@@ -1,0 +1,1 @@
+from .pyalgdb import main
