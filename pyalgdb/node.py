@@ -1,7 +1,11 @@
 class Node:
     
-    def __init__(self, id, name, activation_id):
+    def __init__(self, id, code_component_id, retrn, name):
         self.id = id
+        self.code_component_id = code_component_id
+        self.retrn = retrn
         self.name = name
-        self.activation_id = activation_id
         self.childrens = []
+
+    def has_childrens(self):
+        return len(self.childrens) > 0
