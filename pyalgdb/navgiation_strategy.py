@@ -2,9 +2,11 @@ from node import Node
 
 class NavigationStrategy:
 
+    def __init__(self, root_node: Node):
+        self.root_node = root_node
+
     def navigate(self, exec_tree):
         raise NotImplementedError("Please Implement this method")
-
 
     def evaluate(self, node: Node) -> bool:
         print("-------------------------")
