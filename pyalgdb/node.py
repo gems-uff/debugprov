@@ -6,6 +6,7 @@ class Node:
         self.retrn = retrn
         self.name = name
         self.childrens = []
+        self.validity = None
 
     def has_childrens(self):
         return len(self.childrens) > 0

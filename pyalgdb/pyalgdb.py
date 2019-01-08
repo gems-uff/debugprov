@@ -19,6 +19,7 @@ def main():
       creator = ExecTreeCreator()
       exec_tree = creator.create_exec_tree(CURSOR)
       td = TopDown()
+      exec_tree.validity = False # invalidate root
       result_tree = td.navigate(exec_tree)
       vis = Visualization()
       vis.view_exec_tree(result_tree)

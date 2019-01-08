@@ -6,12 +6,13 @@ class TopDown(NavigationStrategy):
     def navigate(self, exec_tree: Node):
         chds = exec_tree.childrens
         for node in chds:
-            nd = self.evaluate(node)
-            if (nd.validity is True):
+            result = self.evaluate(node)
+            node.validity = result
+            if (node.validity is True):
                 print("Nothing to do here, just go to next node.. ->>")
             else:
-                if (nd.has_childrens()):
-                    self.navigate(nd)
+                if (node.has_childrens()):
+                    self.navigate(node)
                 else:
                     print("Finished navigation!")
                     return exec_tree

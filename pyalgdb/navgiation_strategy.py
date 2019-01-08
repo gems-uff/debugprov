@@ -6,7 +6,7 @@ class NavigationStrategy:
         raise NotImplementedError("Please Implement this method")
 
 
-    def evaluate(self, node: Node):
+    def evaluate(self, node: Node) -> bool:
         print("-------------------------")
         print("Evaluating node {}".format(node.name))
         print("Name: {}".format(node.name))
@@ -15,7 +15,6 @@ class NavigationStrategy:
         print("Returns: {}".format(node.retrn))
         ans = input("Is correct? Y/N ")
         if ans == "Y" or ans == "y":
-            node.validity = True
+            return True
         else:
-            node.validity = False
-        return node
+            return False
