@@ -17,8 +17,8 @@ CURSOR = sqlite3.connect(NOW2_SQLITE_PATH).cursor()
 
 
 def main():
-      creator = ExecTreeCreator()
-      exec_tree = creator.create_exec_tree(CURSOR)
+      creator = ExecTreeCreator(CURSOR)
+      exec_tree = creator.create_exec_tree()
       exec_tree.validity = False # invalidate root
       nav = HeaviestFirst(exec_tree)
       result_tree = nav.navigate()

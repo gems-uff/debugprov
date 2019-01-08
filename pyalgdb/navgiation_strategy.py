@@ -14,6 +14,9 @@ class NavigationStrategy:
         print("Name: {}".format(node.name))
         print("Evaluation_id: {}".format(node.id))
         print("Code_component_id: {}".format(node.code_component_id))
+        print("Parameters: name | value ")
+        for p in node.params:
+            print (" {} | {} ".format(p.name, p.value))
         print("Returns: {}".format(node.retrn))
         ans = input("Is correct? Y/N ")
         if ans == "Y" or ans == "y":
