@@ -2,6 +2,7 @@ import sqlite3
 
 from execution_tree_creator import ExecTreeCreator
 from top_down import TopDown
+from heaviest_first import HeaviestFirst
 from visualization import Visualization
 
 # BEGIN windows only 
@@ -19,8 +20,8 @@ def main():
       creator = ExecTreeCreator()
       exec_tree = creator.create_exec_tree(CURSOR)
       exec_tree.validity = False # invalidate root
-      td = TopDown(exec_tree)
-      result_tree = td.navigate()
+      nav = HeaviestFirst(exec_tree)
+      result_tree = nav.navigate()
       Visualization().view_exec_tree(result_tree)
 
 if __name__ == "__main__":
