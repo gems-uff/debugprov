@@ -15,7 +15,7 @@ class HeaviestFirst(NavigationStrategy):
         # sort by weight, from bigger to smaller
         chds.sort(key=lambda x: x.weight, reverse=True)
 
-        for n in sorted_chds:
+        for n in chds:
             if n.validity is None:
                 n.validity = self.evaluate(n)
             if (n.validity is False):
