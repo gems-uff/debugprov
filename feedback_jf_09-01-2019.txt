@@ -1,0 +1,7 @@
+imprimir árvore parcial
+
+D3.js, para visualizar a árvore na web (pelo browser)
+
+evitar que a mesma função seja avaliada diversas vezes
+
+Tentar usar a tabela de dependências para buscar os parâmetros das funções

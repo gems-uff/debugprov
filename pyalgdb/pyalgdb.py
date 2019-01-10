@@ -4,6 +4,7 @@ from execution_tree_creator import ExecTreeCreator
 from top_down import TopDown
 from heaviest_first import HeaviestFirst
 from visualization import Visualization
+from provenance_navigation import ProvenanceNavigation
 
 # BEGIN windows only 
 import os
@@ -20,9 +21,10 @@ def main():
       creator = ExecTreeCreator(CURSOR)
       exec_tree = creator.create_exec_tree()
       exec_tree.validity = False # invalidate root
-      nav = HeaviestFirst(exec_tree)
+      nav = ProvenanceNavigation(exec_tree, CURSOR)
       result_tree = nav.navigate()
-      Visualization().view_exec_tree(result_tree)
+      Visualization().view_exec_tree_prov(result_tree, nav.DEPENDENCIES)
+      # Visualization().view_exec_tree(result_tree)
 
 if __name__ == "__main__":
     main()

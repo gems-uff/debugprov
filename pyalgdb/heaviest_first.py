@@ -20,7 +20,7 @@ class HeaviestFirst(NavigationStrategy):
                 n.validity = self.evaluate(n)
             if (n.validity is False):
                 for j in chds:
-                    if j.validity == None:
+                    if j.validity is None:
                         j.validity = True
                 if (n.has_childrens()):
                     self.recursive_navigate(n)
