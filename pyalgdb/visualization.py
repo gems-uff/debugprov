@@ -3,6 +3,8 @@ from graphviz import Digraph
 
 class Visualization:
 
+    PROVENANCE_COLOR = 'magenta2'
+
     def __init__(self):
         self.graph = Digraph('exec_tree', filename='exec_tree.gv')
         self.graph.attr('node', shape='box')
@@ -16,12 +18,17 @@ class Visualization:
         self.graph.node(str(exec_tree.id), exec_tree.name, fillcolor='red', style='filled')
         self.navigate(exec_tree)
         for d in dependencies:
-            if d.source.typeof != 'STARTER':
-                source_node = self.search_for_node(d.source.id, exec_tree)[0] #gambiarra feia pra cacete, corrigir!
-                target_node = self.search_for_node(d.target.id, exec_tree)[0]
-                #print(source_node + ' -> ' + target_node)
-                if source_node is not None and target_node is not None:
-                    self.graph.edge(str(source_node.id), str(target_node.id), None, color='magenta2')
+            if d.source.typeof == 'STARTER':
+                self.graph.node(str(d.source.id), d.source.name, shape='none', color=self.PROVENANCE_COLOR)
+                target_nodes = self.search_for_node(d.target.id, exec_tree)
+                for tn in target_nodes:
+                    self.graph.edge(str(d.source.id), str(tn.id), None, color=self.PROVENANCE_COLOR)
+            else:
+                source_nodes = self.search_for_node(d.source.id, exec_tree)
+                target_nodes = self.search_for_node(d.target.id, exec_tree)
+                for sn in source_nodes:
+                    for tn in target_nodes:
+                        self.graph.edge(str(sn.id), str(tn.id), None, color=self.PROVENANCE_COLOR)
         self.graph.view()
 
     # problema: podem existir diversos nós com o mesmo code_component_id
