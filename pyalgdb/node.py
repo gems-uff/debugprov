@@ -10,6 +10,7 @@ class Node:
         self.childrens = []
         self.validity = None
         self.params = None
+        self.prov = None
 
     def has_childrens(self):
         return len(self.childrens) > 0

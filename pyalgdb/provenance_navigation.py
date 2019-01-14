@@ -2,6 +2,7 @@ from navgiation_strategy import NavigationStrategy
 from node import Node
 from code_component import CodeComponent
 from dependency_rel import DependencyRel
+from tree_helper import TreeHelper
 
 class ProvenanceNavigation(NavigationStrategy):
 
@@ -83,19 +84,40 @@ class ProvenanceNavigation(NavigationStrategy):
 
     
     def prune(self):
-        raise NotImplementedError("Please Implement this method")
+        tree_helper = TreeHelper(self.root_node)
+        for d in self.DEPENDENCIES:
+            if d.source.typeof == 'STARTER':
+                target_nodes = tree_helper.search_for_node(d.target.id)
+                for tn in target_nodes:
+                    tn.prov = True
+            else:
+                source_nodes = tree_helper.search_for_node(d.source.id)
+                target_nodes = tree_helper.search_for_node(d.target.id)
+                for sn in source_nodes:
+                    for tn in target_nodes:
+                        sn.prov = True
+                        tn.prov = True
 
 
     def navigate(self):
         cc_start = self.ask_wrong_data()
         self.explore_codecomponent(cc_start)
-        # self.prune() # deve existir? #
-        # self.recursive_navigate(self.root_node)
+        self.prune()
+        self.recursive_navigate(self.root_node)
         return self.root_node
 
 
     def recursive_navigate(self, node: Node):
-        chds = node.childrens
+
+        if len(node.childrens) == 1:
+            self.recursive_navigate(node.childrens[0])
+
+        # Filtering only the childrens that are in provenance dag
+        chds = []
+        for n in node.childrens:
+            if n.prov == True:
+                chds.append(n)
+
         for n in chds:
             if n.validity is None:
                 n.validity = self.evaluate(n)
