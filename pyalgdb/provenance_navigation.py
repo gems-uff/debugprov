@@ -3,6 +3,7 @@ from node import Node
 from code_component import CodeComponent
 from dependency_rel import DependencyRel
 from tree_helper import TreeHelper
+from validity import Validity
 
 class ProvenanceNavigation(NavigationStrategy):
 
@@ -13,7 +14,7 @@ class ProvenanceNavigation(NavigationStrategy):
         self.DEPENDENCIES =[]
 
     def ask_wrong_data(self):
-        ans = input("Which output data is not correct?")
+        ans = input("Which output data is not correct? ")
         query = ("select CC.name, CC.id, CC.first_char_line "
                  "from evaluation EVAL "
                  "join code_component CC on EVAL.code_component_id = CC.id " 
@@ -108,7 +109,6 @@ class ProvenanceNavigation(NavigationStrategy):
 
 
     def recursive_navigate(self, node: Node):
-
         if len(node.childrens) == 1:
             self.recursive_navigate(node.childrens[0])
 
@@ -119,11 +119,12 @@ class ProvenanceNavigation(NavigationStrategy):
                 chds.append(n)
 
         for n in chds:
-            if n.validity is None:
-                n.validity = self.evaluate(n)
-            if (n.validity is False):
+            if n.validity is Validity.UNKNOWN:
+                n = self.evaluate(n)
+            if (n.validity is Validity.INVALID):
                 for j in chds:
-                    if j.validity == None:
-                        j.validity = True
+                    if j.validity is Validity.UNKNOWN:
+                        j.validity = Validity.VALID
+                # re-apply slicing and pruning (?)
                 if (n.has_childrens()):
                     self.recursive_navigate(n)

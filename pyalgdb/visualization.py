@@ -1,10 +1,13 @@
+from graphviz import Graph
+
 from node import Node
 from tree_helper import TreeHelper
-from graphviz import Graph
+from validity import Validity
 
 class Visualization:
 
     PROVENANCE_COLOR = 'magenta2'
+    PROV_PRUNED_NODE = 'grey64'
 
     def __init__(self):
         self.graph = Graph('exec_tree', filename='exec_tree.gv')
@@ -21,42 +24,41 @@ class Visualization:
         tree_helper = TreeHelper(exec_tree)
         for d in dependencies:
             if d.source.typeof == 'STARTER':
-                self.graph.node(str(d.source.id), d.source.name, shape='none', color=self.PROVENANCE_COLOR)
+                self.graph.node(str(d.source.id), d.source.name, shape='none', fontcolor=self.PROVENANCE_COLOR, dir='forward')
                 target_nodes = tree_helper.search_for_node(d.target.id)
                 for tn in target_nodes:
-                    self.graph.edge(str(d.source.id), str(tn.id), None, color=self.PROVENANCE_COLOR)
+                    self.graph.edge(str(d.source.id), str(tn.id), None, color=self.PROVENANCE_COLOR, dir='forward')
             else:
                 source_nodes = tree_helper.search_for_node(d.source.id)
                 target_nodes = tree_helper.search_for_node(d.target.id)
                 for sn in source_nodes:
                     for tn in target_nodes:
-                        self.graph.edge(str(sn.id), str(tn.id), None, color=self.PROVENANCE_COLOR)
+                        self.graph.edge(str(sn.id), str(tn.id), None, color=self.PROVENANCE_COLOR, dir='forward')
         self.graph.view()
 
     def navigate(self, node:Node):
         chds = node.childrens
-        #rank = "same; "
-        #for c in chds:
-        #    rank = rank + "{}; ".format(c.id)
-
-        #self.graph.attr(rank="{}".format(rank))
 
         for n in chds:
-            self.graph.edge(str(node.id), str(n.id))
-            if n.validity == False: # invalid node
+            self.graph.edge(str(node.id), str(n.id), None, dir='forward')
+            if n.validity == Validity.INVALID:
                 self.graph.node(str(n.id), str(n.name), fillcolor='red', style='filled')
-            elif n.validity == True: # valid node
+            elif n.validity == Validity.VALID: 
                 self.graph.node(str(n.id), str(n.name), fillcolor='green', style='filled')
-            else:  # node with unknown validity
+            elif n.validity == Validity.UNKNOWN:  
                 self.graph.node(str(n.id), str(n.name))
-#        self.graph.subgraph(s)
+            # Uncomment this block to paint not-in-provenance removed nodes with grey
+            #    if n.prov is None or n.prov is False:
+            #        self.graph.node(str(n.id), str(n.name), fillcolor=self.PROV_PRUNED_NODE, style='filled')
+            #    else:
+            #        self.graph.node(str(n.id), str(n.name))
 
-        g = Graph()
-        for c in chds:
-            g.node(str(c.id))
-        g.graph_attr['rank']='same'
-
-        self.graph.subgraph(g)
+        if len(chds) > 0:
+            g = Graph()
+            for c in chds:
+                g.node(str(c.id))
+            g.graph_attr['rank']='same'
+            self.graph.subgraph(g)
 
         for n in chds: 
             self.navigate(n)

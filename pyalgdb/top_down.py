@@ -1,5 +1,6 @@
 from navgiation_strategy import NavigationStrategy
 from node import Node
+from validity import Validity
 
 class TopDown(NavigationStrategy):
 
@@ -11,11 +12,11 @@ class TopDown(NavigationStrategy):
     def recursive_navigate(self, node: Node):
         chds = node.childrens
         for n in chds:
-            if n.validity is None:
-                n.validity = self.evaluate(n)
-            if (n.validity is False):
+            if n.validity == Validity.UNKNOWN:
+                n = self.evaluate(n)
+            if n.validity == Validity.INVALID:
                 for j in chds:
-                    if j.validity == None:
-                        j.validity = True
+                    if j.validity == Validity.UNKNOWN:
+                        j.validity = Validity.VALID
                 if (n.has_childrens()):
                     self.recursive_navigate(n)

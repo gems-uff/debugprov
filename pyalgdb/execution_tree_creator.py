@@ -1,7 +1,6 @@
 import sys 
 from node import Node
 
-
 class ExecTreeCreator(): 
 
         def __init__(self, cursor):
@@ -13,23 +12,24 @@ class ExecTreeCreator():
                               "where activation_id = ? ")
 
         def get_root(self) -> Node:
-                # root_query = "select * from activation where activation.id = 1"
-                # safety: verify if one and only one root is found!
+                self.cursor.execute(self.query, [0])
+                result = self.cursor.fetchall()
+                if len(result) != 1:
+                        raise ValueError("ValueError: Something wrong in database. {} root nodes found".format(len(result)))
+
                 for tupl in self.cursor.execute(self.query, [0]):
-                        return Node(tupl[0], tupl[1], tupl[2], tupl[3])
+                        root = Node(tupl[0], tupl[1], tupl[2], tupl[3])
+                        root.validity = False
+                        return root
 
         def get_childrens_of_node(self, node):
-                # query = "select id, code_component_id, repr, name from evaluation natural join activation where activation_id = ?"
                 childrens = []
-
                 for tupl in self.cursor.execute(self.query, [node.id]):
                         n = Node(tupl[0], tupl[1], tupl[2], tupl[3])
                         childrens.append(n)
-
                 for n in childrens:
                         chds = self.get_childrens_of_node(n)
                         n.childrens = chds
-
                 return childrens    
 
         def create_exec_tree(self):

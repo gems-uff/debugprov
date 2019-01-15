@@ -1,4 +1,5 @@
 from parameter import Parameter
+from validity import Validity
 
 class Node:
     
@@ -8,7 +9,7 @@ class Node:
         self.retrn = retrn
         self.name = name
         self.childrens = []
-        self.validity = None
+        self.validity = Validity.UNKNOWN
         self.params = None
         self.prov = None
 
@@ -24,6 +25,6 @@ class Node:
                  "where CMP.whole_id = ? " 
                  "and CMP.type = ? ")
         self.params = []
-        print("code component id  $ "+str(self.code_component_id))
+        # print("code component id  $ "+str(self.code_component_id))
         for tupl in cursor.execute(query, [self.code_component_id, '*args']):
             self.params.append(Parameter(tupl[0], tupl[1]))

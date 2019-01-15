@@ -5,6 +5,7 @@ from top_down import TopDown
 from heaviest_first import HeaviestFirst
 from visualization import Visualization
 from provenance_navigation import ProvenanceNavigation
+from single_stepping import SingleStepping
 
 # BEGIN windows only 
 import os
@@ -20,11 +21,13 @@ CURSOR = sqlite3.connect(NOW2_SQLITE_PATH).cursor()
 def main():
       creator = ExecTreeCreator(CURSOR)
       exec_tree = creator.create_exec_tree()
-      exec_tree.validity = False # invalidate root
-      nav = ProvenanceNavigation(exec_tree, CURSOR)
+      nav = SingleStepping(exec_tree)
+      #nav = ProvenanceNavigation(exec_tree, CURSOR)
       result_tree = nav.navigate()
-      Visualization().view_exec_tree_prov(result_tree, nav.DEPENDENCIES)
-      # Visualization().view_exec_tree(result_tree)
+      vis = Visualization()
+      #vis.view_exec_tree_prov(result_tree, nav.DEPENDENCIES)
+      vis.view_exec_tree(result_tree)
+
 
 if __name__ == "__main__":
     main()

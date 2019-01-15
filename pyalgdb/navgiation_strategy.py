@@ -1,4 +1,5 @@
 from node import Node
+from validity import Validity
 
 class NavigationStrategy:
 
@@ -8,7 +9,7 @@ class NavigationStrategy:
     def navigate(self, exec_tree):
         raise NotImplementedError("Please Implement this method")
 
-    def evaluate(self, node: Node) -> bool:
+    def evaluate(self, node: Node) -> Node:
         print("-------------------------")
         print("Evaluating node {}".format(node.name))
         print("Name: {}".format(node.name))
@@ -20,6 +21,7 @@ class NavigationStrategy:
         print("Returns: {}".format(node.retrn))
         ans = input("Is correct? Y/N ")
         if ans == "Y" or ans == "y":
-            return True
+            node.validity = Validity.VALID
         else:
-            return False
+            node.validity = Validity.INVALID
+        return node
