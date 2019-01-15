@@ -3,11 +3,12 @@ from validity import Validity
 
 class Node:
     
-    def __init__(self, id, code_component_id, retrn, name):
+    def __init__(self, id, code_component_id, retrn, name, parent):
         self.id = id
         self.code_component_id = code_component_id
         self.retrn = retrn
         self.name = name
+        self.parent = parent
         self.childrens = []
         self.validity = Validity.UNKNOWN
         self.params = None

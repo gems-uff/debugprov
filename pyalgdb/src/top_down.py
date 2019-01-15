@@ -5,8 +5,8 @@ from validity import Validity
 class TopDown(NavigationStrategy):
 
     def navigate(self):
-        self.recursive_navigate(self.root_node)
-        return self.root_node
+        self.recursive_navigate(self.exec_tree.root_node)
+        return self.exec_tree
 
 
     def recursive_navigate(self, node: Node):

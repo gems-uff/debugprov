@@ -1,13 +1,14 @@
 from node import Node
+from execution_tree import ExecutionTree
 from validity import Validity
 
 class NavigationStrategy:
 
-    def __init__(self, root_node: Node):
-        self.root_node = root_node
+    def __init__(self, exec_tree: ExecutionTree):
+        self.exec_tree = exec_tree
 
-    def navigate(self, exec_tree):
-        raise NotImplementedError("Please Implement this method")
+    def navigate(self)->ExecutionTree:
+        raise NotImplementedError("Abstract method: Please Implement this method in subclass")
 
     def evaluate(self, node: Node) -> Node:
         print("-------------------------")

@@ -2,12 +2,12 @@ from navgiation_strategy import NavigationStrategy
 from node import Node
 from code_component import CodeComponent
 from dependency_rel import DependencyRel
-from tree_helper import TreeHelper
 from validity import Validity
+from execution_tree import ExecutionTree
 
 class ProvenanceNavigation(NavigationStrategy):
 
-    def __init__(self, root_node, cursor):
+    def __init__(self, exec_tree: ExecutionTree, cursor):
         super().__init__(root_node)
         self.cursor = cursor
         self.VISITED_CCs = []
@@ -85,28 +85,25 @@ class ProvenanceNavigation(NavigationStrategy):
 
     
     def prune(self):
-        tree_helper = TreeHelper(self.root_node)
         for d in self.DEPENDENCIES:
             if d.source.typeof == 'STARTER':
-                target_nodes = tree_helper.search_for_node(d.target.id)
+                target_nodes = self.exec_tree.search_for_node_by_ccid(d.target.id)
                 for tn in target_nodes:
                     tn.prov = True
             else:
-                source_nodes = tree_helper.search_for_node(d.source.id)
-                target_nodes = tree_helper.search_for_node(d.target.id)
+                source_nodes = self.exec_tree.search_for_node_by_ccid(d.source.id)
+                target_nodes = self.exec_tree.search_for_node_by_ccid(d.target.id)
                 for sn in source_nodes:
                     for tn in target_nodes:
                         sn.prov = True
                         tn.prov = True
 
-
     def navigate(self):
         cc_start = self.ask_wrong_data()
         self.explore_codecomponent(cc_start)
         self.prune()
-        self.recursive_navigate(self.root_node)
+        self.recursive_navigate(self.exec_tree.root_node)
         return self.root_node
-
 
     def recursive_navigate(self, node: Node):
         if len(node.childrens) == 1:

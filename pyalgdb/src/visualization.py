@@ -1,7 +1,7 @@
 from graphviz import Graph
 
+from execution_tree import ExecutionTree
 from node import Node
-from tree_helper import TreeHelper
 from validity import Validity
 
 class Visualization:
@@ -9,28 +9,30 @@ class Visualization:
     PROVENANCE_COLOR = 'magenta2'
     PROV_PRUNED_NODE = 'grey64'
 
-    def __init__(self):
+    def __init__(self, exec_tree: ExecutionTree):
+        self.exec_tree = exec_tree
         self.graph = Graph('exec_tree', filename='exec_tree.gv')
         self.graph.attr('node', shape='box')
 
-    def view_exec_tree(self, exec_tree:Node):
-        self.graph.node(str(exec_tree.id), exec_tree.name, fillcolor='red', style='filled')
-        self.navigate(exec_tree)
+    def view_exec_tree(self):
+        root_node = self.exec_tree.root_node
+        self.graph.node(str(root_node.id), root_node.name, fillcolor='red', style='filled')
+        self.navigate(root_node)
         self.graph.view()
 
-    def view_exec_tree_prov(self, exec_tree:Node, dependencies:list):
-        self.graph.node(str(exec_tree.id), exec_tree.name, fillcolor='red', style='filled')
-        self.navigate(exec_tree)
-        tree_helper = TreeHelper(exec_tree)
-        for d in dependencies:
+    def view_exec_tree_prov(self, dependencies:list):
+        root_node = self.exec_tree.root_node
+        self.graph.node(str(root_node.id), root_node.name, fillcolor='red', style='filled')
+        self.navigate(root_node)
+        for d in dependencies: # this loop draws the provenance links between nodes
             if d.source.typeof == 'STARTER':
                 self.graph.node(str(d.source.id), d.source.name, shape='none', fontcolor=self.PROVENANCE_COLOR, dir='forward')
-                target_nodes = tree_helper.search_for_node(d.target.id)
+                target_nodes = exec_tree.search_for_node_by_ccid(d.target.id)
                 for tn in target_nodes:
                     self.graph.edge(str(d.source.id), str(tn.id), None, color=self.PROVENANCE_COLOR, dir='forward')
             else:
-                source_nodes = tree_helper.search_for_node(d.source.id)
-                target_nodes = tree_helper.search_for_node(d.target.id)
+                source_nodes = exec_tree.search_for_node_by_ccid(d.source.id)
+                target_nodes = exec_tree.search_for_node_by_ccid(d.target.id)
                 for sn in source_nodes:
                     for tn in target_nodes:
                         self.graph.edge(str(sn.id), str(tn.id), None, color=self.PROVENANCE_COLOR, dir='forward')

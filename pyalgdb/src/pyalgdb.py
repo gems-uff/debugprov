@@ -6,6 +6,7 @@ from heaviest_first import HeaviestFirst
 from visualization import Visualization
 from provenance_navigation import ProvenanceNavigation
 from single_stepping import SingleStepping
+from divide_and_query import DivideAndQuery
 
 # BEGIN windows only 
 import os
@@ -21,12 +22,12 @@ CURSOR = sqlite3.connect(NOW2_SQLITE_PATH).cursor()
 def main():
       creator = ExecTreeCreator(CURSOR)
       exec_tree = creator.create_exec_tree()
-      nav = SingleStepping(exec_tree)
+      nav = DivideAndQuery(exec_tree)
       #nav = ProvenanceNavigation(exec_tree, CURSOR)
       result_tree = nav.navigate()
-      vis = Visualization()
+      vis = Visualization(result_tree)
       #vis.view_exec_tree_prov(result_tree, nav.DEPENDENCIES)
-      vis.view_exec_tree(result_tree)
+      vis.view_exec_tree()
 
 
 if __name__ == "__main__":

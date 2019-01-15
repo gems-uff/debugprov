@@ -6,8 +6,8 @@ class SingleStepping(NavigationStrategy):
     
     def navigate(self):
         self.found = False
-        self.recursive_navigate(self.root_node)
-        return self.root_node
+        self.recursive_navigate(self.exec_tree.root_node)
+        return self.exec_tree
 
 
     def recursive_navigate(self, node: Node):

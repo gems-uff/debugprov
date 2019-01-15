@@ -1,3 +1,13 @@
 {
-    "python.pythonPath": "C:\\Users\\linha\\Anaconda3\\envs\\now2\\python.exe"
+    "python.pythonPath": "C:\\Users\\linha\\Anaconda3\\envs\\now2\\python.exe",
+    "python.unitTest.unittestArgs": [
+        "-v",
+        "-s",
+        "./pyalgdb",
+        "-p",
+        "*_test.py"
+    ],
+    "python.unitTest.pyTestEnabled": false,
+    "python.unitTest.nosetestsEnabled": false,
+    "python.unitTest.unittestEnabled": true
 }
