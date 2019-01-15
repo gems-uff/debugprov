@@ -1,7 +1,7 @@
-from navgiation_strategy import NavigationStrategy
-from node import Node
-from validity import Validity
-from execution_tree import ExecutionTree
+from src.navgiation_strategy import NavigationStrategy
+from src.node import Node
+from src.validity import Validity
+from src.execution_tree import ExecutionTree
 
 class DivideAndQuery(NavigationStrategy):
 

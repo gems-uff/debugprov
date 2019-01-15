@@ -1,5 +1,5 @@
-from parameter import Parameter
-from validity import Validity
+from src.parameter import Parameter
+from src.validity import Validity
 
 class Node:
     

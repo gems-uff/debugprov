@@ -1,8 +1,8 @@
 from graphviz import Graph
 
-from execution_tree import ExecutionTree
-from node import Node
-from validity import Validity
+from src.execution_tree import ExecutionTree
+from src.node import Node
+from src.validity import Validity
 
 class Visualization:
 

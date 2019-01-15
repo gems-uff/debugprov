@@ -1,6 +1,6 @@
-from node import Node
-from execution_tree import ExecutionTree
-from validity import Validity
+from src.node import Node
+from src.execution_tree import ExecutionTree
+from src.validity import Validity
 
 class NavigationStrategy:
 

@@ -1,4 +1,4 @@
-from code_component import CodeComponent
+from src.code_component import CodeComponent
 
 # Defines a dependency relation between two code components
 class DependencyRel:

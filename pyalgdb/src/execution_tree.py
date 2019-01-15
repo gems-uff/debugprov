@@ -1,4 +1,4 @@
-from node import Node
+from src.node import Node
 
 class ExecutionTree:
 

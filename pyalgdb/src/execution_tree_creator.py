@@ -1,6 +1,5 @@
-import sys 
-from node import Node
-from execution_tree import ExecutionTree
+from src.node import Node
+from src.execution_tree import ExecutionTree
 
 class ExecTreeCreator(): 
 

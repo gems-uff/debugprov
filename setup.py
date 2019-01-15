@@ -3,13 +3,12 @@ from setuptools import setup
 setup(
     name="pyalgdb",
     version="0.0.1",    
-    packages=["pyalgdb"],
+    packages=["pyalgdb", "pyalgdb.src"],
     author=("Henrique Linhares"),
     author_email="hlinhares@id.uff.br",
-    scripts=['pyalgdb/pyalgdb.py'],
     description="",
     entry_points={
-        "console_scripts": ["pyalgdb=pyalgdb:main"]
+        "console_scripts": ["pyalgdb=pyalgdb.src.mn:main"]
     },
     keywords=[""],
     url="",

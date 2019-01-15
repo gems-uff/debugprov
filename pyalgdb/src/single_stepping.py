@@ -1,6 +1,6 @@
-from navgiation_strategy import NavigationStrategy
-from node import Node
-from validity import Validity
+from src.navgiation_strategy import NavigationStrategy
+from src.node import Node
+from src.validity import Validity
 
 class SingleStepping(NavigationStrategy):
     

@@ -1,12 +1,12 @@
 import sqlite3
 
-from execution_tree_creator import ExecTreeCreator
-from top_down import TopDown
-from heaviest_first import HeaviestFirst
-from visualization import Visualization
-from provenance_navigation import ProvenanceNavigation
-from single_stepping import SingleStepping
-from divide_and_query import DivideAndQuery
+from src.execution_tree_creator import ExecTreeCreator
+from src.top_down import TopDown
+from src.heaviest_first import HeaviestFirst
+from src.visualization import Visualization
+from src.provenance_navigation import ProvenanceNavigation
+from src.single_stepping import SingleStepping
+from src.divide_and_query import DivideAndQuery
 
 # BEGIN windows only 
 import os
