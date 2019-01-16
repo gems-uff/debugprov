@@ -1,14 +1,14 @@
-from src.navgiation_strategy import NavigationStrategy
-from src.node import Node
-from src.code_component import CodeComponent
-from src.dependency_rel import DependencyRel
-from src.validity import Validity
-from src.execution_tree import ExecutionTree
+from pyalgdb.navgiation_strategy import NavigationStrategy
+from pyalgdb.node import Node
+from pyalgdb.code_component import CodeComponent
+from pyalgdb.dependency_rel import DependencyRel
+from pyalgdb.validity import Validity
+from pyalgdb.execution_tree import ExecutionTree
 
 class ProvenanceNavigation(NavigationStrategy):
 
     def __init__(self, exec_tree: ExecutionTree, cursor):
-        super().__init__(root_node)
+        super().__init__(exec_tree)
         self.cursor = cursor
         self.VISITED_CCs = []
         self.DEPENDENCIES =[]
@@ -103,7 +103,7 @@ class ProvenanceNavigation(NavigationStrategy):
         self.explore_codecomponent(cc_start)
         self.prune()
         self.recursive_navigate(self.exec_tree.root_node)
-        return self.root_node
+        return self.exec_tree
 
     def recursive_navigate(self, node: Node):
         if len(node.childrens) == 1:

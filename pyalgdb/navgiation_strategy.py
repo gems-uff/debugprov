@@ -1,6 +1,6 @@
-from src.node import Node
-from src.execution_tree import ExecutionTree
-from src.validity import Validity
+from pyalgdb.node import Node
+from pyalgdb.execution_tree import ExecutionTree
+from pyalgdb.validity import Validity
 
 class NavigationStrategy:
 

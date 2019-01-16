@@ -1,5 +1,5 @@
-from src.node import Node
-from src.execution_tree import ExecutionTree
+from pyalgdb.node import Node
+from pyalgdb.execution_tree import ExecutionTree
 
 class ExecTreeCreator(): 
 
@@ -25,7 +25,6 @@ class ExecTreeCreator():
 
                 for tupl in self.cursor.execute(self.query, [0]):
                         root = Node(tupl[0], tupl[1], tupl[2], tupl[3], None)
-                        root.validity = False
                         return root
 
         def get_childrens_of_node(self, node):

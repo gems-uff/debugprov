@@ -1,12 +1,12 @@
 import sqlite3
 
-from src.execution_tree_creator import ExecTreeCreator
-from src.top_down import TopDown
-from src.heaviest_first import HeaviestFirst
-from src.visualization import Visualization
-from src.provenance_navigation import ProvenanceNavigation
-from src.single_stepping import SingleStepping
-from src.divide_and_query import DivideAndQuery
+from pyalgdb.execution_tree_creator import ExecTreeCreator
+from pyalgdb.top_down import TopDown
+from pyalgdb.heaviest_first import HeaviestFirst
+from pyalgdb.visualization import Visualization
+from pyalgdb.provenance_navigation import ProvenanceNavigation
+from pyalgdb.single_stepping import SingleStepping
+from pyalgdb.divide_and_query import DivideAndQuery
 
 # BEGIN windows only 
 import os

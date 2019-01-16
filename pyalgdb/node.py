@@ -1,5 +1,5 @@
-from src.parameter import Parameter
-from src.validity import Validity
+from pyalgdb.parameter import Parameter
+from pyalgdb.validity import Validity
 
 class Node:
     

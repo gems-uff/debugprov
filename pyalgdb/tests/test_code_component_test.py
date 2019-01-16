@@ -1,10 +1,8 @@
 import unittest
-import sys
 
-from pyalgdb.src.code_component import CodeComponent
+from pyalgdb.code_component import CodeComponent
 
 class CodeComponentTest(unittest.TestCase):
-
 
     def test_code_component(self):
         code_component_id = 300

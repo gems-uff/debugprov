@@ -1,8 +1,8 @@
 from graphviz import Graph
 
-from src.execution_tree import ExecutionTree
-from src.node import Node
-from src.validity import Validity
+from pyalgdb.execution_tree import ExecutionTree
+from pyalgdb.node import Node
+from pyalgdb.validity import Validity
 
 class Visualization:
 
@@ -27,12 +27,12 @@ class Visualization:
         for d in dependencies: # this loop draws the provenance links between nodes
             if d.source.typeof == 'STARTER':
                 self.graph.node(str(d.source.id), d.source.name, shape='none', fontcolor=self.PROVENANCE_COLOR, dir='forward')
-                target_nodes = exec_tree.search_for_node_by_ccid(d.target.id)
+                target_nodes = self.exec_tree.search_for_node_by_ccid(d.target.id)
                 for tn in target_nodes:
                     self.graph.edge(str(d.source.id), str(tn.id), None, color=self.PROVENANCE_COLOR, dir='forward')
             else:
-                source_nodes = exec_tree.search_for_node_by_ccid(d.source.id)
-                target_nodes = exec_tree.search_for_node_by_ccid(d.target.id)
+                source_nodes = self.exec_tree.search_for_node_by_ccid(d.source.id)
+                target_nodes = self.exec_tree.search_for_node_by_ccid(d.target.id)
                 for sn in source_nodes:
                     for tn in target_nodes:
                         self.graph.edge(str(sn.id), str(tn.id), None, color=self.PROVENANCE_COLOR, dir='forward')
