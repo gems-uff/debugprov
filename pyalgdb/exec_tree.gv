@@ -1,6 +1,0 @@
-digraph exec_tree {
-	__main__
-	__main__ -> dobro
-	dobro -> neg
-	__main__ -> print
-}
