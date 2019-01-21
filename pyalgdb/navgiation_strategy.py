@@ -12,7 +12,7 @@ class NavigationStrategy:
         raise NotImplementedError("Abstract method: Please Implement this method in subclass")
 
     def evaluate(self, node: Node) -> Node:
-        node.eval = True
+        self.exec_tree.node_under_evaluation = node
         vis = Visualization(self.exec_tree)
         vis.view_exec_tree(str(id(node)))
         print("-------------------------")
@@ -24,12 +24,10 @@ class NavigationStrategy:
         for p in node.params:
             print (" {} | {} ".format(p.name, p.value))
         print("Returns: {}".format(node.retrn))
-
-
-
         ans = input("Is correct? Y/N ")
         if ans == "Y" or ans == "y":
             node.validity = Validity.VALID
         else:
             node.validity = Validity.INVALID
+        self.exec_tree.node_under_evaluation = None
         return node

@@ -13,10 +13,12 @@ class DivideAndQuery(NavigationStrategy):
         if node.weight > self.best_guess.weight and node.weight <= w_2:
             self.best_guess = node
         for c in node.childrens:
-            self.find_best_node(c, w_2)
+            if c.validity is Validity.UNKNOWN:
+                self.find_best_node(c, w_2)
 
     def calculate_weights(self, node:Node):
         node.weight = self.weight(node)
+        print(node.name+" "+str(node.weight))
         for c in node.childrens:
             self.calculate_weights(c)
 
@@ -45,6 +47,8 @@ class DivideAndQuery(NavigationStrategy):
             for sibling in self.best_guess.parent.childrens:
                 if sibling is not self.best_guess:
                     self.validate(sibling)
+            self.recursive_navigate(node)
+
 
     def validate(self, node):
         node.validity = Validity.VALID
