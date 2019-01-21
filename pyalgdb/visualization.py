@@ -9,12 +9,17 @@ class Visualization:
     PROVENANCE_COLOR = 'magenta2'
     PROV_PRUNED_NODE = 'grey64'
 
+    NODE_IN_EVALUATION = 'cyan1'
+
     def __init__(self, exec_tree: ExecutionTree):
         self.exec_tree = exec_tree
-        self.graph = Graph('exec_tree', filename='exec_tree.gv')
-        self.graph.attr('node', shape='box')
 
-    def view_exec_tree(self):
+    def view_exec_tree(self, graph_name = 'exec_tree'):
+        file_name = "{}.gv".format(graph_name)
+        print("file name: ")
+        print(file_name)
+        self.graph = Graph(graph_name, filename=file_name)
+        self.graph.attr('node', shape='box')
         root_node = self.exec_tree.root_node
         self.graph.node(str(root_node.id), root_node.name, fillcolor='red', style='filled')
         self.navigate(root_node)
@@ -48,7 +53,10 @@ class Visualization:
             elif n.validity == Validity.VALID: 
                 self.graph.node(str(n.id), str(n.name), fillcolor='green', style='filled')
             elif n.validity == Validity.UNKNOWN:  
-                self.graph.node(str(n.id), str(n.name))
+                if n.eval is True:
+                    self.graph.node(str(n.id), str(n.name), fillcolor=self.NODE_IN_EVALUATION, style='filled')
+                else:
+                    self.graph.node(str(n.id), str(n.name))
             # Uncomment this block to paint not-in-provenance removed nodes with grey
             #    if n.prov is None or n.prov is False:
             #        self.graph.node(str(n.id), str(n.name), fillcolor=self.PROV_PRUNED_NODE, style='filled')

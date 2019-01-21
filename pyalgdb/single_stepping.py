@@ -17,5 +17,6 @@ class SingleStepping(NavigationStrategy):
         if self.found is False:
             node = self.evaluate(node)
             if node.validity is Validity.INVALID:
+                self.exec_tree.buggy_node = node
                 self.found = True
 

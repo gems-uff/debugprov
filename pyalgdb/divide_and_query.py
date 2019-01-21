@@ -21,15 +21,14 @@ class DivideAndQuery(NavigationStrategy):
             self.calculate_weights(c)
 
     def weight(self, node: Node):
-        if not node.has_childrens():
-            return 0
-        else:
-            chds = node.childrens
-            summ = 0
-            for c in chds:
+        chds = node.childrens
+        summ = 0
+        for c in chds:
+            if c.validity == Validity.UNKNOWN:
                 summ += 1 + self.weight(c)
-            return summ
+        return summ
 
+    # falta definir a condição de parada: quando o algoritmo deve parar de executar?
     def recursive_navigate(self, node: Node):
         self.calculate_weights(node)
         self.best_guess = Node("", "", "", "", None)
@@ -40,11 +39,15 @@ class DivideAndQuery(NavigationStrategy):
         print("w/2: {}".format(node.weight/2))
         self.best_guess = self.evaluate(self.best_guess)
         if self.best_guess.validity is Validity.VALID:
-            bg = self.best_guess
-            self.best_guess.parent.childrens.remove(bg)
+            self.validate(self.best_guess)
             self.recursive_navigate(node)
         elif self.best_guess.validity is Validity.INVALID:
             for sibling in self.best_guess.parent.childrens:
                 if sibling is not self.best_guess:
-                    self.best_guess.parent.childrens.remove(sibling)
+                    self.validate(sibling)
+
+    def validate(self, node):
+        node.validity = Validity.VALID
+        for c in node.childrens:
+            self.validate(c)
             
