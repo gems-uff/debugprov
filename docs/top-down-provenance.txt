@@ -1,0 +1,5 @@
+TOP-DOWN with Provenance navigation strategy
+
+1- Ask the programmer which is the incorrect output value
+2- Enhance the ET with provenance
+3- 
