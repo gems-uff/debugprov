@@ -11,7 +11,7 @@ class NavigationStrategyTest(unittest.TestCase):
         root = Node(1, 1, None, 'a-script.py', None)
         exec_tree = ExecutionTree(root)
         nav = NavigationStrategy(exec_tree)
-        self.assertEquals(nav.exec_tree, exec_tree)
+        self.assertEqual(nav.exec_tree, exec_tree)
 
 
 if __name__ == '__main__':
