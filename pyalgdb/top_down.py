@@ -8,15 +8,14 @@ class TopDown(NavigationStrategy):
         self.recursive_navigate(self.exec_tree.root_node)
         return self.exec_tree
 
-
     def recursive_navigate(self, node: Node):
-        chds = node.childrens
-        for n in chds:
+        for n in node.childrens:
             if n.validity == Validity.UNKNOWN:
-                n = self.evaluate(n)
+                self.evaluate(n)
             if n.validity == Validity.INVALID:
-                for j in chds:
+                for j in node.childrens:
                     if j.validity == Validity.UNKNOWN:
-                        j.validity = Validity.VALID
+                        self.recursive_validate(j)
                 if (n.has_childrens()):
                     self.recursive_navigate(n)
+                    

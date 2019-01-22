@@ -9,7 +9,6 @@ class SingleStepping(NavigationStrategy):
         self.recursive_navigate(self.exec_tree.root_node)
         return self.exec_tree
 
-
     def recursive_navigate(self, node: Node):
         if node.has_childrens():
             for c in node.childrens:
@@ -19,4 +18,3 @@ class SingleStepping(NavigationStrategy):
             if node.validity is Validity.INVALID:
                 self.exec_tree.buggy_node = node
                 self.found = True
-

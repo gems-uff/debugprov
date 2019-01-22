@@ -31,3 +31,9 @@ class NavigationStrategy:
             node.validity = Validity.INVALID
         self.exec_tree.node_under_evaluation = None
         return node
+
+
+    def recursive_validate(self, node):
+        node.validity = Validity.VALID
+        for c in node.childrens:
+            self.recursive_validate(c)

@@ -9,27 +9,26 @@ class HeaviestFirst(NavigationStrategy):
         return self.exec_tree
 
     def recursive_navigate(self, node: Node):
-        chds = node.childrens
-        for n in chds:
-            n.weight = self.weight(n)
+        self.weight(node)
         # sort by weight, from bigger to smaller
-        chds.sort(key=lambda x: x.weight, reverse=True)
-        for n in chds:
+        node.childrens.sort(key=lambda x: x.weight, reverse=True)
+        for n in node.childrens:
             if n.validity == Validity.UNKNOWN:
-                n = self.evaluate(n)
-            if (n.validity == Validity.INVALID):
-                for j in chds:
-                    if j.validity == Validity.UNKNOWN:
-                        j.validity = Validity.VALID
-                if (n.has_childrens()):
-                    self.recursive_navigate(n)
+                self.evaluate(n)
+                if n.validity is Validity.VALID:
+                    self.recursive_validate(n)
+                if n.validity == Validity.INVALID:
+                    for j in node.childrens:
+                        if j is not n:
+                            self.recursive_validate(j)
+                    if n.has_childrens_with_validity(Validity.UNKNOWN):
+                        self.recursive_navigate(n)
+                    else:
+                        self.exec_tree.buggy_node = n
 
     def weight(self, node: Node):
-        if not node.has_childrens():
-            return 0
-        else:
-            chds = node.childrens
-            summ = 0
-            for c in chds:
-                summ += 1 + self.weight(c)
-            return summ
+        summ = 0
+        for c in node.childrens:
+            summ += 1 + self.weight(c)
+        node.weight = summ
+        return summ
