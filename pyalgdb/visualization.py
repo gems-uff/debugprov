@@ -19,7 +19,7 @@ class Visualization:
         self.graph = Graph(graph_name, filename=file_name)
         self.graph.attr('node', shape='box')
         root_node = self.exec_tree.root_node
-        self.graph.node(str(root_node.id), root_node.name, fillcolor='red', style='filled')
+        self.graph.node(str(root_node.id), root_node.name)
         self.navigate(root_node)
         eval_node = self.exec_tree.node_under_evaluation
         if eval_node is not None:

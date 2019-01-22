@@ -10,8 +10,11 @@ class DivideAndQuery(NavigationStrategy):
         return self.exec_tree
 
     def find_best_node(self, node:Node, w_2:float):
-        if node.weight > self.best_guess.weight and node.weight <= w_2:
-            self.best_guess = node
+        if node.weight <= w_2:
+            if (self.best_guess is None):
+                self.best_guess = node
+            elif node.weight > self.best_guess.weight:
+                self.best_guess = node
         for c in node.childrens:
             if c.validity is Validity.UNKNOWN:
                 self.find_best_node(c, w_2)
@@ -30,11 +33,9 @@ class DivideAndQuery(NavigationStrategy):
                 summ += 1 + self.weight(c)
         return summ
 
-    # falta definir a condição de parada: quando o algoritmo deve parar de executar?
     def recursive_navigate(self, node: Node):
         self.calculate_weights(node)
-        self.best_guess = Node("", "", "", "", None)
-        self.best_guess.weight = 0
+        self.best_guess = None
         self.find_best_node(node, (node.weight/2))
         print("Best guess: {}".format(self.best_guess.name))
         print("Best guess weight: {}".format(str(self.best_guess.weight)))
@@ -47,7 +48,7 @@ class DivideAndQuery(NavigationStrategy):
             for sibling in self.best_guess.parent.childrens:
                 if sibling is not self.best_guess:
                     self.validate(sibling)
-            self.recursive_navigate(node)
+            self.recursive_navigate(self.best_guess)
 
 
     def validate(self, node):
