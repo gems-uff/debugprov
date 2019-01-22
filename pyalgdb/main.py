@@ -26,7 +26,7 @@ def main():
       nav = ProvenanceNavigation(exec_tree, CURSOR)
       result_tree = nav.navigate()
       vis = Visualization(result_tree)
-      vis.view_exec_tree_prov(nav.DEPENDENCIES)
+      vis.view_exec_tree_prov('exec_tree',nav.DEPENDENCIES)
       #vis.view_exec_tree()
 
 if __name__ == "__main__":

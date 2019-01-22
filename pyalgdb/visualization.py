@@ -29,9 +29,13 @@ class Visualization:
     def view_exec_tree_prov(self, graph_name, dependencies:list):
         file_name = "{}.gv".format(graph_name)
         self.graph = Graph(graph_name, filename=file_name)
+        self.graph.attr('node', shape='box')
         root_node = self.exec_tree.root_node
-        self.graph.node(str(root_node.id), root_node.name, fillcolor='red', style='filled')
+        self.graph.node(str(root_node.id), root_node.name)
         self.navigate(root_node)
+        eval_node = self.exec_tree.node_under_evaluation
+        if eval_node is not None:
+            self.graph.node(str(eval_node.id), str(eval_node.name), fillcolor=self.NODE_IN_EVALUATION, style='filled')
         for d in dependencies: # this loop draws the provenance links between nodes
             if d.source.typeof == 'STARTER':
                 self.graph.node(str(d.source.id), d.source.name, shape='none', fontcolor=self.PROVENANCE_COLOR, dir='forward')
