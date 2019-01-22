@@ -26,9 +26,17 @@ class NavigationStrategy:
         print("Returns: {}".format(node.retrn))
         ans = input("Is correct? Y/N ")
         if ans == "Y" or ans == "y":
-            node.validity = Validity.VALID
+            # The YES answer prunes the subtree rooted at N
+            self.recursive_validate(node)
         else:
+            # The NO answer prunes all the nodes of the ET,
+            # exept the subtree rooted at N
             node.validity = Validity.INVALID
+            if node.parent is not None:
+                for c in node.parent.childrens:
+                    if c is not node:
+                        self.recursive_validate(c)
+
         self.exec_tree.node_under_evaluation = None
         return node
 
@@ -37,3 +45,4 @@ class NavigationStrategy:
         node.validity = Validity.VALID
         for c in node.childrens:
             self.recursive_validate(c)
+

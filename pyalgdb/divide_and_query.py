@@ -37,15 +37,11 @@ class DivideAndQuery(NavigationStrategy):
             print("w/2: {}".format(node.weight/2))
             self.evaluate(self.best_guess)
             if self.best_guess.validity is Validity.VALID:
-                self.recursive_validate(self.best_guess)
                 if self.best_guess.parent.has_childrens_with_validity(Validity.UNKNOWN):
                     self.recursive_navigate(node)
                 else:
                     self.exec_tree.buggy_node = self.best_guess.parent
             elif self.best_guess.validity is Validity.INVALID:
-                for sibling in self.best_guess.parent.childrens:
-                    if sibling is not self.best_guess:
-                        self.recursive_validate(sibling)
                 if self.best_guess.has_childrens_with_validity(Validity.UNKNOWN):
                     self.recursive_navigate(node)
                 else:
