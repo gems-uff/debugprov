@@ -26,7 +26,9 @@ class Visualization:
             self.graph.node(str(eval_node.id), str(eval_node.name), fillcolor=self.NODE_IN_EVALUATION, style='filled')
         self.graph.view()
 
-    def view_exec_tree_prov(self, dependencies:list):
+    def view_exec_tree_prov(self, graph_name, dependencies:list):
+        file_name = "{}.gv".format(graph_name)
+        self.graph = Graph(graph_name, filename=file_name)
         root_node = self.exec_tree.root_node
         self.graph.node(str(root_node.id), root_node.name, fillcolor='red', style='filled')
         self.navigate(root_node)

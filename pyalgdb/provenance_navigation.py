@@ -4,6 +4,7 @@ from pyalgdb.code_component import CodeComponent
 from pyalgdb.dependency_rel import DependencyRel
 from pyalgdb.validity import Validity
 from pyalgdb.execution_tree import ExecutionTree
+from pyalgdb.visualization import Visualization
 
 class ProvenanceNavigation(NavigationStrategy):
 
@@ -125,3 +126,33 @@ class ProvenanceNavigation(NavigationStrategy):
                 # re-apply slicing and pruning (?)
                 if (n.has_childrens()):
                     self.recursive_navigate(n)
+
+
+    def evaluate(self, node: Node) -> Node:
+        self.exec_tree.node_under_evaluation = node
+        vis = Visualization(self.exec_tree)
+        vis.view_exec_tree_prov(str(id(node)), self.DEPENDENCIES)
+        print("-------------------------")
+        print("Evaluating node {}".format(node.name))
+        print("Name: {}".format(node.name))
+        print("Evaluation_id: {}".format(node.id))
+        print("Code_component_id: {}".format(node.code_component_id))
+        print("Parameters: name | value ")
+        for p in node.params:
+            print (" {} | {} ".format(p.name, p.value))
+        print("Returns: {}".format(node.retrn))
+        ans = input("Is correct? Y/N ")
+        if ans == "Y" or ans == "y":
+            # The YES answer prunes the subtree rooted at N
+            self.recursive_validate(node)
+        else:
+            # The NO answer prunes all the nodes of the ET,
+            # exept the subtree rooted at N
+            node.validity = Validity.INVALID
+            if node.parent is not None:
+                for c in node.parent.childrens:
+                    if c is not node:
+                        self.recursive_validate(c)
+
+        self.exec_tree.node_under_evaluation = None
+        return node
