@@ -14,7 +14,7 @@ class Visualization:
     def __init__(self, exec_tree: ExecutionTree):
         self.exec_tree = exec_tree
 
-    def view_exec_tree(self, graph_name = 'exec_tree'):
+    def generate_exec_tree(self, graph_name = 'exec_tree'):
         file_name = "{}.gv".format(graph_name)
         self.graph = Graph(graph_name, filename=file_name)
         self.graph.attr('node', shape='box')
@@ -24,6 +24,9 @@ class Visualization:
         eval_node = self.exec_tree.node_under_evaluation
         if eval_node is not None:
             self.graph.node(str(eval_node.id), str(eval_node.name), fillcolor=self.NODE_IN_EVALUATION, style='filled')
+
+    def view_exec_tree(self, graph_name = 'exec_tree'):
+        self.generate_exec_tree(graph_name)
         self.graph.view()
 
     def view_exec_tree_prov(self, graph_name, dependencies:list):
