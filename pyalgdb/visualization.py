@@ -37,17 +37,11 @@ class Visualization:
         if eval_node is not None:
             self.graph.node(str(eval_node.id), str(eval_node.name), fillcolor=self.NODE_IN_EVALUATION, style='filled')
         for d in dependencies: # this loop draws the provenance links between nodes
-            if d.source.typeof == 'STARTER':
-                self.graph.node(str(d.source.id), d.source.name, shape='none', fontcolor=self.PROVENANCE_COLOR, dir='forward')
-                target_nodes = self.exec_tree.search_for_node_by_ccid(d.target.id)
+            source_nodes = self.exec_tree.search_for_node_by_ccid(d.source.id)
+            target_nodes = self.exec_tree.search_for_node_by_ccid(d.target.id)
+            for sn in source_nodes:
                 for tn in target_nodes:
-                    self.graph.edge(str(d.source.id), str(tn.id), None, color=self.PROVENANCE_COLOR, dir='forward')
-            else:
-                source_nodes = self.exec_tree.search_for_node_by_ccid(d.source.id)
-                target_nodes = self.exec_tree.search_for_node_by_ccid(d.target.id)
-                for sn in source_nodes:
-                    for tn in target_nodes:
-                        self.graph.edge(str(sn.id), str(tn.id), None, color=self.PROVENANCE_COLOR, dir='forward')
+                    self.graph.edge(str(sn.id), str(tn.id), None, color=self.PROVENANCE_COLOR, dir='forward')
         self.graph.view()
 
     def navigate(self, node:Node):
@@ -61,7 +55,7 @@ class Visualization:
                 self.graph.node(str(n.id), str(n.name), fillcolor='green', style='filled')
             elif n.validity == Validity.UNKNOWN:  
                 self.graph.node(str(n.id), str(n.name))
-            # Uncomment this block to paint not-in-provenance removed nodes with grey
+            # Uncomment this block below to paint not-in-provenance removed nodes with grey
             #    if n.prov is None or n.prov is False:
             #        self.graph.node(str(n.id), str(n.name), fillcolor=self.PROV_PRUNED_NODE, style='filled')
             #    else:
