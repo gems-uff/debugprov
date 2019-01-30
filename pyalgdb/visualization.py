@@ -19,11 +19,11 @@ class Visualization:
         self.graph = Graph(graph_name, filename=file_name)
         self.graph.attr('node', shape='box')
         root_node = self.exec_tree.root_node
-        self.graph.node(str(root_node.id), root_node.name) # root node
+        self.graph.node(str(root_node.id), root_node.get_name()) # root node
         self.navigate(root_node)
         eval_node = self.exec_tree.node_under_evaluation
         if eval_node is not None:
-            self.graph.node(str(eval_node.id), str(eval_node.name), fillcolor=self.NODE_IN_EVALUATION, style='filled')
+            self.graph.node(str(eval_node.id), str(eval_node.get_name()), fillcolor=self.NODE_IN_EVALUATION, style='filled')
 
     def view_exec_tree(self, graph_name = 'exec_tree'):
         self.generate_exec_tree(graph_name)
@@ -53,11 +53,11 @@ class Visualization:
         for n in chds:
             self.graph.edge(str(node.id), str(n.id), None, dir='forward')
             if n.validity == Validity.INVALID:
-                self.graph.node(str(n.id), str(n.name), fillcolor='red', style='filled')
+                self.graph.node(str(n.id), str(n.get_name()), fillcolor='red', style='filled')
             elif n.validity == Validity.VALID: 
-                self.graph.node(str(n.id), str(n.name), fillcolor='green', style='filled')
+                self.graph.node(str(n.id), str(n.get_name()), fillcolor='green', style='filled')
             elif n.validity == Validity.UNKNOWN:  
-                self.graph.node(str(n.id), str(n.name))
+                self.graph.node(str(n.id), str(n.get_name()))
             # Uncomment this block below to paint not-in-provenance removed nodes with grey
             #    if n.prov is None or n.prov is False:
             #        self.graph.node(str(n.id), str(n.name), fillcolor=self.PROV_PRUNED_NODE, style='filled')
