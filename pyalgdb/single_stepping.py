@@ -9,12 +9,12 @@ class SingleStepping(NavigationStrategy):
         self.recursive_navigate(self.exec_tree.root_node)
         return self.exec_tree
 
-    def recursive_navigate(self, node: Node):
-        if node.has_childrens():
-            for c in node.childrens:
-                    self.recursive_navigate(c)
+    def recursive_navigate(self, current_node: Node):
+        if current_node.has_childrens():
+            for c in current_node.childrens:
+                self.recursive_navigate(c)
         if self.found is False:
-            node = self.evaluate(node)
-            if node.validity is Validity.INVALID:
-                self.exec_tree.buggy_node = node
-                self.found = True
+            self.evaluate(current_node)            
+        if current_node.validity is Validity.INVALID:
+            self.exec_tree.buggy_node = current_node
+            self.found = True
