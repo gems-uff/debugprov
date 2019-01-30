@@ -5,7 +5,7 @@ from pyalgdb.node import Node
 class NavigationLogger:
 
     def __init__(self):
-        file_name = datetime.now().strftime('logs/%Y_%m_%d %H-%M-%S.log')
+        file_name = datetime.now().strftime('experiment_logs/%Y_%m_%d %H-%M-%S.log')
         self.file = open(file_name,'w') 
         #logging.basicConfig(filename=datetime.now().strftime('logs/%Y_%m_%d %H-%M-%S.log'),
         #level=logging.INFO,
