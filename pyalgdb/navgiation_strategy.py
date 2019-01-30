@@ -31,11 +31,11 @@ class NavigationStrategy:
         seq_num = " {} ".format(str(self.sequence_num))
         self.exec_tree.node_under_evaluation = node
         self.nav_log.log_node(node, self.sequence_num)
-        if self.answers[node.id] is Validity.VALID:
+        if self.answers[node.ev_id] is Validity.VALID:
             # The YES answer prunes the subtree rooted at N
             self.recursive_validate(node)
             self.nav_log.log(seq_num+"The node was defined as VALID")
-        elif self.answers[node.id] is Validity.INVALID:
+        elif self.answers[node.ev_id] is Validity.INVALID:
             # The NO answer prunes all the nodes of the ET,
             # exept the subtree rooted at N
             node.validity = Validity.INVALID
@@ -54,7 +54,7 @@ class NavigationStrategy:
         print("-------------------------")
         print("Evaluating node {}".format(node.name))
         print("Name: {}".format(node.name))
-        print("Evaluation_id: {}".format(node.id))
+        print("Evaluation_id: {}".format(node.ev_id))
         print("Code_component_id: {}".format(node.code_component_id))
         print("Parameters: name | value ")
         for p in node.params:

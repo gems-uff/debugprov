@@ -3,8 +3,8 @@ from pyalgdb.validity import Validity
 
 class Node:
     
-    def __init__(self, id, code_component_id, retrn, name, parent):
-        self.id = id
+    def __init__(self, ev_id, code_component_id, retrn, name, parent):
+        self.ev_id = ev_id
         self.code_component_id = code_component_id
         self.retrn = retrn
         self.name = name
@@ -34,4 +34,4 @@ class Node:
             self.params.append(Parameter(tupl[0], tupl[1]))
 
     def get_name(self):
-        return "{} {}".format(self.id, self.name)
+        return "{} {}".format(self.ev_id, self.name)

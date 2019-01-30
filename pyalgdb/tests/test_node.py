@@ -6,7 +6,7 @@ class NodeTest(unittest.TestCase):
 
     def test_node(self):
         node = Node(1, 100, "#1_return", "#1_name", None)
-        self.assertEqual(node.id, 1)
+        self.assertEqual(node.ev_id, 1)
         self.assertEqual(node.code_component_id, 100)
         self.assertEqual(node.retrn, "#1_return")
         self.assertEqual(node.name, "#1_name")

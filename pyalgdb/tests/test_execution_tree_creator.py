@@ -28,7 +28,7 @@ class ExecTreeCreatorTest(unittest.TestCase):
             ev_repr = tupl[2] 
             cc_name = tupl[3]
 
-        self.assertEqual(root.id, ev_id)
+        self.assertEqual(root.ev_id, ev_id)
         self.assertEqual(root.code_component_id, cc_id)
         self.assertEqual(root.retrn, ev_repr)
         self.assertEqual(root.name, cc_name)

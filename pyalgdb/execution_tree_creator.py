@@ -29,7 +29,7 @@ class ExecTreeCreator():
 
         def get_childrens_of_node(self, node):
                 childrens = []
-                for tupl in self.cursor.execute(self.query, [node.id]):
+                for tupl in self.cursor.execute(self.query, [node.ev_id]):
                         n = Node(tupl[0], tupl[1], tupl[2], tupl[3], node)
                         childrens.append(n)
                 for n in childrens:

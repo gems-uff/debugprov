@@ -7,7 +7,7 @@ from pyalgdb.execution_tree import ExecutionTree
 from pyalgdb.visualization import Visualization
 from pyalgdb.provenance_tools import ProvenanceTools
 
-class ProvenanceNavigation(NavigationStrategy):
+class ProvenanceEnhancement(NavigationStrategy):
 
     def __init__(self, exec_tree: ExecutionTree, cursor):
         super().__init__(exec_tree)
@@ -33,11 +33,19 @@ class ProvenanceNavigation(NavigationStrategy):
         invalid_cc = code_components[invalid_eval]
         return CodeComponent(invalid_cc[1], invalid_cc[0], "STARTER")
 
-    
     def prune(self):
         for d in self.DEPENDENCIES:
-            source_nodes = self.exec_tree.search_for_node_by_ccid(d.source.id)
-            target_nodes = self.exec_tree.search_for_node_by_ccid(d.target.id)
+            source_nodes = self.exec_tree.search_by_ev_id(d.source.ev_id)
+            target_nodes = self.exec_tree.search_by_ev_id(d.target.ev_id)
+            for sn in source_nodes:
+                for tn in target_nodes:
+                    sn.prov = True
+                    tn.prov = True
+
+    def enhance(self):
+        for d in self.DEPENDENCIES:
+            source_nodes = self.exec_tree.search_by_ev_id(d.source.ev_id)
+            target_nodes = self.exec_tree.search_by_ev_id(d.target.ev_id)
             for sn in source_nodes:
                 for tn in target_nodes:
                     sn.prov = True
@@ -80,7 +88,7 @@ class ProvenanceNavigation(NavigationStrategy):
         print("-------------------------")
         print("Evaluating node {}".format(node.name))
         print("Name: {}".format(node.name))
-        print("Evaluation_id: {}".format(node.id))
+        print("Evaluation_id: {}".format(node.ev_id))
         print("Code_component_id: {}".format(node.code_component_id))
         print("Parameters: name | value ")
         for p in node.params:

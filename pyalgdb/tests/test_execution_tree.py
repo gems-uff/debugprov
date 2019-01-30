@@ -25,7 +25,7 @@ class ExecutionTreeTest(unittest.TestCase):
 
         root.childrens = childrens
         exec_tree = ExecutionTree(root)
-        result = exec_tree.search_for_node_by_ccid(4)
+        result = exec_tree.search_by_ccid(4)
         self.assertEqual(len(result), 1)
         self.assertEqual(result[0].code_component_id, 4)
         

@@ -20,9 +20,8 @@ class NavigationLogger:
         self.log(seq_num + "-------------------------")
         self.log(seq_num + "Evaluating node {}".format(node.name))
         self.log(seq_num + "Name: {}".format(node.name))
-        self.log(seq_num + "Evaluation_id: {}".format(node.id))
+        self.log(seq_num + "Evaluation_id: {}".format(node.ev_id))
         self.log(seq_num + "Code_component_id: {}".format(node.code_component_id))
-        self.log(seq_num + "Evaluation_id: {}".format(node.id))
         self.log(seq_num + "Parameters: name | value ")
         for p in node.params:
             self.log(seq_num + " {} | {} ".format(p.name, p.value))
