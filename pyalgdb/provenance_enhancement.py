@@ -13,8 +13,7 @@ class ProvenanceEnhancement(NavigationStrategy):
         super().__init__(exec_tree)
         self.prov_tools = ProvenanceTools(cursor)
         self.cursor = cursor
-        self.VISITED_CCs = []
-        self.DEPENDENCIES =[]
+        self.dependencies =[]
 
     def ask_wrong_data(self):
         ans = input("Which output data is not correct? ")
@@ -33,79 +32,11 @@ class ProvenanceEnhancement(NavigationStrategy):
         invalid_cc = code_components[invalid_eval]
         return CodeComponent(invalid_cc[1], invalid_cc[0], "STARTER")
 
-    def prune(self):
-        for d in self.DEPENDENCIES:
-            source_nodes = self.exec_tree.search_by_ev_id(d.source.ev_id)
-            target_nodes = self.exec_tree.search_by_ev_id(d.target.ev_id)
-            for sn in source_nodes:
-                for tn in target_nodes:
-                    sn.prov = True
-                    tn.prov = True
-
     def enhance(self):
-        for d in self.DEPENDENCIES:
+        for d in self.dependencies:
             source_nodes = self.exec_tree.search_by_ev_id(d.source.ev_id)
             target_nodes = self.exec_tree.search_by_ev_id(d.target.ev_id)
             for sn in source_nodes:
                 for tn in target_nodes:
                     sn.prov = True
                     tn.prov = True
-
-    def navigate(self):
-        #cc_start = self.ask_wrong_data()
-        #self.explore_codecomponent(cc_start)
-        self.DEPENDENCIES = self.prov_tools.get_dependencies()
-        self.prune()
-        self.recursive_navigate(self.exec_tree.root_node)
-        return self.exec_tree
-
-    def recursive_navigate(self, node: Node):
-        if len(node.childrens) == 1:
-            self.recursive_navigate(node.childrens[0])
-
-        # Filtering only the childrens that are in provenance dag
-        chds = []
-        for n in node.childrens:
-            if n.prov == True:
-                chds.append(n)
-
-        for n in chds:
-            if n.validity is Validity.UNKNOWN:
-                n = self.evaluate(n)
-            if (n.validity is Validity.INVALID):
-                for j in chds:
-                    if j.validity is Validity.UNKNOWN:
-                        j.validity = Validity.VALID
-                # re-apply slicing and pruning (?)
-                if (n.has_childrens()):
-                    self.recursive_navigate(n)
-
-
-    def evaluate(self, node: Node) -> Node:
-        self.exec_tree.node_under_evaluation = node
-        vis = Visualization(self.exec_tree)
-        vis.view_exec_tree_prov(str(id(node)), self.DEPENDENCIES)
-        print("-------------------------")
-        print("Evaluating node {}".format(node.name))
-        print("Name: {}".format(node.name))
-        print("Evaluation_id: {}".format(node.ev_id))
-        print("Code_component_id: {}".format(node.code_component_id))
-        print("Parameters: name | value ")
-        for p in node.params:
-            print (" {} | {} ".format(p.name, p.value))
-        print("Returns: {}".format(node.retrn))
-        ans = input("Is correct? Y/N ")
-        if ans == "Y" or ans == "y":
-            # The YES answer prunes the subtree rooted at N
-            self.recursive_validate(node)
-        else:
-            # The NO answer prunes all the nodes of the ET,
-            # exept the subtree rooted at N
-            node.validity = Validity.INVALID
-            if node.parent is not None:
-                for c in node.parent.childrens:
-                    if c is not node:
-                        self.recursive_validate(c)
-
-        self.exec_tree.node_under_evaluation = None
-        return node

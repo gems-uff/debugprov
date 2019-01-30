@@ -6,10 +6,11 @@ from pyalgdb.validity import Validity
 
 class Visualization:
 
-    PROVENANCE_COLOR = 'magenta2'
-    PROV_PRUNED_NODE = 'grey64'
-    ROOT_COLOR = 'tomato'
-    NODE_IN_EVALUATION = 'cyan1'
+    PROVENANCE_COLOR = 'darkorchid2'
+    INVALID_COLOR = 'indianred1'
+    VALID_COLOR = 'seagreen2'
+    #PROV_PRUNED_NODE = 'grey64'
+    NODE_IN_EVALUATION = 'lightskyblue'
 
     def __init__(self, exec_tree: ExecutionTree):
         self.exec_tree = exec_tree
@@ -19,7 +20,7 @@ class Visualization:
         self.graph = Graph(graph_name, filename=file_name)
         self.graph.attr('node', shape='box')
         root_node = self.exec_tree.root_node
-        self.graph.node(str(root_node.ev_id), root_node.get_name(), fillcolor=ROOT_COLOR, style='filled') # root node
+        self.graph.node(str(root_node.ev_id), root_node.get_name(), fillcolor=self.INVALID_COLOR, style='filled') # root node
         self.navigate(root_node)
         eval_node = self.exec_tree.node_under_evaluation
         if eval_node is not None:
@@ -34,17 +35,18 @@ class Visualization:
         self.graph = Graph(graph_name, filename=file_name)
         self.graph.attr('node', shape='box')
         root_node = self.exec_tree.root_node
-        self.graph.node(str(root_node.ev_id), root_node.name)
+        self.graph.node(str(root_node.ev_id), root_node.name, fillcolor=self.INVALID_COLOR, style='filled')
         self.navigate(root_node)
         eval_node = self.exec_tree.node_under_evaluation
         if eval_node is not None:
             self.graph.node(str(eval_node.ev_id), str(eval_node.name), fillcolor=self.NODE_IN_EVALUATION, style='filled')
         for d in dependencies: # this loop draws the provenance links between nodes
-            source_nodes = self.exec_tree.search_by_ev_id(d.source.ev_id)
-            target_nodes = self.exec_tree.search_by_ev_id(d.target.ev_id)
-            for sn in source_nodes:
-                for tn in target_nodes:
-                    self.graph.edge(str(sn.ev_id), str(tn.ev_id), None, color=self.PROVENANCE_COLOR, dir='forward')
+            self.graph.edge(str(d.source.ev_id), str(d.target.ev_id), None, color=self.PROVENANCE_COLOR, dir='forward')
+            #source_nodes = self.exec_tree.search_by_ev_id(d.source.ev_id)
+            #target_nodes = self.exec_tree.search_by_ev_id(d.target.ev_id)
+            #for sn in source_nodes:
+            #    for tn in target_nodes:
+            #        self.graph.edge(str(sn.ev_id), str(tn.ev_id), None, color=self.PROVENANCE_COLOR, dir='forward')
         self.graph.view()
 
     def navigate(self, node:Node):
@@ -53,9 +55,9 @@ class Visualization:
         for n in chds:
             self.graph.edge(str(node.ev_id), str(n.ev_id), None, dir='forward')
             if n.validity == Validity.INVALID:
-                self.graph.node(str(n.ev_id), str(n.get_name()), fillcolor='red', style='filled')
+                self.graph.node(str(n.ev_id), str(n.get_name()), fillcolor=self.INVALID_COLOR, style='filled')
             elif n.validity == Validity.VALID: 
-                self.graph.node(str(n.ev_id), str(n.get_name()), fillcolor='green', style='filled')
+                self.graph.node(str(n.ev_id), str(n.get_name()), fillcolor=self.VALID_COLOR, style='filled')
             elif n.validity == Validity.UNKNOWN:  
                 self.graph.node(str(n.ev_id), str(n.get_name()))
             # Uncomment this block below to paint not-in-provenance removed nodes with grey

@@ -24,6 +24,7 @@ class ExecutionTree:
     def recursive_search_by_ev_id(self, ev_id, node:Node):
         nodes = []
         if node.ev_id == ev_id:
+            return node
             nodes.append(node)
         for c in node.childrens:
             nodes.extend(self.recursive_search_by_ev_id(ev_id, c))
