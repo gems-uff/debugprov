@@ -6,11 +6,11 @@ from pyalgdb.validity import Validity
 
 class Visualization:
 
-    PROVENANCE_COLOR = 'darkorchid2'
-    INVALID_COLOR = 'indianred1'
-    VALID_COLOR = 'seagreen2'
+    PROVENANCE_COLOR = 'dodgerblue'
+    INVALID_COLOR = 'tomato'
+    VALID_COLOR = 'darkolivegreen1'
     #PROV_PRUNED_NODE = 'grey64'
-    NODE_IN_EVALUATION = 'lightskyblue'
+    NODE_IN_EVALUATION = 'gold2'
 
     def __init__(self, exec_tree: ExecutionTree):
         self.exec_tree = exec_tree
@@ -34,6 +34,7 @@ class Visualization:
         file_name = "{}.gv".format(graph_name)
         self.graph = Graph(graph_name, filename=file_name)
         self.graph.attr('node', shape='box')
+        self.graph.attr('graph', ordering='out')
         root_node = self.exec_tree.root_node
         self.graph.node(str(root_node.ev_id), root_node.name, fillcolor=self.INVALID_COLOR, style='filled')
         self.navigate(root_node)
@@ -42,16 +43,12 @@ class Visualization:
             self.graph.node(str(eval_node.ev_id), str(eval_node.name), fillcolor=self.NODE_IN_EVALUATION, style='filled')
         for d in dependencies: # this loop draws the provenance links between nodes
             self.graph.edge(str(d.source.ev_id), str(d.target.ev_id), None, color=self.PROVENANCE_COLOR, dir='forward')
-            #source_nodes = self.exec_tree.search_by_ev_id(d.source.ev_id)
-            #target_nodes = self.exec_tree.search_by_ev_id(d.target.ev_id)
-            #for sn in source_nodes:
-            #    for tn in target_nodes:
-            #        self.graph.edge(str(sn.ev_id), str(tn.ev_id), None, color=self.PROVENANCE_COLOR, dir='forward')
+            self.graph.node(str(d.source.ev_id), None, fillcolor=self.PROVENANCE_COLOR, style='filled')
+            self.graph.node(str(d.target.ev_id), None, fillcolor=self.PROVENANCE_COLOR, style='filled')
         self.graph.view()
 
     def navigate(self, node:Node):
         chds = node.childrens
-
         for n in chds:
             self.graph.edge(str(node.ev_id), str(n.ev_id), None, dir='forward')
             if n.validity == Validity.INVALID:
