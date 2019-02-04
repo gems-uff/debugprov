@@ -42,9 +42,9 @@ class Visualization:
         if eval_node is not None:
             self.graph.node(str(eval_node.ev_id), str(eval_node.name), fillcolor=self.NODE_IN_EVALUATION, style='filled')
         for d in dependencies: # this loop draws the provenance links between nodes
-            self.graph.edge(str(d.source.ev_id), str(d.target.ev_id), None, color=self.PROVENANCE_COLOR, dir='forward')
-            self.graph.node(str(d.source.ev_id), None, fillcolor=self.PROVENANCE_COLOR, style='filled')
-            self.graph.node(str(d.target.ev_id), None, fillcolor=self.PROVENANCE_COLOR, style='filled')
+            self.graph.edge(str(d.dependent.ev_id), str(d.influencer.ev_id), None, color=self.PROVENANCE_COLOR, dir='forward')
+            self.graph.node(str(d.dependent.ev_id), None, fillcolor=self.PROVENANCE_COLOR, style='filled')
+            self.graph.node(str(d.influencer.ev_id), None, fillcolor=self.PROVENANCE_COLOR, style='filled')
         self.graph.view()
 
     def navigate(self, node:Node):

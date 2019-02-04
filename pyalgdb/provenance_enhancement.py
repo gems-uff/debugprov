@@ -20,19 +20,19 @@ class ProvenanceEnhancement(NavigationStrategy):
         
 
     def ask_wrong_data(self):
-        ans = input("Which output data is not correct? ")
-        query = ("select EVAL.id, CC.id, CC.type "
+        ans = input("Which evaluation id is not correct? ")
+        query = ("select EVAL.id, CC.id, CC.type, CC.name "
                  "from evaluation EVAL "
                  "join code_component CC on EVAL.code_component_id = CC.id " 
-                 "where EVAL.repr = ? ")
+                 "where EVAL.id = ? ")
         evals = []
         for tupl in self.cursor.execute(query, [ans]):
-            evals.append(Evaluation(tupl[0],tupl[1],tupl[2]))
+            evals.append(Evaluation(tupl[0],tupl[1],tupl[2],tupl[3]))
         return evals[-1]
 
     def is_in(self, dep:DependencyRel, dependencies):
       for d in dependencies:
-            if dep.target.ev_id == d.target.ev_id and dep.source.ev_id == d.source.ev_id:
+            if dep.influencer.ev_id == d.influencer.ev_id and dep.dependent.ev_id == d.dependent.ev_id:
                   return True
       return False
    
@@ -40,39 +40,30 @@ class ProvenanceEnhancement(NavigationStrategy):
         if not self.is_in(dep, dependency_list):
             dependency_list.append(dep)
 
-    def build_provenance_dag(self, ev_id):
-        for d in self.dependencies:
-            if d.target.ev_id == ev_id:
-                self.insert_dependency(d, self.filtered_dependencies)
-                self.build_provenance_dag(d.source.ev_id)
-
     def find_influencers_of(self, ev_id):
         arr = []
-        for d in self.filtered_dependencies:
-            if d.target.ev_id == ev_id:
-                arr.append(d.source)
+        for d in self.dependencies:
+            if d.dependent.ev_id == ev_id:
+                arr.append(d.influencer)
         return arr
-                
 
-    def get_func_dependencies_of(self, ev_id):
-        func_dependencies = []
+    def get_influencers_of(self, ev_id, typeof):
+        influencers = []
         evaluations = self.find_influencers_of(ev_id)
         for ev in evaluations:
-            if ev.code_component_type == 'call':
-                func_dependencies.append(ev)
+            if ev.code_component_type == typeof:
+                influencers.append(ev)
             else:
-                func_dependencies.extend(self.get_func_dependencies_of(ev.ev_id))
-        return func_dependencies
-
+                influencers.extend(self.get_influencers_of(ev.ev_id, typeof))
+        return influencers        
 
     def recursive_get_func_dependencies_of(self, evaluation):
-        evaluations = self.get_func_dependencies_of(evaluation.ev_id)
-        for ev in evaluations:
+        influencers = self.get_influencers_of(evaluation.ev_id, 'call')
+        for ev in influencers:
             self.insert_dependency(DependencyRel(ev, evaluation), self.final_dependencies)
             self.recursive_get_func_dependencies_of(ev)
 
     def enhance(self, evaluation):
-        self.build_provenance_dag(evaluation.ev_id)
         self.recursive_get_func_dependencies_of(evaluation)    
         return self.final_dependencies    
 
