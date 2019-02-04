@@ -5,14 +5,14 @@ from pyalgdb.node import Node
 class NavigationLogger:
 
     def __init__(self):
-        file_name = datetime.now().strftime('experiment_logs/%Y_%m_%d %H-%M-%S.log')
+        file_name = datetime.now().strftime('experiment_logs/%Y_%m_%d %H-%M-%S.%f.log')
         self.file = open(file_name,'w') 
         #logging.basicConfig(filename=datetime.now().strftime('logs/%Y_%m_%d %H-%M-%S.log'),
         #level=logging.INFO,
         #format='%(asctime)s %(message)s')
     
     def log(self, message):
-        time_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S ")
+        time_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f ")
         self.file.write(time_str + message + "\n")
 
     def log_node(self, node, sequence_num):

@@ -6,6 +6,7 @@ class HeaviestFirst(NavigationStrategy):
 
     def navigate(self):
         self.recursive_navigate(self.exec_tree.root_node)
+        self.finish_navigation()
         return self.exec_tree
 
     def recursive_navigate(self, node: Node):

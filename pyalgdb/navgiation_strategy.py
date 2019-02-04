@@ -82,3 +82,5 @@ class NavigationStrategy:
         for c in node.childrens:
             self.recursive_validate(c)
 
+    def finish_navigation(self):
+        self.nav_log.file.close()
