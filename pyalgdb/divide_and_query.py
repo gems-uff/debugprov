@@ -37,14 +37,14 @@ class DivideAndQuery(NavigationStrategy):
                 if self.best_guess.parent.has_childrens_with_validity(Validity.UNKNOWN):
                     self.recursive_navigate(node)
                 else:
-                    self.finish_navigation()
                     self.exec_tree.buggy_node = self.best_guess.parent
+                    self.finish_navigation()
             elif self.best_guess.validity is Validity.INVALID:
                 if self.best_guess.has_childrens_with_validity(Validity.UNKNOWN):
                     self.recursive_navigate(node)
                 else:
-                    self.finish_navigation()
                     self.exec_tree.buggy_node = self.best_guess
+                    self.finish_navigation()
 
 
             

@@ -83,4 +83,7 @@ class NavigationStrategy:
             self.recursive_validate(c)
 
     def finish_navigation(self):
-        self.nav_log.file.close()
+        if self.AUTOMATED_NAVIGATION:
+            self.nav_log.log("Buggy node found: "+str(self.exec_tree.buggy_node.get_name()))
+            self.nav_log.log("Navigation finished.")
+            self.nav_log.file.close()
