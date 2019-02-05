@@ -6,8 +6,9 @@ from pyalgdb.validity import Validity
 
 class Visualization:
 
+    BUGGY_NODE_COLOR = 'red'
     PROVENANCE_COLOR = 'dodgerblue'
-    INVALID_COLOR = 'tomato'
+    INVALID_COLOR = 'darkorange1'
     VALID_COLOR = 'darkolivegreen1'
     #PROV_PRUNED_NODE = 'grey64'
     NODE_IN_EVALUATION = 'gold2'
@@ -25,6 +26,9 @@ class Visualization:
         eval_node = self.exec_tree.node_under_evaluation
         if eval_node is not None:
             self.graph.node(str(eval_node.ev_id), str(eval_node.get_name()), fillcolor=self.NODE_IN_EVALUATION, style='filled')
+        buggy_node = self.exec_tree.buggy_node
+        if buggy_node is not None:
+            self.graph.node(str(buggy_node.ev_id), str(buggy_node.get_name()), fillcolor=self.BUGGY_NODE_COLOR, style='filled')
 
     def view_exec_tree(self, graph_name = 'exec_tree'):
         self.generate_exec_tree(graph_name)

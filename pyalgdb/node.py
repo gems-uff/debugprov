@@ -22,6 +22,12 @@ class Node:
             if c.validity is validity:
                 return True
         return False 
+    
+    def all_childrens_are_valid(self):
+        for chd in self.childrens:
+            if chd.validity is not Validity.VALID:
+                return False
+        return True
 
     def get_parameters(self, cursor):
         query = ("select CC.name, EV.repr as 'value' "
