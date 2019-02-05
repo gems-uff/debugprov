@@ -9,6 +9,13 @@ from pyalgdb.evaluation import Evaluation
 
 class ProvenanceEnhancement():
 
+    FUNCTION_CALL = 'call'
+    
+    QUERY = ("select EVAL.id, CC.id, CC.type, CC.name "
+             "from evaluation EVAL "
+             "join code_component CC on EVAL.code_component_id = CC.id " 
+             "where EVAL.id = ? ")
+
     def __init__(self, exec_tree: ExecutionTree, cursor):
         self.exec_tree = exec_tree
         self.prov_tools = ProvenanceTools(cursor)
@@ -21,10 +28,7 @@ class ProvenanceEnhancement():
 
     def ask_wrong_data(self):
         ans = input("Which evaluation id is not correct? ")
-        query = ("select EVAL.id, CC.id, CC.type, CC.name "
-                 "from evaluation EVAL "
-                 "join code_component CC on EVAL.code_component_id = CC.id " 
-                 "where EVAL.id = ? ")
+        query = self.QUERY
         evals = []
         for tupl in self.cursor.execute(query, [ans]):
             evals.append(Evaluation(tupl[0],tupl[1],tupl[2],tupl[3]))
@@ -58,7 +62,7 @@ class ProvenanceEnhancement():
         return influencers        
 
     def recursive_get_func_dependencies_of(self, evaluation):
-        influencers = self.get_influencers_of(evaluation.ev_id, 'call')
+        influencers = self.get_influencers_of(evaluation.ev_id, self.FUNCTION_CALL)
         for ev in influencers:
             self.insert_dependency(DependencyRel(ev, evaluation), self.final_dependencies)
             self.recursive_get_func_dependencies_of(ev)
@@ -71,9 +75,9 @@ class ProvenanceEnhancement():
     def enhance_all(self):
         # Perform the provenance enhancement, having as "start set" all nodes that are function calls
         for d in self.dependencies:
-            if d.influencer.code_component_type == 'call':
+            if d.influencer.code_component_type == self.FUNCTION_CALL:
                 self.enhance(d.influencer)
-            if d.dependent.code_component_type == 'call':
+            if d.dependent.code_component_type == self.FUNCTION_CALL:
                 self.enhance(d.dependent) 
         self.exec_tree.dependencies = self.final_dependencies
         self.exec_tree.is_prov_enhanced = True
