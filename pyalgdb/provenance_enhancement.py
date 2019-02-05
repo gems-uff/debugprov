@@ -64,5 +64,15 @@ class ProvenanceEnhancement():
 
     def enhance(self, evaluation):
         self.recursive_get_func_dependencies_of(evaluation)    
-        return self.final_dependencies    
+        return self.final_dependencies 
+
+    def enhance_all(self):
+        # Perform the provenance enhancement, having as "start set" all nodes that are function calls
+        for d in self.dependencies:
+            if d.influencer.code_component_type == 'call':
+                self.enhance(d.influencer)
+            if d.dependent.code_component_type == 'call':
+                self.enhance(d.dependent) 
+        self.exec_tree.dependencies = self.final_dependencies
+        self.exec_tree.is_prov_enhanced = True
 

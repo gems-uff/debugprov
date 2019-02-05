@@ -21,10 +21,11 @@ class NavigationStrategy:
         raise NotImplementedError("Abstract method: Please Implement this method in subclass")
 
     def evaluate(self, node: Node) -> Node:
-        if self.AUTOMATED_NAVIGATION:
-            self._automated_evaluation(node)
-        else:
-            self._interactive_evaluation(node)
+        if node.validity is Validity.UNKNOWN:
+            if self.AUTOMATED_NAVIGATION:
+                self._automated_evaluation(node)
+            else:
+                self._interactive_evaluation(node)
     
     def _automated_evaluation(self, node:Node) -> Node:
         self.sequence_num += 1
@@ -78,7 +79,8 @@ class NavigationStrategy:
 
 
     def recursive_validate(self, node):
-        node.validity = Validity.VALID
+        if node.validity is not Validity.NOT_IN_PROV:
+            node.validity = Validity.VALID
         for c in node.childrens:
             self.recursive_validate(c)
 
@@ -88,12 +90,15 @@ class NavigationStrategy:
             self.nav_log.log("Navigation finished.")
             self.nav_log.file.close()
 
-    def provenance_prune(self, dependencies):
+
+    def provenance_prune(self):
+        dependencies = self.exec_tree.dependencies        
         nodes = self.exec_tree.get_all_nodes()
         for n in nodes:
-            n.is_active = False
+            n.validity = Validity.NOT_IN_PROV
         for d in dependencies:
             infl_node = self.exec_tree.search_by_ev_id(d.influencer.ev_id) 
-            infl_node.is_active = True
+            infl_node.validity = Validity.UNKNOWN
             depend_node = self.exec_tree.search_by_ev_id(d.dependent.ev_id)
-            depend_node.is_active = True
+            depend_node.validity = Validity.UNKNOWN
+        self.exec_tree.root_node.validity = Validity.INVALID

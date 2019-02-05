@@ -16,6 +16,6 @@ class SingleStepping(NavigationStrategy):
                 self.recursive_navigate(c)
         if self.found is False:
             self.evaluate(current_node)            
-        if current_node.validity is Validity.INVALID:
-            self.exec_tree.buggy_node = current_node
-            self.found = True
+            if current_node.validity is Validity.INVALID:
+                self.exec_tree.buggy_node = current_node
+                self.found = True

@@ -32,10 +32,12 @@ class HeaviestFirst(NavigationStrategy):
                             self.exec_tree.buggy_node = n
                             self.finish_navigation()
 
-
     def weight(self, node: Node):
         summ = 0
         for c in node.childrens:
-            summ += 1 + self.weight(c)
+            if c.validity is Validity.NOT_IN_PROV:
+                summ += self.weight(c)
+            else:
+                summ += 1 + self.weight(c)
         node.weight = summ
         return summ
