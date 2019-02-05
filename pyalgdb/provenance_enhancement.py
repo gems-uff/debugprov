@@ -1,4 +1,3 @@
-from pyalgdb.navgiation_strategy import NavigationStrategy
 from pyalgdb.node import Node
 from pyalgdb.code_component import CodeComponent
 from pyalgdb.dependency_rel import DependencyRel
@@ -8,13 +7,13 @@ from pyalgdb.visualization import Visualization
 from pyalgdb.provenance_tools import ProvenanceTools
 from pyalgdb.evaluation import Evaluation
 
-class ProvenanceEnhancement(NavigationStrategy):
+class ProvenanceEnhancement():
 
     def __init__(self, exec_tree: ExecutionTree, cursor):
-        super().__init__(exec_tree)
+        self.exec_tree = exec_tree
         self.prov_tools = ProvenanceTools(cursor)
         self.cursor = cursor
-        self.dependencies =[]
+        self.dependencies = []
         self.filtered_dependencies = []
         self.final_dependencies = []
         

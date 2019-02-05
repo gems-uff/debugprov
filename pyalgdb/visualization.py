@@ -10,7 +10,6 @@ class Visualization:
     PROVENANCE_COLOR = 'dodgerblue'
     INVALID_COLOR = 'darkorange1'
     VALID_COLOR = 'darkolivegreen1'
-    #PROV_PRUNED_NODE = 'grey64'
     NODE_IN_EVALUATION = 'gold2'
 
     def __init__(self, exec_tree: ExecutionTree):
@@ -35,20 +34,10 @@ class Visualization:
         self.graph.view()
 
     def view_exec_tree_prov(self, graph_name, dependencies:list):
-        file_name = "{}.gv".format(graph_name)
-        self.graph = Graph(graph_name, filename=file_name)
-        self.graph.attr('node', shape='box')
+        self.generate_exec_tree(graph_name)
         self.graph.attr('graph', ordering='out')
-        root_node = self.exec_tree.root_node
-        self.graph.node(str(root_node.ev_id), root_node.name, fillcolor=self.INVALID_COLOR, style='filled')
-        self.navigate(root_node)
-        eval_node = self.exec_tree.node_under_evaluation
-        if eval_node is not None:
-            self.graph.node(str(eval_node.ev_id), str(eval_node.name), fillcolor=self.NODE_IN_EVALUATION, style='filled')
         for d in dependencies: # this loop draws the provenance links between nodes
             self.graph.edge(str(d.dependent.ev_id), str(d.influencer.ev_id), None, color=self.PROVENANCE_COLOR, dir='forward')
-            self.graph.node(str(d.dependent.ev_id), None, fillcolor=self.PROVENANCE_COLOR, style='filled')
-            self.graph.node(str(d.influencer.ev_id), None, fillcolor=self.PROVENANCE_COLOR, style='filled')
         self.graph.view()
 
     def navigate(self, node:Node):
@@ -61,11 +50,6 @@ class Visualization:
                 self.graph.node(str(n.ev_id), str(n.get_name()), fillcolor=self.VALID_COLOR, style='filled')
             elif n.validity == Validity.UNKNOWN:  
                 self.graph.node(str(n.ev_id), str(n.get_name()))
-            # Uncomment this block below to paint not-in-provenance removed nodes with grey
-            #if n.prov is None or n.prov is False:
-            #    self.graph.node(str(n.ev_id), str(n.name), fillcolor=self.PROV_PRUNED_NODE, style='filled')
-            #else:
-            #    self.graph.node(str(n.ev_id), str(n.name))
 
         if len(chds) > 0:
             g = Graph()

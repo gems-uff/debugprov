@@ -87,3 +87,13 @@ class NavigationStrategy:
             self.nav_log.log("Buggy node found: "+str(self.exec_tree.buggy_node.get_name()))
             self.nav_log.log("Navigation finished.")
             self.nav_log.file.close()
+
+    def provenance_prune(self, dependencies):
+        nodes = self.exec_tree.get_all_nodes()
+        for n in nodes:
+            n.is_active = False
+        for d in dependencies:
+            infl_node = self.exec_tree.search_by_ev_id(d.influencer.ev_id) 
+            infl_node.is_active = True
+            depend_node = self.exec_tree.search_by_ev_id(d.dependent.ev_id)
+            depend_node.is_active = True

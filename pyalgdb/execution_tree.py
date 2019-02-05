@@ -19,13 +19,26 @@ class ExecutionTree:
         return nodes
 
     def search_by_ev_id(self, ev_id):
-        return self.recursive_search_by_ev_id(ev_id, self.root_node)
+        all_nodes = self.get_all_nodes()
+        for n in all_nodes:
+            if n.ev_id == ev_id:
+                return n
 
-    def recursive_search_by_ev_id(self, ev_id, node:Node):
+#    def recursive_search_by_ev_id(self, ev_id, node:Node):
+#        if node.ev_id == ev_id:
+#            return node
+#        else:
+#            for c in node.childrens:
+#                self.recursive_search_by_ev_id(ev_id, c)
+
+    def get_all_nodes(self):
+        return self._get_all_nodes(self.root_node)
+
+    def _get_all_nodes(self, node):
         nodes = []
-        if node.ev_id == ev_id:
-            return node
-            nodes.append(node)
+        nodes.append(node)
         for c in node.childrens:
-            nodes.extend(self.recursive_search_by_ev_id(ev_id, c))
+            nodes.append(c)
+        for c in node.childrens:
+            nodes.extend(self._get_all_nodes(c))
         return nodes

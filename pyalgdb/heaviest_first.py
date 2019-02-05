@@ -1,3 +1,4 @@
+import copy
 from pyalgdb.navgiation_strategy import NavigationStrategy
 from pyalgdb.node import Node
 from pyalgdb.validity import Validity
