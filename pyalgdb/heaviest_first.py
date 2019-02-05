@@ -12,9 +12,12 @@ class HeaviestFirst(NavigationStrategy):
     def recursive_navigate(self, node: Node):
         self.weight(node)
         # sort by weight, from bigger to smaller
-        node.childrens.sort(key=lambda x: x.weight, reverse=True)
-        for n in node.childrens:
+        sorted_childrens = copy.deepcopy(node.childrens)
+        sorted_childrens.sort(key=lambda x: x.weight, reverse=True)
+        #node.childrens.sort(key=lambda x: x.weight, reverse=True)
+        for srtd_n in sorted_childrens:
             if self.exec_tree.buggy_node is None:
+                n = self.exec_tree.search_by_ev_id(srtd_n.ev_id)
                 if n.validity == Validity.UNKNOWN:
                     self.evaluate(n)
                     if n.validity is Validity.VALID:
