@@ -7,7 +7,7 @@ class ExecutionTree:
         self.buggy_node = None
         self.node_under_evaluation = None
         self.is_prov_enhanced = False
-        self.dependencies = []
+        self.dependencies = None
 
     def search_by_ccid(self, code_component_id):
         return self.recursive_search_by_ccid(code_component_id, self.root_node)

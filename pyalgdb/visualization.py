@@ -19,6 +19,7 @@ class Visualization:
         file_name = "{}.gv".format(graph_name)
         self.graph = Graph(graph_name, filename=file_name)
         self.graph.attr('node', shape='box')
+        self.graph.attr('graph', ordering='out')
         root_node = self.exec_tree.root_node
         self.graph.node(str(root_node.ev_id), root_node.get_name(), fillcolor=self.INVALID_COLOR, style='filled') # root node
         self.navigate(root_node)
@@ -28,16 +29,12 @@ class Visualization:
         buggy_node = self.exec_tree.buggy_node
         if buggy_node is not None:
             self.graph.node(str(buggy_node.ev_id), str(buggy_node.get_name()), fillcolor=self.BUGGY_NODE_COLOR, style='filled')
+        if self.exec_tree.dependencies is not None:
+            for d in self.exec_tree.dependencies: # this loop draws the provenance links between nodes
+                self.graph.edge(str(d.dependent.ev_id), str(d.influencer.ev_id), None, color=self.PROVENANCE_COLOR, dir='forward')
 
     def view_exec_tree(self, graph_name = 'exec_tree'):
         self.generate_exec_tree(graph_name)
-        self.graph.view()
-
-    def view_exec_tree_prov(self, graph_name, dependencies:list):
-        self.generate_exec_tree(graph_name)
-        self.graph.attr('graph', ordering='out')
-        for d in dependencies: # this loop draws the provenance links between nodes
-            self.graph.edge(str(d.dependent.ev_id), str(d.influencer.ev_id), None, color=self.PROVENANCE_COLOR, dir='forward')
         self.graph.view()
 
     def navigate(self, node:Node):

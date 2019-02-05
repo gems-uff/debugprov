@@ -13,7 +13,8 @@ class ProvenanceEnhancement():
         self.exec_tree = exec_tree
         self.prov_tools = ProvenanceTools(cursor)
         self.cursor = cursor
-        self.dependencies = []
+        self.dependencies = self.prov_tools.get_dependencies()
+        self.exec_tree.dependencies = self.dependencies
         self.filtered_dependencies = []
         self.final_dependencies = []
         
@@ -63,8 +64,9 @@ class ProvenanceEnhancement():
             self.recursive_get_func_dependencies_of(ev)
 
     def enhance(self, evaluation):
-        self.recursive_get_func_dependencies_of(evaluation)    
-        return self.final_dependencies 
+        self.recursive_get_func_dependencies_of(evaluation)   
+        self.exec_tree.dependencies = self.final_dependencies
+        self.exec_tree.is_prov_enhanced = True 
 
     def enhance_all(self):
         # Perform the provenance enhancement, having as "start set" all nodes that are function calls
