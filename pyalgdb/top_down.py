@@ -13,6 +13,12 @@ class TopDown(NavigationStrategy):
             if self.exec_tree.buggy_node is None:
                 if n.validity == Validity.UNKNOWN:
                     self.evaluate(n)
+                elif n.validity == Validity.NOT_IN_PROV:
+                    # workaround to ignore nodes that are not in the
+                    # provenance dag, but without removing its childs
+                    # (the childs can be in the dag)
+                    if n.has_childrens():
+                        self.recursive_navigate(n)                    
                 if n.validity == Validity.INVALID:
                     for j in node.childrens:
                         if j.validity == Validity.UNKNOWN:

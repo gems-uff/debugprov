@@ -26,13 +26,6 @@ class ExecutionTree:
             if n.ev_id == ev_id:
                 return n
 
-#    def recursive_search_by_ev_id(self, ev_id, node:Node):
-#        if node.ev_id == ev_id:
-#            return node
-#        else:
-#            for c in node.childrens:
-#                self.recursive_search_by_ev_id(ev_id, c)
-
     def get_all_nodes(self):
         return self._get_all_nodes(self.root_node)
 

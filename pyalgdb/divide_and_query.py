@@ -16,7 +16,7 @@ class DivideAndQuery(NavigationStrategy):
             elif node.weight > self.best_guess.weight:
                 self.best_guess = node
         for c in node.childrens:
-            if c.validity is Validity.UNKNOWN or c.validity is Validity.INVALID:
+            if c.validity is not Validity.VALID:
                 self.find_best_guess(c, w_2)
 
     def weight(self, node: Node):
@@ -24,6 +24,8 @@ class DivideAndQuery(NavigationStrategy):
         for c in node.childrens:
             if c.validity is Validity.UNKNOWN or c.validity is Validity.INVALID:
                 summ += 1 + self.weight(c)
+            elif c.validity is Validity.NOT_IN_PROV:
+                summ += self.weight(c)
         node.weight = summ
         return summ
 
