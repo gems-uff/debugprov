@@ -12,7 +12,9 @@ class NavigationStrategy:
         self.AUTOMATED_NAVIGATION = automated
         if self.AUTOMATED_NAVIGATION:
             answer_reader = AnswerReader(answer_file)
-            self.answers = answer_reader.read_answers()
+            data = answer_reader.read_answers()
+            self.answers = data['answer_dict']
+            self.wrong_node_id = data['wrong_node_id']
             self.nav_log = NavigationLogger()
             self.nav_log.log("Navigation Strategy: {}".format(self.__class__.__name__))
             self.sequence_num = 0

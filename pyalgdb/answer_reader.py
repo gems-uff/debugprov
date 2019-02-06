@@ -1,25 +1,33 @@
 import csv
+import json
 from pyalgdb.validity import Validity
 
 class AnswerReader:
 
-    def __init__(self, answer_file = 'aux_files/answers.csv'):
+    def __init__(self, answer_file):
         self.file_name = answer_file
 
+    
     def read_answers(self):
-        answers = {}
-        myfile = open(self.file_name)
-        with myfile as csv_file:
-            csv_reader = csv.reader(csv_file, delimiter=',')
-            line_count = 0
-            for row in csv_reader:
-                if line_count != 0:
-                    if row[1] == 'valid':
-                        answers[int(row[0])] = Validity.VALID
-                    elif row[1] == 'invalid':
-                        answers[int(row[0])] = Validity.INVALID
-                    else:
-                        raise Exception('Error reading answer csv file')
-                line_count += 1
-        myfile.close()
-        return answers
+        with open(self.file_name) as json_data:
+            data = json.load(json_data)
+        answer_dict = {}
+        wrong_node_id = int(data['wrong_node_id'])
+        for ans in data['answers']:
+            for k,v in ans.items():
+                key = int(k)
+                value = None
+                if v == 'valid':
+                    value = Validity.VALID
+                elif v == 'invalid':
+                    value = Validity.INVALID
+                if value is None:
+                    raise Exception('Error parsing JSON file')
+                else:
+                    answer_dict[key] = value
+        obj = {
+            "answer_dict": answer_dict,
+            "wrong_node_id": wrong_node_id
+        }
+        return obj
+
