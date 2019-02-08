@@ -1,5 +1,4 @@
 from pyalgdb.node import Node
-from pyalgdb.code_component import CodeComponent
 from pyalgdb.dependency_rel import DependencyRel
 from pyalgdb.validity import Validity
 from pyalgdb.execution_tree import ExecutionTree

@@ -4,8 +4,8 @@ from pyalgdb.validity import Validity
 
 class AnswerReader:
 
-    def __init__(self, answer_file):
-        self.file_name = answer_file
+    def __init__(self, file_name):
+        self.file_name = file_name
 
     
     def read_answers(self):

@@ -1,0 +1,159 @@
+graph exec_tree {
+	node [shape=box]
+	graph [ordering=out]
+	1 [label="1 calculate.py" fillcolor=darkorange1 style=filled]
+	1 -- 20 [dir=forward]
+	20 [label="20 main()" fillcolor=darkorange1 style=filled]
+	{
+		graph [rank=same]
+		20
+	}
+	20 -- 21 [dir=forward]
+	21 [label="21 abre_arquivo(FILE_NAME)" fillcolor=darkolivegreen1 style=filled]
+	20 -- 28 [dir=forward]
+	28 [label="28 leitura_csv(myfile)" fillcolor=darkolivegreen1 style=filled]
+	20 -- 45 [dir=forward]
+	45 [label="45 processa_dados(data)" fillcolor=darkolivegreen1 style=filled]
+	20 -- 262 [dir=forward]
+	262 [label="262 calcula_resultado(proc_data)" fillcolor=darkorange1 style=filled]
+	20 -- 280 [dir=forward]
+	280 [label="280 imprime_resultado(res)" fillcolor=darkolivegreen1 style=filled]
+	20 -- 296 [dir=forward]
+	296 [label="296 fecha_arquivos(myfile)" fillcolor=darkolivegreen1 style=filled]
+	{
+		graph [rank=same]
+		21
+		28
+		45
+		262
+		280
+		296
+	}
+	21 -- 24 [dir=forward]
+	24 [label="24 open(name)" fillcolor=darkolivegreen1 style=filled]
+	{
+		graph [rank=same]
+		24
+	}
+	28 -- 34 [dir=forward]
+	34 [label="34 print(\"Processed \"+str(line_count)+\" lines\")" fillcolor=darkolivegreen1 style=filled]
+	28 -- 36 [dir=forward]
+	36 [label="36 str(line_count)" fillcolor=darkolivegreen1 style=filled]
+	{
+		graph [rank=same]
+		34
+		36
+	}
+	45 -- 48 [dir=forward]
+	48 [label="48 enumerate(data)" fillcolor=darkolivegreen1 style=filled]
+	45 -- 54 [dir=forward]
+	54 [label="54 randint(-100, 100)" fillcolor=darkolivegreen1 style=filled]
+	45 -- 65 [dir=forward]
+	65 [label="65 randint(-100, 100)" fillcolor=darkolivegreen1 style=filled]
+	45 -- 76 [dir=forward]
+	76 [label="76 randint(-100, 100)" fillcolor=darkolivegreen1 style=filled]
+	45 -- 87 [dir=forward]
+	87 [label="87 randint(-100, 100)" fillcolor=darkolivegreen1 style=filled]
+	45 -- 98 [dir=forward]
+	98 [label="98 randint(-100, 100)" fillcolor=darkolivegreen1 style=filled]
+	45 -- 109 [dir=forward]
+	109 [label="109 randint(-100, 100)" fillcolor=darkolivegreen1 style=filled]
+	45 -- 120 [dir=forward]
+	120 [label="120 randint(-100, 100)" fillcolor=darkolivegreen1 style=filled]
+	45 -- 131 [dir=forward]
+	131 [label="131 randint(-100, 100)" fillcolor=darkolivegreen1 style=filled]
+	45 -- 142 [dir=forward]
+	142 [label="142 randint(-100, 100)" fillcolor=darkolivegreen1 style=filled]
+	45 -- 153 [dir=forward]
+	153 [label="153 randint(-100, 100)" fillcolor=darkolivegreen1 style=filled]
+	45 -- 164 [dir=forward]
+	164 [label="164 randint(-100, 100)" fillcolor=darkolivegreen1 style=filled]
+	45 -- 175 [dir=forward]
+	175 [label="175 randint(-100, 100)" fillcolor=darkolivegreen1 style=filled]
+	45 -- 186 [dir=forward]
+	186 [label="186 randint(-100, 100)" fillcolor=darkolivegreen1 style=filled]
+	45 -- 197 [dir=forward]
+	197 [label="197 randint(-100, 100)" fillcolor=darkolivegreen1 style=filled]
+	45 -- 208 [dir=forward]
+	208 [label="208 randint(-100, 100)" fillcolor=darkolivegreen1 style=filled]
+	45 -- 219 [dir=forward]
+	219 [label="219 randint(-100, 100)" fillcolor=darkolivegreen1 style=filled]
+	45 -- 230 [dir=forward]
+	230 [label="230 randint(-100, 100)" fillcolor=darkolivegreen1 style=filled]
+	45 -- 241 [dir=forward]
+	241 [label="241 randint(-100, 100)" fillcolor=darkolivegreen1 style=filled]
+	45 -- 252 [dir=forward]
+	252 [label="252 randint(-100, 100)" fillcolor=darkolivegreen1 style=filled]
+	{
+		graph [rank=same]
+		48
+		54
+		65
+		76
+		87
+		98
+		109
+		120
+		131
+		142
+		153
+		164
+		175
+		186
+		197
+		208
+		219
+		230
+		241
+		252
+	}
+	262 -- 265 [dir=forward]
+	265 [label="265 average(data)" fillcolor=darkorange1 style=filled]
+	{
+		graph [rank=same]
+		265
+	}
+	265 -- 268 [dir=forward]
+	268 [label="268 sum(numbers)" fillcolor=darkolivegreen1 style=filled]
+	265 -- 271 [dir=forward]
+	271 [label="271 float(total)" fillcolor=darkolivegreen1 style=filled]
+	265 -- 276 [dir=forward]
+	276 [label="276 len(numbers)" fillcolor=darkolivegreen1 style=filled]
+	{
+		graph [rank=same]
+		268
+		271
+		276
+	}
+	280 -- 283 [dir=forward]
+	283 [label="283 print(\"$ $ $ $ $ $ $ $ $ $\")" fillcolor=darkolivegreen1 style=filled]
+	280 -- 285 [dir=forward]
+	285 [label="285 print(\"$ $ $ $ $ $ $ $ $ $\")" fillcolor=darkolivegreen1 style=filled]
+	280 -- 287 [dir=forward]
+	287 [label="287 print(\"$ RESULTADO: \"+str(res))" fillcolor=darkolivegreen1 style=filled]
+	280 -- 289 [dir=forward]
+	289 [label="289 str(res)" fillcolor=darkolivegreen1 style=filled]
+	280 -- 292 [dir=forward]
+	292 [label="292 print(\"$ $ $ $ $ $ $ $ $ $\")" fillcolor=darkolivegreen1 style=filled]
+	280 -- 294 [dir=forward]
+	294 [label="294 print(\"$ $ $ $ $ $ $ $ $ $\")" fillcolor=darkolivegreen1 style=filled]
+	{
+		graph [rank=same]
+		283
+		285
+		287
+		289
+		292
+		294
+	}
+	296 -- 299 [dir=forward]
+	299 [label="299 print(\"closing all files....\")" fillcolor=darkolivegreen1 style=filled]
+	296 -- 301 [dir=forward]
+	301 [label="301 file.close()" fillcolor=darkolivegreen1 style=filled]
+	{
+		graph [rank=same]
+		299
+		301
+	}
+	265 [label="265 average(data)" fillcolor=red style=filled]
+}
