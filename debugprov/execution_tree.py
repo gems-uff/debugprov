@@ -1,4 +1,4 @@
-from pyalgdb.node import Node
+from debugprov.node import Node
 
 class ExecutionTree:
 

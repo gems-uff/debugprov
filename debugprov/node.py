@@ -1,5 +1,5 @@
-from pyalgdb.parameter import Parameter
-from pyalgdb.validity import Validity
+from debugprov.parameter import Parameter
+from debugprov.validity import Validity
 
 class Node:
     

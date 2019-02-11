@@ -1,6 +1,6 @@
-from pyalgdb.navgiation_strategy import NavigationStrategy
-from pyalgdb.node import Node
-from pyalgdb.validity import Validity
+from debugprov.navgiation_strategy import NavigationStrategy
+from debugprov.node import Node
+from debugprov.validity import Validity
 
 class TopDown(NavigationStrategy):
 

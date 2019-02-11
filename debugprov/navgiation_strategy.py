@@ -1,9 +1,9 @@
-from pyalgdb.node import Node
-from pyalgdb.execution_tree import ExecutionTree
-from pyalgdb.validity import Validity
-from pyalgdb.visualization import Visualization
-from pyalgdb.answer_reader import AnswerReader
-from pyalgdb.navigation_logger import NavigationLogger
+from debugprov.node import Node
+from debugprov.execution_tree import ExecutionTree
+from debugprov.validity import Validity
+from debugprov.visualization import Visualization
+from debugprov.answer_reader import AnswerReader
+from debugprov.navigation_logger import NavigationLogger
 
 class NavigationStrategy:
 

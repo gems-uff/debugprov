@@ -1,8 +1,8 @@
 import unittest
 import sys
 
-from pyalgdb.dependency_rel import DependencyRel
-from pyalgdb.evaluation import Evaluation
+from debugprov.dependency_rel import DependencyRel
+from debugprov.evaluation import Evaluation
 
 class DependencyRelTest(unittest.TestCase):
 

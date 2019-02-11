@@ -2,13 +2,13 @@ import unittest
 import sys
 import sqlite3
 
-from pyalgdb.execution_tree_creator import ExecTreeCreator
-from pyalgdb.node import Node
-from pyalgdb.validity import Validity
+from debugprov.execution_tree_creator import ExecTreeCreator
+from debugprov.node import Node
+from debugprov.validity import Validity
 
 class ExecTreeCreatorTest(unittest.TestCase):
 
-    DB_SQLITE_PATH = 'C:/Users/linha/Desktop/ws/pyalgdb/pyalgdb/tests/db.sqlite'
+    DB_SQLITE_PATH = 'C:/Users/linha/Desktop/ws/debugprov/debugprov/tests/db.sqlite'
     CURSOR = sqlite3.connect(DB_SQLITE_PATH).cursor()
 
     def setUp(self):

@@ -1,10 +1,10 @@
-from pyalgdb.node import Node
-from pyalgdb.dependency_rel import DependencyRel
-from pyalgdb.validity import Validity
-from pyalgdb.execution_tree import ExecutionTree
-from pyalgdb.visualization import Visualization
-from pyalgdb.provenance_tools import ProvenanceTools
-from pyalgdb.evaluation import Evaluation
+from debugprov.node import Node
+from debugprov.dependency_rel import DependencyRel
+from debugprov.validity import Validity
+from debugprov.execution_tree import ExecutionTree
+from debugprov.visualization import Visualization
+from debugprov.provenance_tools import ProvenanceTools
+from debugprov.evaluation import Evaluation
 
 class ProvenanceEnhancement():
 

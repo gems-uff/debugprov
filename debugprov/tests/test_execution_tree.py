@@ -1,7 +1,7 @@
 import unittest
 
-from pyalgdb.execution_tree import ExecutionTree
-from pyalgdb.node import Node
+from debugprov.execution_tree import ExecutionTree
+from debugprov.node import Node
 
 class ExecutionTreeTest(unittest.TestCase):
 

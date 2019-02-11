@@ -1,6 +1,6 @@
 import unittest
 
-from pyalgdb.evaluation import Evaluation
+from debugprov.evaluation import Evaluation
 
 class EvaluationTest(unittest.TestCase):
 

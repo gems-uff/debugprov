@@ -1,7 +1,7 @@
-from pyalgdb.navgiation_strategy import NavigationStrategy
-from pyalgdb.node import Node
-from pyalgdb.validity import Validity
-from pyalgdb.execution_tree import ExecutionTree
+from debugprov.navgiation_strategy import NavigationStrategy
+from debugprov.node import Node
+from debugprov.validity import Validity
+from debugprov.execution_tree import ExecutionTree
 
 class DivideAndQuery(NavigationStrategy):
 

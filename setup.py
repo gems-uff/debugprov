@@ -1,14 +1,14 @@
 from setuptools import setup
 
 setup(
-    name="pyalgdb",
+    name="debugprov",
     version="0.0.1",    
-    packages=["pyalgdb"],
+    packages=["debugprov"],
     author=("Henrique Linhares"),
     author_email="hlinhares@id.uff.br",
     description="",
     entry_points={
-        "console_scripts": ["pyalgdb=pyalgdb.main:main"]
+        "console_scripts": ["debugprov=debugprov.main:main"]
     },
     keywords=[""],
     url="",

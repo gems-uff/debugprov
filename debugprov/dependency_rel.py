@@ -1,4 +1,4 @@
-from pyalgdb.evaluation import Evaluation
+from debugprov.evaluation import Evaluation
 
 # Defines a dependency relation between two evalautions
 class DependencyRel:

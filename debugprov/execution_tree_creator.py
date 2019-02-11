@@ -1,5 +1,5 @@
-from pyalgdb.node import Node
-from pyalgdb.execution_tree import ExecutionTree
+from debugprov.node import Node
+from debugprov.execution_tree import ExecutionTree
 
 class ExecTreeCreator(): 
 

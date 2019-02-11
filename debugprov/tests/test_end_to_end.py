@@ -2,15 +2,15 @@ import unittest
 
 import sqlite3
 from graphviz import Graph
-from pyalgdb.validity import Validity 
-from pyalgdb.node import Node
-from pyalgdb.provenance_enhancement import ProvenanceEnhancement
-from pyalgdb.execution_tree_creator import ExecTreeCreator
-from pyalgdb.top_down import TopDown
-from pyalgdb.heaviest_first import HeaviestFirst
-from pyalgdb.visualization import Visualization
-from pyalgdb.single_stepping import SingleStepping
-from pyalgdb.divide_and_query import DivideAndQuery
+from debugprov.validity import Validity 
+from debugprov.node import Node
+from debugprov.provenance_enhancement import ProvenanceEnhancement
+from debugprov.execution_tree_creator import ExecTreeCreator
+from debugprov.top_down import TopDown
+from debugprov.heaviest_first import HeaviestFirst
+from debugprov.visualization import Visualization
+from debugprov.single_stepping import SingleStepping
+from debugprov.divide_and_query import DivideAndQuery
 
 class EndToEndTest(unittest.TestCase):
 
@@ -30,10 +30,10 @@ class EndToEndTest(unittest.TestCase):
             vis.generate_exec_tree()
             results.append(str(vis.graph))
             
-        SS_FILE = 'pyalgdb/tests/test_files/age-avg-ss.gv'
-        TD_FILE = 'pyalgdb/tests/test_files/age-avg-td.gv'
-        HF_FILE = 'pyalgdb/tests/test_files/age-avg-hf.gv'
-        DQ_FILE = 'pyalgdb/tests/test_files/age-avg-dq.gv'
+        SS_FILE = 'debugprov/tests/test_files/age-avg-ss.gv'
+        TD_FILE = 'debugprov/tests/test_files/age-avg-td.gv'
+        HF_FILE = 'debugprov/tests/test_files/age-avg-hf.gv'
+        DQ_FILE = 'debugprov/tests/test_files/age-avg-dq.gv'
         
         result_files = [SS_FILE,TD_FILE,HF_FILE,DQ_FILE]
         idx = 0

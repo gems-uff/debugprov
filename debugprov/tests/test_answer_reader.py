@@ -1,7 +1,7 @@
 import unittest
 
-from pyalgdb.answer_reader import AnswerReader
-from pyalgdb.validity import Validity
+from debugprov.answer_reader import AnswerReader
+from debugprov.validity import Validity
 
 class AnswerReaderTest(unittest.TestCase):
 

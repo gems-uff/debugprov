@@ -1,8 +1,8 @@
 from graphviz import Graph
 
-from pyalgdb.execution_tree import ExecutionTree
-from pyalgdb.node import Node
-from pyalgdb.validity import Validity
+from debugprov.execution_tree import ExecutionTree
+from debugprov.node import Node
+from debugprov.validity import Validity
 
 class Visualization:
 

@@ -1,6 +1,6 @@
 import logging
 from datetime import datetime
-from pyalgdb.node import Node
+from debugprov.node import Node
 
 class NavigationLogger:
 

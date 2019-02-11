@@ -1,9 +1,9 @@
 import unittest
 import sys
 
-from pyalgdb.navgiation_strategy import NavigationStrategy
-from pyalgdb.execution_tree import ExecutionTree
-from pyalgdb.node import Node
+from debugprov.navgiation_strategy import NavigationStrategy
+from debugprov.execution_tree import ExecutionTree
+from debugprov.node import Node
 
 class NavigationStrategyTest(unittest.TestCase):
 
