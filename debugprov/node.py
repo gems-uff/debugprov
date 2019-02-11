@@ -12,7 +12,6 @@ class Node:
         self.childrens = []
         self.validity = Validity.UNKNOWN
         self.params = []
-        self.is_active = True
 
     def has_childrens(self):
         return len(self.childrens) > 0
