@@ -2,8 +2,10 @@ from __future__ import unicode_literals
 
 import sqlite3
 
+from graphviz import Graph
 from prompt_toolkit.shortcuts import confirm, prompt
 
+from debugprov.node import Node
 from debugprov.execution_tree_creator import ExecTreeCreator
 from debugprov.top_down import TopDown
 from debugprov.heaviest_first import HeaviestFirst
@@ -11,6 +13,35 @@ from debugprov.visualization import Visualization
 from debugprov.provenance_enhancement import ProvenanceEnhancement
 from debugprov.single_stepping import SingleStepping
 from debugprov.divide_and_query import DivideAndQuery
+from debugprov.validity import Validity
+
+class CustomVisualization(Visualization):
+
+    def name_for_node(self, node:Node):
+        return " {} {} '{}'".format(str(node.ev_id),node.name,str(node.retrn))
+
+    def navigate(self, node:Node):
+        chds = node.childrens
+        for n in chds:
+            self.graph.edge(str(node.ev_id), str(n.ev_id), None, dir='forward')
+            if n.validity == Validity.INVALID:
+                self.graph.node(str(n.ev_id), self.name_for_node(n), fillcolor=self.INVALID_COLOR, style='filled')
+            elif n.validity == Validity.VALID: 
+                self.graph.node(str(n.ev_id), self.name_for_node(n), fillcolor=self.VALID_COLOR, style='filled')
+            elif n.validity == Validity.UNKNOWN:  
+                self.graph.node(str(n.ev_id), self.name_for_node(n))
+            elif n.validity is Validity.NOT_IN_PROV:
+                self.graph.node(str(n.ev_id), self.name_for_node(n), fillcolor=self.PROV_PRUNED_NODE_COLOR, style='filled')
+            
+        if len(chds) > 0:
+            g = Graph()
+            for c in chds:
+                g.node(str(c.ev_id))
+            g.graph_attr['rank']='same'
+            self.graph.subgraph(g)
+
+        for n in chds: 
+            self.navigate(n)
 
 class ConsoleInterface:
 
@@ -34,8 +65,11 @@ class ConsoleInterface:
     def ask_use_wrong_data(self):
         return confirm('Do you want to inform which output data is wrong? ')
 
-    def ask_wrong_data(self):
-        raise NotImplementedError("Not Ready Yet")
+    def ask_wrong_data(self, exec_tree):
+        custom_vis = CustomVisualization(exec_tree)
+        custom_vis.view_exec_tree('custom_tree')
+        print("Choose the id of the node with incorrect data: ")
+        return int(prompt('> '))
 
     def ask_output_file_name(self):
         self.out_filename = prompt('Output file name: ', default='exec_tree')
@@ -53,10 +87,13 @@ class ConsoleInterface:
         nav = self.choosen_nav_strategy(exec_tree) 
         if self.ask_use_prov():
             prov = ProvenanceEnhancement(exec_tree, cursor)
+            prov.enhance_all()
             if self.ask_use_wrong_data():
-                wrong_data = self.ask_use_wrong_data()
-            else:
-                prov.enhance_all()
+                wrong_data_id = self.ask_wrong_data(exec_tree)
+                wrong_data = exec_tree.search_by_ev_id(wrong_data_id)
+                prov.final_dependencies = []
+                prov.enhance(wrong_data)
+            nav.provenance_prune()
         result_tree = nav.navigate()
         file_name = self.ask_output_file_name()
         vis = Visualization(result_tree)
