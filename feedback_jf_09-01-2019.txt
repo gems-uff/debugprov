@@ -1,4 +1,4 @@
-imprimir árvore parcial
+imprimir árvore parcial (feito)
 
 D3.js, para visualizar a árvore na web (pelo browser)
 
