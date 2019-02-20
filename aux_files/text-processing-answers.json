@@ -1,17 +1,18 @@
 {
-    "wrong_node_id": "53",
+    "wrong_node_id": "44",
     "answers": [
         {"1": "invalid"},
         {"12": "valid"},
-        {"32": "invalid"},
-        {"41": "valid"},
+        {"25": "invalid"},
+        {"32": "valid"},
         {"15": "valid"},
         {"19": "valid"},
-        {"24": "valid"},
-        {"29": "valid"},
-        {"37": "invalid"},
-        {"48": "valid"},
-        {"53": "valid"},
-        {"55": "valid"}
+        {"21": "valid"},
+        {"28": "invalid"},
+        {"37": "valid"},
+        {"41": "valid"},
+        {"44": "valid"},
+        {"46": "valid"}
+
     ]
 }
