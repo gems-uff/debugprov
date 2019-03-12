@@ -13,6 +13,7 @@ scripts = ['01-compression_analysis/psnr.py',
            '03-intersection/intersection.py',
            '04-lu_decomposition/lu_decomposition.py',
            '05-newton_method/newton_method.py',
+           '06-md5/hashmd5.py',
            '09-dijkstra_algorithm/dijkstra_algorithm.py',
            '10-caesar_cipher/caesar_cipher.py',
            '11-brute_force_caesar_cipher/brute_force_caesar_cipher.py',
@@ -23,7 +24,8 @@ scripts = ['01-compression_analysis/psnr.py',
            '19-binary_search/binary_search.py',
            '21-longest_common_subsequence/lcs.py',
            '24-bubblesort/bubblesort.py',
-           '25-quicksort/quicksort.py']
+           '25-quicksort/quicksort.py',
+           '27-generate_parenthesis/generate_parenthesis.py']
 
 def run_scripts(scripts,save_log=False):
     for script in scripts:
