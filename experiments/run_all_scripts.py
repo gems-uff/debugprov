@@ -35,6 +35,7 @@ scripts = ['01-compression_analysis/psnr.py',
            '25-quicksort/quicksort.py',
            '26-heapsort/heapsort.py',
            '27-generate_parenthesis/generate_parenthesis.py',
+           '28-knn/knn.py',
            '29-string_permutation/stringpermutation.py',
            '30-linear_regression/demo.py']
 
@@ -51,7 +52,7 @@ def run_scripts(scripts,save_log=False):
             os.chdir(directory)
             proc = subprocess.Popen(['python',script], cwd=os.getcwd(), env=os.environ, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             stdout, stderr = proc.communicate()
-            #print(stdout.decode('utf-8'))
+            print(stdout.decode('utf-8'))
             if save_log:
                 logfile = open(script+'.log','w') 
                 logfile.write(stdout.decode('utf-8'))
