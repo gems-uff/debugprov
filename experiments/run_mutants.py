@@ -8,7 +8,7 @@ import os
 import subprocess
 import shutil
 
-mutants = ['02-bisection/mutants.all']
+mutants = ['30-linear_regression/mutants.running']
 
 def run_mutants(scripts):
     muts_with_syntax_errors = []
@@ -18,7 +18,7 @@ def run_mutants(scripts):
         os.chdir(script_path)
         for mutant in os.listdir():
             if mutant.endswith('.py'):
-                print(mutant)
+                #print(mutant)
                 proc = subprocess.Popen(['python',mutant], cwd=os.getcwd(), env=os.environ, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                 try:
                     stdout, stderr = proc.communicate(timeout=TIMEOUT_LIMIT)
@@ -29,8 +29,10 @@ def run_mutants(scripts):
                         logfile.close()
                     else:
                         muts_with_syntax_errors.append(mutant)
+                    proc.kill()
                 except:
                     muts_with_infinite_loops.append(mutant)
+                    proc.kill()
         for mut in muts_with_syntax_errors:
             os.remove(mut)
         for mut in muts_with_infinite_loops:
