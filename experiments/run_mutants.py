@@ -8,7 +8,7 @@ import os
 import subprocess
 import shutil
 
-mutants = ['30-linear_regression/mutants.running']
+mutants = ['15-decision_tree/mutants.running']
 
 def run_mutants(scripts):
     muts_with_syntax_errors = []
