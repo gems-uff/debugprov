@@ -17,7 +17,7 @@ def run_mutants(scripts):
         print(script_path)
         os.chdir(script_path)
         for mutant in os.listdir():
-            if mutant.endswith('.py'):
+            if mutant.startswith('rsa_cipher') and mutant.endswith('.py'):
                 #print(mutant)
                 proc = subprocess.Popen(['python',mutant], cwd=os.getcwd(), env=os.environ, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                 try:
