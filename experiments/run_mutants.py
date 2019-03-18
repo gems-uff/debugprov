@@ -8,7 +8,7 @@ import os
 import subprocess
 import shutil
 
-mutants = ['15-decision_tree/mutants.running']
+mutants = ['14-rsa_cipher/mutants.running']
 
 def run_mutants(scripts):
     muts_with_syntax_errors = []
