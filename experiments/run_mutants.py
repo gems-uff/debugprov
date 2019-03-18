@@ -8,7 +8,7 @@ import os
 import subprocess
 import shutil
 
-mutants = ['15-decision_tree/mutants.running']
+mutants = ['14-rsa_cipher/mutants.running']
 
 def run_mutants(scripts):
     muts_with_syntax_errors = []
@@ -18,7 +18,7 @@ def run_mutants(scripts):
         os.chdir(script_path)
         for mutant in os.listdir():
             if mutant.startswith('rsa_cipher') and mutant.endswith('.py'):
-                #print(mutant)
+                print(mutant)
                 proc = subprocess.Popen(['python',mutant], cwd=os.getcwd(), env=os.environ, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                 try:
                     stdout, stderr = proc.communicate(timeout=TIMEOUT_LIMIT)
@@ -29,6 +29,7 @@ def run_mutants(scripts):
                         logfile.close()
                     else:
                         muts_with_syntax_errors.append(mutant)
+                        print(stderr)
                     proc.kill()
                 except:
                     muts_with_infinite_loops.append(mutant)
