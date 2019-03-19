@@ -63,7 +63,7 @@ def run_mutants(directories):
                                         import sys
                                         sys.exit("EXCEPT Something wrong happened...")
                 os.chdir('..')
-        os.chdir('..')
+        os.chdir('../..')
 
 os.chdir(SCRIPTS_DIRECTORY)
 run_mutants(directories)
