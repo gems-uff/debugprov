@@ -8,32 +8,11 @@ import os
 import subprocess
 import shutil
 
-directories = ['02-bisection',
-           '03-intersection',
-           '04-lu_decomposition',
-           '05-newton_method',
-           '06-md5',
-           '07-basic_binary_tree',
-           '08-edit_distance',
-           '09-dijkstra_algorithm',
-           '10-caesar_cipher',
-           '11-brute_force_caesar_cipher',
+directories = ['11-brute_force_caesar_cipher',
            '12-basic_maths',
            '13-merge_sort',
            '15-decision_tree',
-           '16-math_parser',
-           '17-merge_intervals',
-           '18-graph_find_path',
-           '19-binary_search',
-           '20-permute',
-           '21-longest_common_subsequence',
-           '22-catalan',
-           '23-longest_increasing_subsequence',
-           '24-bubblesort',
-           '25-quicksort',
-           '26-heapsort',
-           '28-knn',
-           '29-string_permutation']
+           '16-math_parser']
 
 def run_mutants(directories):
     for directory in directories:
@@ -46,7 +25,6 @@ def run_mutants(directories):
                         if py_file.endswith('.py'):
                                 print(os.getcwd())
                                 print("now run {}".format(py_file))
-                                print(os.environ)
                                 proc = subprocess.Popen(['now','run',py_file], cwd=os.getcwd(), env=os.environ, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                                 try:
                                         stdout, stderr = proc.communicate(timeout=TIMEOUT_LIMIT)
