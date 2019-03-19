@@ -1,0 +1,1818 @@
+11-brute_force_caesar_cipher
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/11-brute_force_caesar_cipher/mutants.wrong_result/brute_force_caesar_cipher.mutant.43
+now run brute_force_caesar_cipher.mutant.43.py
+Success running brute_force_caesar_cipher.mutant.43.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/11-brute_force_caesar_cipher/mutants.wrong_result/brute_force_caesar_cipher.mutant.37
+now run brute_force_caesar_cipher.mutant.37.py
+Success running brute_force_caesar_cipher.mutant.37.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/11-brute_force_caesar_cipher/mutants.wrong_result/brute_force_caesar_cipher.mutant.63
+now run brute_force_caesar_cipher.mutant.63.py
+Success running brute_force_caesar_cipher.mutant.63.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/11-brute_force_caesar_cipher/mutants.wrong_result/brute_force_caesar_cipher.mutant.8
+now run brute_force_caesar_cipher.mutant.8.py
+Success running brute_force_caesar_cipher.mutant.8.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/11-brute_force_caesar_cipher/mutants.wrong_result/brute_force_caesar_cipher.mutant.64
+now run brute_force_caesar_cipher.mutant.64.py
+Success running brute_force_caesar_cipher.mutant.64.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/11-brute_force_caesar_cipher/mutants.wrong_result/brute_force_caesar_cipher.mutant.36
+now run brute_force_caesar_cipher.mutant.36.py
+Success running brute_force_caesar_cipher.mutant.36.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/11-brute_force_caesar_cipher/mutants.wrong_result/brute_force_caesar_cipher.mutant.52
+now run brute_force_caesar_cipher.mutant.52.py
+Success running brute_force_caesar_cipher.mutant.52.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/11-brute_force_caesar_cipher/mutants.wrong_result/brute_force_caesar_cipher.mutant.7
+now run brute_force_caesar_cipher.mutant.7.py
+Success running brute_force_caesar_cipher.mutant.7.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/11-brute_force_caesar_cipher/mutants.wrong_result/brute_force_caesar_cipher.mutant.16
+now run brute_force_caesar_cipher.mutant.16.py
+Success running brute_force_caesar_cipher.mutant.16.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/11-brute_force_caesar_cipher/mutants.wrong_result/brute_force_caesar_cipher.mutant.1
+now run brute_force_caesar_cipher.mutant.1.py
+Success running brute_force_caesar_cipher.mutant.1.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/11-brute_force_caesar_cipher/mutants.wrong_result/brute_force_caesar_cipher.mutant.56
+now run brute_force_caesar_cipher.mutant.56.py
+Success running brute_force_caesar_cipher.mutant.56.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/11-brute_force_caesar_cipher/mutants.wrong_result/brute_force_caesar_cipher.mutant.15
+now run brute_force_caesar_cipher.mutant.15.py
+Success running brute_force_caesar_cipher.mutant.15.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/11-brute_force_caesar_cipher/mutants.wrong_result/brute_force_caesar_cipher.mutant.60
+now run brute_force_caesar_cipher.mutant.60.py
+Success running brute_force_caesar_cipher.mutant.60.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/11-brute_force_caesar_cipher/mutants.wrong_result/brute_force_caesar_cipher.mutant.44
+now run brute_force_caesar_cipher.mutant.44.py
+Success running brute_force_caesar_cipher.mutant.44.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/11-brute_force_caesar_cipher/mutants.wrong_result/brute_force_caesar_cipher.mutant.4
+now run brute_force_caesar_cipher.mutant.4.py
+Success running brute_force_caesar_cipher.mutant.4.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/11-brute_force_caesar_cipher/mutants.wrong_result/brute_force_caesar_cipher.mutant.50
+now run brute_force_caesar_cipher.mutant.50.py
+Success running brute_force_caesar_cipher.mutant.50.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/11-brute_force_caesar_cipher/mutants.wrong_result/brute_force_caesar_cipher.mutant.58
+now run brute_force_caesar_cipher.mutant.58.py
+Success running brute_force_caesar_cipher.mutant.58.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/11-brute_force_caesar_cipher/mutants.wrong_result/brute_force_caesar_cipher.mutant.29
+now run brute_force_caesar_cipher.mutant.29.py
+Success running brute_force_caesar_cipher.mutant.29.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/11-brute_force_caesar_cipher/mutants.wrong_result/brute_force_caesar_cipher.mutant.65
+now run brute_force_caesar_cipher.mutant.65.py
+Success running brute_force_caesar_cipher.mutant.65.py
+12-basic_maths
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.191
+now run basic_maths.mutant.191.py
+Success running basic_maths.mutant.191.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.479
+now run basic_maths.mutant.479.py
+Success running basic_maths.mutant.479.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.371
+now run basic_maths.mutant.371.py
+Success running basic_maths.mutant.371.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.101
+now run basic_maths.mutant.101.py
+Success running basic_maths.mutant.101.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.434
+now run basic_maths.mutant.434.py
+Success running basic_maths.mutant.434.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.343
+now run basic_maths.mutant.343.py
+Success running basic_maths.mutant.343.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.12
+now run basic_maths.mutant.12.py
+Success running basic_maths.mutant.12.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.204
+now run basic_maths.mutant.204.py
+Success running basic_maths.mutant.204.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.348
+now run basic_maths.mutant.348.py
+Success running basic_maths.mutant.348.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.141
+now run basic_maths.mutant.141.py
+Success running basic_maths.mutant.141.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.131
+now run basic_maths.mutant.131.py
+Success running basic_maths.mutant.131.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.310
+now run basic_maths.mutant.310.py
+Success running basic_maths.mutant.310.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.452
+now run basic_maths.mutant.452.py
+Success running basic_maths.mutant.452.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.351
+now run basic_maths.mutant.351.py
+Success running basic_maths.mutant.351.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.396
+now run basic_maths.mutant.396.py
+Success running basic_maths.mutant.396.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.137
+now run basic_maths.mutant.137.py
+Success running basic_maths.mutant.137.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.287
+now run basic_maths.mutant.287.py
+Success running basic_maths.mutant.287.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.28
+now run basic_maths.mutant.28.py
+Success running basic_maths.mutant.28.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.22
+now run basic_maths.mutant.22.py
+Success running basic_maths.mutant.22.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.177
+now run basic_maths.mutant.177.py
+Success running basic_maths.mutant.177.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.103
+now run basic_maths.mutant.103.py
+Success running basic_maths.mutant.103.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.470
+now run basic_maths.mutant.470.py
+Success running basic_maths.mutant.470.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.418
+now run basic_maths.mutant.418.py
+Success running basic_maths.mutant.418.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.283
+now run basic_maths.mutant.283.py
+Success running basic_maths.mutant.283.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.45
+now run basic_maths.mutant.45.py
+Success running basic_maths.mutant.45.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.364
+now run basic_maths.mutant.364.py
+Success running basic_maths.mutant.364.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.409
+now run basic_maths.mutant.409.py
+Success running basic_maths.mutant.409.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.23
+now run basic_maths.mutant.23.py
+Success running basic_maths.mutant.23.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.482
+now run basic_maths.mutant.482.py
+Success running basic_maths.mutant.482.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.29
+now run basic_maths.mutant.29.py
+Success running basic_maths.mutant.29.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.182
+now run basic_maths.mutant.182.py
+Success running basic_maths.mutant.182.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.225
+now run basic_maths.mutant.225.py
+Success running basic_maths.mutant.225.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.72
+now run basic_maths.mutant.72.py
+Success running basic_maths.mutant.72.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.142
+now run basic_maths.mutant.142.py
+Success running basic_maths.mutant.142.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.295
+now run basic_maths.mutant.295.py
+Success running basic_maths.mutant.295.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.200
+now run basic_maths.mutant.200.py
+Success running basic_maths.mutant.200.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.444
+now run basic_maths.mutant.444.py
+Success running basic_maths.mutant.444.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.5
+now run basic_maths.mutant.5.py
+Success running basic_maths.mutant.5.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.334
+now run basic_maths.mutant.334.py
+Success running basic_maths.mutant.334.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.312
+now run basic_maths.mutant.312.py
+Success running basic_maths.mutant.312.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.373
+now run basic_maths.mutant.373.py
+Success running basic_maths.mutant.373.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.104
+now run basic_maths.mutant.104.py
+Success running basic_maths.mutant.104.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.210
+now run basic_maths.mutant.210.py
+Success running basic_maths.mutant.210.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.413
+now run basic_maths.mutant.413.py
+Success running basic_maths.mutant.413.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.151
+now run basic_maths.mutant.151.py
+Success running basic_maths.mutant.151.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.185
+now run basic_maths.mutant.185.py
+Success running basic_maths.mutant.185.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.476
+now run basic_maths.mutant.476.py
+Success running basic_maths.mutant.476.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.347
+now run basic_maths.mutant.347.py
+Success running basic_maths.mutant.347.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.272
+now run basic_maths.mutant.272.py
+Success running basic_maths.mutant.272.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.199
+now run basic_maths.mutant.199.py
+Success running basic_maths.mutant.199.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.91
+now run basic_maths.mutant.91.py
+Success running basic_maths.mutant.91.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.25
+now run basic_maths.mutant.25.py
+Success running basic_maths.mutant.25.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.67
+now run basic_maths.mutant.67.py
+Success running basic_maths.mutant.67.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.187
+now run basic_maths.mutant.187.py
+Success running basic_maths.mutant.187.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.311
+now run basic_maths.mutant.311.py
+Success running basic_maths.mutant.311.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.271
+now run basic_maths.mutant.271.py
+Success running basic_maths.mutant.271.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.357
+now run basic_maths.mutant.357.py
+Success running basic_maths.mutant.357.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.451
+now run basic_maths.mutant.451.py
+Success running basic_maths.mutant.451.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.323
+now run basic_maths.mutant.323.py
+Success running basic_maths.mutant.323.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.349
+now run basic_maths.mutant.349.py
+Success running basic_maths.mutant.349.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.378
+now run basic_maths.mutant.378.py
+Success running basic_maths.mutant.378.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.305
+now run basic_maths.mutant.305.py
+Success running basic_maths.mutant.305.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.293
+now run basic_maths.mutant.293.py
+Success running basic_maths.mutant.293.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.474
+now run basic_maths.mutant.474.py
+Success running basic_maths.mutant.474.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.192
+now run basic_maths.mutant.192.py
+Success running basic_maths.mutant.192.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.157
+now run basic_maths.mutant.157.py
+Success running basic_maths.mutant.157.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.61
+now run basic_maths.mutant.61.py
+Success running basic_maths.mutant.61.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.303
+now run basic_maths.mutant.303.py
+Success running basic_maths.mutant.303.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.179
+now run basic_maths.mutant.179.py
+Success running basic_maths.mutant.179.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.218
+now run basic_maths.mutant.218.py
+Success running basic_maths.mutant.218.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.446
+now run basic_maths.mutant.446.py
+Success running basic_maths.mutant.446.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.309
+now run basic_maths.mutant.309.py
+Success running basic_maths.mutant.309.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.189
+now run basic_maths.mutant.189.py
+Success running basic_maths.mutant.189.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.160
+now run basic_maths.mutant.160.py
+Success running basic_maths.mutant.160.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.18
+now run basic_maths.mutant.18.py
+Success running basic_maths.mutant.18.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.48
+now run basic_maths.mutant.48.py
+Success running basic_maths.mutant.48.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.411
+now run basic_maths.mutant.411.py
+Success running basic_maths.mutant.411.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.75
+now run basic_maths.mutant.75.py
+Success running basic_maths.mutant.75.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.477
+now run basic_maths.mutant.477.py
+Success running basic_maths.mutant.477.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.202
+now run basic_maths.mutant.202.py
+Success running basic_maths.mutant.202.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.239
+now run basic_maths.mutant.239.py
+Success running basic_maths.mutant.239.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.196
+now run basic_maths.mutant.196.py
+Success running basic_maths.mutant.196.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.428
+now run basic_maths.mutant.428.py
+Success running basic_maths.mutant.428.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.238
+now run basic_maths.mutant.238.py
+Success running basic_maths.mutant.238.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.365
+now run basic_maths.mutant.365.py
+Success running basic_maths.mutant.365.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.7
+now run basic_maths.mutant.7.py
+Success running basic_maths.mutant.7.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.281
+now run basic_maths.mutant.281.py
+Success running basic_maths.mutant.281.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.370
+now run basic_maths.mutant.370.py
+Success running basic_maths.mutant.370.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.447
+now run basic_maths.mutant.447.py
+Success running basic_maths.mutant.447.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.237
+now run basic_maths.mutant.237.py
+Success running basic_maths.mutant.237.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.417
+now run basic_maths.mutant.417.py
+Success running basic_maths.mutant.417.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.93
+now run basic_maths.mutant.93.py
+Success running basic_maths.mutant.93.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.161
+now run basic_maths.mutant.161.py
+Success running basic_maths.mutant.161.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.181
+now run basic_maths.mutant.181.py
+Success running basic_maths.mutant.181.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.298
+now run basic_maths.mutant.298.py
+Success running basic_maths.mutant.298.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.455
+now run basic_maths.mutant.455.py
+Success running basic_maths.mutant.455.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.226
+now run basic_maths.mutant.226.py
+Success running basic_maths.mutant.226.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.320
+now run basic_maths.mutant.320.py
+Success running basic_maths.mutant.320.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.438
+now run basic_maths.mutant.438.py
+Success running basic_maths.mutant.438.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.120
+now run basic_maths.mutant.120.py
+Success running basic_maths.mutant.120.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.261
+now run basic_maths.mutant.261.py
+Success running basic_maths.mutant.261.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.372
+now run basic_maths.mutant.372.py
+Success running basic_maths.mutant.372.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.415
+now run basic_maths.mutant.415.py
+Success running basic_maths.mutant.415.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.296
+now run basic_maths.mutant.296.py
+Success running basic_maths.mutant.296.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.246
+now run basic_maths.mutant.246.py
+Success running basic_maths.mutant.246.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.110
+now run basic_maths.mutant.110.py
+Success running basic_maths.mutant.110.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.377
+now run basic_maths.mutant.377.py
+Success running basic_maths.mutant.377.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.140
+now run basic_maths.mutant.140.py
+Success running basic_maths.mutant.140.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.175
+now run basic_maths.mutant.175.py
+Success running basic_maths.mutant.175.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.424
+now run basic_maths.mutant.424.py
+Success running basic_maths.mutant.424.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.197
+now run basic_maths.mutant.197.py
+Success running basic_maths.mutant.197.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.404
+now run basic_maths.mutant.404.py
+Success running basic_maths.mutant.404.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.345
+now run basic_maths.mutant.345.py
+Success running basic_maths.mutant.345.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.113
+now run basic_maths.mutant.113.py
+Success running basic_maths.mutant.113.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.484
+now run basic_maths.mutant.484.py
+Success running basic_maths.mutant.484.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.78
+now run basic_maths.mutant.78.py
+Success running basic_maths.mutant.78.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.300
+now run basic_maths.mutant.300.py
+Success running basic_maths.mutant.300.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.158
+now run basic_maths.mutant.158.py
+Success running basic_maths.mutant.158.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.227
+now run basic_maths.mutant.227.py
+Success running basic_maths.mutant.227.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.353
+now run basic_maths.mutant.353.py
+Success running basic_maths.mutant.353.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.288
+now run basic_maths.mutant.288.py
+Success running basic_maths.mutant.288.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.385
+now run basic_maths.mutant.385.py
+Success running basic_maths.mutant.385.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.367
+now run basic_maths.mutant.367.py
+Success running basic_maths.mutant.367.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.233
+now run basic_maths.mutant.233.py
+Success running basic_maths.mutant.233.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.55
+now run basic_maths.mutant.55.py
+Success running basic_maths.mutant.55.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.468
+now run basic_maths.mutant.468.py
+Success running basic_maths.mutant.468.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.412
+now run basic_maths.mutant.412.py
+Success running basic_maths.mutant.412.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.65
+now run basic_maths.mutant.65.py
+Success running basic_maths.mutant.65.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.317
+now run basic_maths.mutant.317.py
+Success running basic_maths.mutant.317.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.318
+now run basic_maths.mutant.318.py
+Success running basic_maths.mutant.318.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.270
+now run basic_maths.mutant.270.py
+Success running basic_maths.mutant.270.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.406
+now run basic_maths.mutant.406.py
+Success running basic_maths.mutant.406.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.19
+now run basic_maths.mutant.19.py
+Success running basic_maths.mutant.19.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.115
+now run basic_maths.mutant.115.py
+Success running basic_maths.mutant.115.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.350
+now run basic_maths.mutant.350.py
+Success running basic_maths.mutant.350.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.229
+now run basic_maths.mutant.229.py
+Success running basic_maths.mutant.229.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.114
+now run basic_maths.mutant.114.py
+Success running basic_maths.mutant.114.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.458
+now run basic_maths.mutant.458.py
+Success running basic_maths.mutant.458.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.108
+now run basic_maths.mutant.108.py
+Success running basic_maths.mutant.108.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.164
+now run basic_maths.mutant.164.py
+Success running basic_maths.mutant.164.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.73
+now run basic_maths.mutant.73.py
+Success running basic_maths.mutant.73.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.17
+now run basic_maths.mutant.17.py
+Success running basic_maths.mutant.17.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.203
+now run basic_maths.mutant.203.py
+Success running basic_maths.mutant.203.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.356
+now run basic_maths.mutant.356.py
+Success running basic_maths.mutant.356.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.251
+now run basic_maths.mutant.251.py
+Success running basic_maths.mutant.251.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.74
+now run basic_maths.mutant.74.py
+Success running basic_maths.mutant.74.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.133
+now run basic_maths.mutant.133.py
+Success running basic_maths.mutant.133.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.59
+now run basic_maths.mutant.59.py
+Success running basic_maths.mutant.59.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.483
+now run basic_maths.mutant.483.py
+Success running basic_maths.mutant.483.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.121
+now run basic_maths.mutant.121.py
+Success running basic_maths.mutant.121.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.448
+now run basic_maths.mutant.448.py
+Success running basic_maths.mutant.448.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.366
+now run basic_maths.mutant.366.py
+Success running basic_maths.mutant.366.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.485
+now run basic_maths.mutant.485.py
+Success running basic_maths.mutant.485.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.440
+now run basic_maths.mutant.440.py
+Success running basic_maths.mutant.440.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.126
+now run basic_maths.mutant.126.py
+Success running basic_maths.mutant.126.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.313
+now run basic_maths.mutant.313.py
+Success running basic_maths.mutant.313.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.325
+now run basic_maths.mutant.325.py
+Success running basic_maths.mutant.325.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.211
+now run basic_maths.mutant.211.py
+Success running basic_maths.mutant.211.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.375
+now run basic_maths.mutant.375.py
+Success running basic_maths.mutant.375.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.449
+now run basic_maths.mutant.449.py
+Success running basic_maths.mutant.449.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.198
+now run basic_maths.mutant.198.py
+Success running basic_maths.mutant.198.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.8
+now run basic_maths.mutant.8.py
+Success running basic_maths.mutant.8.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.326
+now run basic_maths.mutant.326.py
+Success running basic_maths.mutant.326.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.77
+now run basic_maths.mutant.77.py
+Success running basic_maths.mutant.77.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.340
+now run basic_maths.mutant.340.py
+Success running basic_maths.mutant.340.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.439
+now run basic_maths.mutant.439.py
+Success running basic_maths.mutant.439.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.15
+now run basic_maths.mutant.15.py
+Success running basic_maths.mutant.15.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.433
+now run basic_maths.mutant.433.py
+Success running basic_maths.mutant.433.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.222
+now run basic_maths.mutant.222.py
+Success running basic_maths.mutant.222.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.262
+now run basic_maths.mutant.262.py
+Success running basic_maths.mutant.262.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.341
+now run basic_maths.mutant.341.py
+Success running basic_maths.mutant.341.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.419
+now run basic_maths.mutant.419.py
+Success running basic_maths.mutant.419.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.397
+now run basic_maths.mutant.397.py
+Success running basic_maths.mutant.397.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.436
+now run basic_maths.mutant.436.py
+Success running basic_maths.mutant.436.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.421
+now run basic_maths.mutant.421.py
+Success running basic_maths.mutant.421.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.231
+now run basic_maths.mutant.231.py
+Success running basic_maths.mutant.231.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.64
+now run basic_maths.mutant.64.py
+Success running basic_maths.mutant.64.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.60
+now run basic_maths.mutant.60.py
+Success running basic_maths.mutant.60.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.263
+now run basic_maths.mutant.263.py
+Success running basic_maths.mutant.263.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.319
+now run basic_maths.mutant.319.py
+Success running basic_maths.mutant.319.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.314
+now run basic_maths.mutant.314.py
+Success running basic_maths.mutant.314.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.240
+now run basic_maths.mutant.240.py
+Success running basic_maths.mutant.240.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.244
+now run basic_maths.mutant.244.py
+Success running basic_maths.mutant.244.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.299
+now run basic_maths.mutant.299.py
+Success running basic_maths.mutant.299.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.260
+now run basic_maths.mutant.260.py
+Success running basic_maths.mutant.260.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.332
+now run basic_maths.mutant.332.py
+Success running basic_maths.mutant.332.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.173
+now run basic_maths.mutant.173.py
+Success running basic_maths.mutant.173.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.368
+now run basic_maths.mutant.368.py
+Success running basic_maths.mutant.368.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.166
+now run basic_maths.mutant.166.py
+Success running basic_maths.mutant.166.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.159
+now run basic_maths.mutant.159.py
+Success running basic_maths.mutant.159.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.46
+now run basic_maths.mutant.46.py
+Success running basic_maths.mutant.46.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.127
+now run basic_maths.mutant.127.py
+Success running basic_maths.mutant.127.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.457
+now run basic_maths.mutant.457.py
+Success running basic_maths.mutant.457.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.234
+now run basic_maths.mutant.234.py
+Success running basic_maths.mutant.234.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.405
+now run basic_maths.mutant.405.py
+Success running basic_maths.mutant.405.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.11
+now run basic_maths.mutant.11.py
+Success running basic_maths.mutant.11.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.302
+now run basic_maths.mutant.302.py
+Success running basic_maths.mutant.302.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.136
+now run basic_maths.mutant.136.py
+Success running basic_maths.mutant.136.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.410
+now run basic_maths.mutant.410.py
+Success running basic_maths.mutant.410.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.462
+now run basic_maths.mutant.462.py
+Success running basic_maths.mutant.462.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.26
+now run basic_maths.mutant.26.py
+Success running basic_maths.mutant.26.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.369
+now run basic_maths.mutant.369.py
+Success running basic_maths.mutant.369.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.395
+now run basic_maths.mutant.395.py
+Success running basic_maths.mutant.395.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.57
+now run basic_maths.mutant.57.py
+Success running basic_maths.mutant.57.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.257
+now run basic_maths.mutant.257.py
+Success running basic_maths.mutant.257.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.39
+now run basic_maths.mutant.39.py
+Success running basic_maths.mutant.39.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.399
+now run basic_maths.mutant.399.py
+Success running basic_maths.mutant.399.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.329
+now run basic_maths.mutant.329.py
+Success running basic_maths.mutant.329.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.135
+now run basic_maths.mutant.135.py
+Success running basic_maths.mutant.135.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.294
+now run basic_maths.mutant.294.py
+Success running basic_maths.mutant.294.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.223
+now run basic_maths.mutant.223.py
+Success running basic_maths.mutant.223.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.245
+now run basic_maths.mutant.245.py
+Success running basic_maths.mutant.245.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.407
+now run basic_maths.mutant.407.py
+Success running basic_maths.mutant.407.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.307
+now run basic_maths.mutant.307.py
+Success running basic_maths.mutant.307.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.266
+now run basic_maths.mutant.266.py
+Success running basic_maths.mutant.266.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.63
+now run basic_maths.mutant.63.py
+Success running basic_maths.mutant.63.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.184
+now run basic_maths.mutant.184.py
+Success running basic_maths.mutant.184.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.358
+now run basic_maths.mutant.358.py
+Success running basic_maths.mutant.358.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.416
+now run basic_maths.mutant.416.py
+Success running basic_maths.mutant.416.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.206
+now run basic_maths.mutant.206.py
+Success running basic_maths.mutant.206.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.355
+now run basic_maths.mutant.355.py
+Success running basic_maths.mutant.355.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.102
+now run basic_maths.mutant.102.py
+Success running basic_maths.mutant.102.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.174
+now run basic_maths.mutant.174.py
+Success running basic_maths.mutant.174.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.352
+now run basic_maths.mutant.352.py
+Success running basic_maths.mutant.352.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.442
+now run basic_maths.mutant.442.py
+Success running basic_maths.mutant.442.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.21
+now run basic_maths.mutant.21.py
+Success running basic_maths.mutant.21.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.254
+now run basic_maths.mutant.254.py
+Success running basic_maths.mutant.254.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.250
+now run basic_maths.mutant.250.py
+Success running basic_maths.mutant.250.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.205
+now run basic_maths.mutant.205.py
+Success running basic_maths.mutant.205.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.445
+now run basic_maths.mutant.445.py
+Success running basic_maths.mutant.445.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.139
+now run basic_maths.mutant.139.py
+Success running basic_maths.mutant.139.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.208
+now run basic_maths.mutant.208.py
+Success running basic_maths.mutant.208.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.471
+now run basic_maths.mutant.471.py
+Success running basic_maths.mutant.471.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.128
+now run basic_maths.mutant.128.py
+Success running basic_maths.mutant.128.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.232
+now run basic_maths.mutant.232.py
+Success running basic_maths.mutant.232.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.432
+now run basic_maths.mutant.432.py
+Success running basic_maths.mutant.432.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.6
+now run basic_maths.mutant.6.py
+Success running basic_maths.mutant.6.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.315
+now run basic_maths.mutant.315.py
+Success running basic_maths.mutant.315.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.265
+now run basic_maths.mutant.265.py
+Success running basic_maths.mutant.265.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.190
+now run basic_maths.mutant.190.py
+Success running basic_maths.mutant.190.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.134
+now run basic_maths.mutant.134.py
+Success running basic_maths.mutant.134.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.408
+now run basic_maths.mutant.408.py
+Success running basic_maths.mutant.408.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.247
+now run basic_maths.mutant.247.py
+Success running basic_maths.mutant.247.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.443
+now run basic_maths.mutant.443.py
+Success running basic_maths.mutant.443.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.201
+now run basic_maths.mutant.201.py
+Success running basic_maths.mutant.201.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.465
+now run basic_maths.mutant.465.py
+Success running basic_maths.mutant.465.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.464
+now run basic_maths.mutant.464.py
+Success running basic_maths.mutant.464.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.304
+now run basic_maths.mutant.304.py
+Success running basic_maths.mutant.304.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.163
+now run basic_maths.mutant.163.py
+Success running basic_maths.mutant.163.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.297
+now run basic_maths.mutant.297.py
+Success running basic_maths.mutant.297.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.183
+now run basic_maths.mutant.183.py
+Success running basic_maths.mutant.183.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.50
+now run basic_maths.mutant.50.py
+Success running basic_maths.mutant.50.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.374
+now run basic_maths.mutant.374.py
+Success running basic_maths.mutant.374.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.256
+now run basic_maths.mutant.256.py
+Success running basic_maths.mutant.256.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.66
+now run basic_maths.mutant.66.py
+Success running basic_maths.mutant.66.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.41
+now run basic_maths.mutant.41.py
+Success running basic_maths.mutant.41.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.379
+now run basic_maths.mutant.379.py
+Success running basic_maths.mutant.379.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.362
+now run basic_maths.mutant.362.py
+Success running basic_maths.mutant.362.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.79
+now run basic_maths.mutant.79.py
+Success running basic_maths.mutant.79.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.269
+now run basic_maths.mutant.269.py
+Success running basic_maths.mutant.269.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.132
+now run basic_maths.mutant.132.py
+Success running basic_maths.mutant.132.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.207
+now run basic_maths.mutant.207.py
+Success running basic_maths.mutant.207.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.400
+now run basic_maths.mutant.400.py
+Success running basic_maths.mutant.400.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.398
+now run basic_maths.mutant.398.py
+Success running basic_maths.mutant.398.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.193
+now run basic_maths.mutant.193.py
+Success running basic_maths.mutant.193.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.306
+now run basic_maths.mutant.306.py
+Success running basic_maths.mutant.306.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.414
+now run basic_maths.mutant.414.py
+Success running basic_maths.mutant.414.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.224
+now run basic_maths.mutant.224.py
+Success running basic_maths.mutant.224.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.267
+now run basic_maths.mutant.267.py
+Success running basic_maths.mutant.267.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.437
+now run basic_maths.mutant.437.py
+Success running basic_maths.mutant.437.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.89
+now run basic_maths.mutant.89.py
+Success running basic_maths.mutant.89.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.390
+now run basic_maths.mutant.390.py
+Success running basic_maths.mutant.390.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.124
+now run basic_maths.mutant.124.py
+Success running basic_maths.mutant.124.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.402
+now run basic_maths.mutant.402.py
+Success running basic_maths.mutant.402.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.330
+now run basic_maths.mutant.330.py
+Success running basic_maths.mutant.330.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.4
+now run basic_maths.mutant.4.py
+Success running basic_maths.mutant.4.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.56
+now run basic_maths.mutant.56.py
+Success running basic_maths.mutant.56.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.401
+now run basic_maths.mutant.401.py
+Success running basic_maths.mutant.401.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.316
+now run basic_maths.mutant.316.py
+Success running basic_maths.mutant.316.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.359
+now run basic_maths.mutant.359.py
+Success running basic_maths.mutant.359.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.168
+now run basic_maths.mutant.168.py
+Success running basic_maths.mutant.168.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.130
+now run basic_maths.mutant.130.py
+Success running basic_maths.mutant.130.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.116
+now run basic_maths.mutant.116.py
+Success running basic_maths.mutant.116.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.30
+now run basic_maths.mutant.30.py
+Success running basic_maths.mutant.30.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.441
+now run basic_maths.mutant.441.py
+Success running basic_maths.mutant.441.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.268
+now run basic_maths.mutant.268.py
+Success running basic_maths.mutant.268.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.339
+now run basic_maths.mutant.339.py
+Success running basic_maths.mutant.339.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.264
+now run basic_maths.mutant.264.py
+Success running basic_maths.mutant.264.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.27
+now run basic_maths.mutant.27.py
+Success running basic_maths.mutant.27.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.344
+now run basic_maths.mutant.344.py
+Success running basic_maths.mutant.344.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.322
+now run basic_maths.mutant.322.py
+Success running basic_maths.mutant.322.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.258
+now run basic_maths.mutant.258.py
+Success running basic_maths.mutant.258.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.186
+now run basic_maths.mutant.186.py
+Success running basic_maths.mutant.186.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.117
+now run basic_maths.mutant.117.py
+Success running basic_maths.mutant.117.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.109
+now run basic_maths.mutant.109.py
+Success running basic_maths.mutant.109.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.389
+now run basic_maths.mutant.389.py
+Success running basic_maths.mutant.389.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.209
+now run basic_maths.mutant.209.py
+Success running basic_maths.mutant.209.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.212
+now run basic_maths.mutant.212.py
+Success running basic_maths.mutant.212.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.138
+now run basic_maths.mutant.138.py
+Success running basic_maths.mutant.138.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.107
+now run basic_maths.mutant.107.py
+Success running basic_maths.mutant.107.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.376
+now run basic_maths.mutant.376.py
+Success running basic_maths.mutant.376.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.363
+now run basic_maths.mutant.363.py
+Success running basic_maths.mutant.363.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.96
+now run basic_maths.mutant.96.py
+Success running basic_maths.mutant.96.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.243
+now run basic_maths.mutant.243.py
+Success running basic_maths.mutant.243.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.435
+now run basic_maths.mutant.435.py
+Success running basic_maths.mutant.435.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.459
+now run basic_maths.mutant.459.py
+Success running basic_maths.mutant.459.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.153
+now run basic_maths.mutant.153.py
+Success running basic_maths.mutant.153.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.178
+now run basic_maths.mutant.178.py
+Success running basic_maths.mutant.178.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.71
+now run basic_maths.mutant.71.py
+Success running basic_maths.mutant.71.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/12-basic_maths/mutants.wrong_result/basic_maths.mutant.68
+now run basic_maths.mutant.68.py
+Success running basic_maths.mutant.68.py
+13-merge_sort
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.249
+now run merge_sort.mutant.249.py
+Success running merge_sort.mutant.249.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.232
+now run merge_sort.mutant.232.py
+Success running merge_sort.mutant.232.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.221
+now run merge_sort.mutant.221.py
+Success running merge_sort.mutant.221.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.323
+now run merge_sort.mutant.323.py
+Success running merge_sort.mutant.323.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.207
+now run merge_sort.mutant.207.py
+Success running merge_sort.mutant.207.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.127
+now run merge_sort.mutant.127.py
+Success running merge_sort.mutant.127.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.183
+now run merge_sort.mutant.183.py
+Success running merge_sort.mutant.183.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.353
+now run merge_sort.mutant.353.py
+Success running merge_sort.mutant.353.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.239
+now run merge_sort.mutant.239.py
+Success running merge_sort.mutant.239.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.247
+now run merge_sort.mutant.247.py
+Success running merge_sort.mutant.247.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.187
+now run merge_sort.mutant.187.py
+Success running merge_sort.mutant.187.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.234
+now run merge_sort.mutant.234.py
+Success running merge_sort.mutant.234.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.277
+now run merge_sort.mutant.277.py
+Success running merge_sort.mutant.277.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.259
+now run merge_sort.mutant.259.py
+Success running merge_sort.mutant.259.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.263
+now run merge_sort.mutant.263.py
+Success running merge_sort.mutant.263.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.158
+now run merge_sort.mutant.158.py
+Success running merge_sort.mutant.158.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.242
+now run merge_sort.mutant.242.py
+Success running merge_sort.mutant.242.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.167
+now run merge_sort.mutant.167.py
+Success running merge_sort.mutant.167.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.267
+now run merge_sort.mutant.267.py
+Success running merge_sort.mutant.267.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.278
+now run merge_sort.mutant.278.py
+Success running merge_sort.mutant.278.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.215
+now run merge_sort.mutant.215.py
+Success running merge_sort.mutant.215.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.230
+now run merge_sort.mutant.230.py
+Success running merge_sort.mutant.230.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.320
+now run merge_sort.mutant.320.py
+Success running merge_sort.mutant.320.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.189
+now run merge_sort.mutant.189.py
+Success running merge_sort.mutant.189.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.341
+now run merge_sort.mutant.341.py
+Success running merge_sort.mutant.341.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.274
+now run merge_sort.mutant.274.py
+Success running merge_sort.mutant.274.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.328
+now run merge_sort.mutant.328.py
+Success running merge_sort.mutant.328.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.326
+now run merge_sort.mutant.326.py
+Success running merge_sort.mutant.326.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.317
+now run merge_sort.mutant.317.py
+Success running merge_sort.mutant.317.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.177
+now run merge_sort.mutant.177.py
+Success running merge_sort.mutant.177.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.126
+now run merge_sort.mutant.126.py
+Success running merge_sort.mutant.126.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.65
+now run merge_sort.mutant.65.py
+Success running merge_sort.mutant.65.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.28
+now run merge_sort.mutant.28.py
+Success running merge_sort.mutant.28.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.266
+now run merge_sort.mutant.266.py
+Success running merge_sort.mutant.266.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.172
+now run merge_sort.mutant.172.py
+Success running merge_sort.mutant.172.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.330
+now run merge_sort.mutant.330.py
+Success running merge_sort.mutant.330.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.203
+now run merge_sort.mutant.203.py
+Success running merge_sort.mutant.203.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.351
+now run merge_sort.mutant.351.py
+Success running merge_sort.mutant.351.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.262
+now run merge_sort.mutant.262.py
+Success running merge_sort.mutant.262.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.180
+now run merge_sort.mutant.180.py
+Success running merge_sort.mutant.180.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.366
+now run merge_sort.mutant.366.py
+Success running merge_sort.mutant.366.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.86
+now run merge_sort.mutant.86.py
+Success running merge_sort.mutant.86.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.119
+now run merge_sort.mutant.119.py
+Success running merge_sort.mutant.119.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.327
+now run merge_sort.mutant.327.py
+Success running merge_sort.mutant.327.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.261
+now run merge_sort.mutant.261.py
+Success running merge_sort.mutant.261.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.238
+now run merge_sort.mutant.238.py
+Success running merge_sort.mutant.238.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.362
+now run merge_sort.mutant.362.py
+Success running merge_sort.mutant.362.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.307
+now run merge_sort.mutant.307.py
+Success running merge_sort.mutant.307.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.97
+now run merge_sort.mutant.97.py
+Success running merge_sort.mutant.97.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.137
+now run merge_sort.mutant.137.py
+Success running merge_sort.mutant.137.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.170
+now run merge_sort.mutant.170.py
+Success running merge_sort.mutant.170.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.265
+now run merge_sort.mutant.265.py
+Success running merge_sort.mutant.265.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.148
+now run merge_sort.mutant.148.py
+Success running merge_sort.mutant.148.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.345
+now run merge_sort.mutant.345.py
+Success running merge_sort.mutant.345.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.348
+now run merge_sort.mutant.348.py
+Success running merge_sort.mutant.348.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.69
+now run merge_sort.mutant.69.py
+Success running merge_sort.mutant.69.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.141
+now run merge_sort.mutant.141.py
+Success running merge_sort.mutant.141.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.276
+now run merge_sort.mutant.276.py
+Success running merge_sort.mutant.276.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.250
+now run merge_sort.mutant.250.py
+Success running merge_sort.mutant.250.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.144
+now run merge_sort.mutant.144.py
+Success running merge_sort.mutant.144.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.251
+now run merge_sort.mutant.251.py
+Success running merge_sort.mutant.251.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.108
+now run merge_sort.mutant.108.py
+Success running merge_sort.mutant.108.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.184
+now run merge_sort.mutant.184.py
+Success running merge_sort.mutant.184.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.338
+now run merge_sort.mutant.338.py
+Success running merge_sort.mutant.338.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.271
+now run merge_sort.mutant.271.py
+Success running merge_sort.mutant.271.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.344
+now run merge_sort.mutant.344.py
+Success running merge_sort.mutant.344.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.252
+now run merge_sort.mutant.252.py
+Success running merge_sort.mutant.252.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.292
+now run merge_sort.mutant.292.py
+Success running merge_sort.mutant.292.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.51
+now run merge_sort.mutant.51.py
+Success running merge_sort.mutant.51.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.369
+now run merge_sort.mutant.369.py
+Success running merge_sort.mutant.369.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.322
+now run merge_sort.mutant.322.py
+Success running merge_sort.mutant.322.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.192
+now run merge_sort.mutant.192.py
+Success running merge_sort.mutant.192.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.93
+now run merge_sort.mutant.93.py
+Success running merge_sort.mutant.93.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.145
+now run merge_sort.mutant.145.py
+Success running merge_sort.mutant.145.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.179
+now run merge_sort.mutant.179.py
+Success running merge_sort.mutant.179.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.335
+now run merge_sort.mutant.335.py
+Success running merge_sort.mutant.335.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.198
+now run merge_sort.mutant.198.py
+Success running merge_sort.mutant.198.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.367
+now run merge_sort.mutant.367.py
+Success running merge_sort.mutant.367.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.9
+now run merge_sort.mutant.9.py
+Success running merge_sort.mutant.9.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.82
+now run merge_sort.mutant.82.py
+Success running merge_sort.mutant.82.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.220
+now run merge_sort.mutant.220.py
+Success running merge_sort.mutant.220.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.279
+now run merge_sort.mutant.279.py
+Success running merge_sort.mutant.279.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.360
+now run merge_sort.mutant.360.py
+Success running merge_sort.mutant.360.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.359
+now run merge_sort.mutant.359.py
+Success running merge_sort.mutant.359.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.358
+now run merge_sort.mutant.358.py
+Success running merge_sort.mutant.358.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.216
+now run merge_sort.mutant.216.py
+Success running merge_sort.mutant.216.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.273
+now run merge_sort.mutant.273.py
+Success running merge_sort.mutant.273.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.202
+now run merge_sort.mutant.202.py
+Success running merge_sort.mutant.202.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.333
+now run merge_sort.mutant.333.py
+Success running merge_sort.mutant.333.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.311
+now run merge_sort.mutant.311.py
+Success running merge_sort.mutant.311.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.290
+now run merge_sort.mutant.290.py
+Success running merge_sort.mutant.290.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.363
+now run merge_sort.mutant.363.py
+Success running merge_sort.mutant.363.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.45
+now run merge_sort.mutant.45.py
+Success running merge_sort.mutant.45.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.211
+now run merge_sort.mutant.211.py
+Success running merge_sort.mutant.211.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.350
+now run merge_sort.mutant.350.py
+Success running merge_sort.mutant.350.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.253
+now run merge_sort.mutant.253.py
+Success running merge_sort.mutant.253.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.68
+now run merge_sort.mutant.68.py
+Success running merge_sort.mutant.68.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.294
+now run merge_sort.mutant.294.py
+Success running merge_sort.mutant.294.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.120
+now run merge_sort.mutant.120.py
+Success running merge_sort.mutant.120.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.7
+now run merge_sort.mutant.7.py
+Success running merge_sort.mutant.7.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.269
+now run merge_sort.mutant.269.py
+Success running merge_sort.mutant.269.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.214
+now run merge_sort.mutant.214.py
+Success running merge_sort.mutant.214.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.315
+now run merge_sort.mutant.315.py
+Success running merge_sort.mutant.315.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.63
+now run merge_sort.mutant.63.py
+Success running merge_sort.mutant.63.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.244
+now run merge_sort.mutant.244.py
+Success running merge_sort.mutant.244.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.106
+now run merge_sort.mutant.106.py
+Success running merge_sort.mutant.106.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.114
+now run merge_sort.mutant.114.py
+Success running merge_sort.mutant.114.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.342
+now run merge_sort.mutant.342.py
+Success running merge_sort.mutant.342.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.222
+now run merge_sort.mutant.222.py
+Success running merge_sort.mutant.222.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.140
+now run merge_sort.mutant.140.py
+Success running merge_sort.mutant.140.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.352
+now run merge_sort.mutant.352.py
+Success running merge_sort.mutant.352.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.364
+now run merge_sort.mutant.364.py
+Success running merge_sort.mutant.364.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.347
+now run merge_sort.mutant.347.py
+Success running merge_sort.mutant.347.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.235
+now run merge_sort.mutant.235.py
+Success running merge_sort.mutant.235.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.98
+now run merge_sort.mutant.98.py
+Success running merge_sort.mutant.98.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.201
+now run merge_sort.mutant.201.py
+Success running merge_sort.mutant.201.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.355
+now run merge_sort.mutant.355.py
+Success running merge_sort.mutant.355.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.24
+now run merge_sort.mutant.24.py
+Success running merge_sort.mutant.24.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.268
+now run merge_sort.mutant.268.py
+Success running merge_sort.mutant.268.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.188
+now run merge_sort.mutant.188.py
+Success running merge_sort.mutant.188.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.337
+now run merge_sort.mutant.337.py
+Success running merge_sort.mutant.337.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.316
+now run merge_sort.mutant.316.py
+Success running merge_sort.mutant.316.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.4
+now run merge_sort.mutant.4.py
+Success running merge_sort.mutant.4.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.241
+now run merge_sort.mutant.241.py
+Success running merge_sort.mutant.241.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.309
+now run merge_sort.mutant.309.py
+Success running merge_sort.mutant.309.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.174
+now run merge_sort.mutant.174.py
+Success running merge_sort.mutant.174.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.281
+now run merge_sort.mutant.281.py
+Success running merge_sort.mutant.281.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.194
+now run merge_sort.mutant.194.py
+Success running merge_sort.mutant.194.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.218
+now run merge_sort.mutant.218.py
+Success running merge_sort.mutant.218.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.231
+now run merge_sort.mutant.231.py
+Success running merge_sort.mutant.231.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.190
+now run merge_sort.mutant.190.py
+Success running merge_sort.mutant.190.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.298
+now run merge_sort.mutant.298.py
+Success running merge_sort.mutant.298.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.296
+now run merge_sort.mutant.296.py
+Success running merge_sort.mutant.296.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.111
+now run merge_sort.mutant.111.py
+Success running merge_sort.mutant.111.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.282
+now run merge_sort.mutant.282.py
+Success running merge_sort.mutant.282.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.3
+now run merge_sort.mutant.3.py
+Success running merge_sort.mutant.3.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.116
+now run merge_sort.mutant.116.py
+Success running merge_sort.mutant.116.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.264
+now run merge_sort.mutant.264.py
+Success running merge_sort.mutant.264.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.305
+now run merge_sort.mutant.305.py
+Success running merge_sort.mutant.305.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.306
+now run merge_sort.mutant.306.py
+Success running merge_sort.mutant.306.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.308
+now run merge_sort.mutant.308.py
+Success running merge_sort.mutant.308.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.229
+now run merge_sort.mutant.229.py
+Success running merge_sort.mutant.229.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.217
+now run merge_sort.mutant.217.py
+Success running merge_sort.mutant.217.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.53
+now run merge_sort.mutant.53.py
+Success running merge_sort.mutant.53.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.186
+now run merge_sort.mutant.186.py
+Success running merge_sort.mutant.186.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.285
+now run merge_sort.mutant.285.py
+Success running merge_sort.mutant.285.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.193
+now run merge_sort.mutant.193.py
+Success running merge_sort.mutant.193.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.196
+now run merge_sort.mutant.196.py
+Success running merge_sort.mutant.196.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.258
+now run merge_sort.mutant.258.py
+Success running merge_sort.mutant.258.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.46
+now run merge_sort.mutant.46.py
+Success running merge_sort.mutant.46.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.122
+now run merge_sort.mutant.122.py
+Success running merge_sort.mutant.122.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.287
+now run merge_sort.mutant.287.py
+Success running merge_sort.mutant.287.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.87
+now run merge_sort.mutant.87.py
+Success running merge_sort.mutant.87.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.124
+now run merge_sort.mutant.124.py
+Success running merge_sort.mutant.124.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.255
+now run merge_sort.mutant.255.py
+Success running merge_sort.mutant.255.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.365
+now run merge_sort.mutant.365.py
+Success running merge_sort.mutant.365.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.77
+now run merge_sort.mutant.77.py
+Success running merge_sort.mutant.77.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.149
+now run merge_sort.mutant.149.py
+Success running merge_sort.mutant.149.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.291
+now run merge_sort.mutant.291.py
+Success running merge_sort.mutant.291.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.85
+now run merge_sort.mutant.85.py
+Success running merge_sort.mutant.85.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.191
+now run merge_sort.mutant.191.py
+Success running merge_sort.mutant.191.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.318
+now run merge_sort.mutant.318.py
+Success running merge_sort.mutant.318.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.286
+now run merge_sort.mutant.286.py
+Success running merge_sort.mutant.286.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.224
+now run merge_sort.mutant.224.py
+Success running merge_sort.mutant.224.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.319
+now run merge_sort.mutant.319.py
+Success running merge_sort.mutant.319.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.256
+now run merge_sort.mutant.256.py
+Success running merge_sort.mutant.256.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.153
+now run merge_sort.mutant.153.py
+Success running merge_sort.mutant.153.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.118
+now run merge_sort.mutant.118.py
+Success running merge_sort.mutant.118.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.354
+now run merge_sort.mutant.354.py
+Success running merge_sort.mutant.354.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.254
+now run merge_sort.mutant.254.py
+Success running merge_sort.mutant.254.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.169
+now run merge_sort.mutant.169.py
+Success running merge_sort.mutant.169.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.325
+now run merge_sort.mutant.325.py
+Success running merge_sort.mutant.325.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.357
+now run merge_sort.mutant.357.py
+Success running merge_sort.mutant.357.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.199
+now run merge_sort.mutant.199.py
+Success running merge_sort.mutant.199.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.143
+now run merge_sort.mutant.143.py
+Success running merge_sort.mutant.143.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.257
+now run merge_sort.mutant.257.py
+Success running merge_sort.mutant.257.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.171
+now run merge_sort.mutant.171.py
+Success running merge_sort.mutant.171.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.236
+now run merge_sort.mutant.236.py
+Success running merge_sort.mutant.236.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.303
+now run merge_sort.mutant.303.py
+Success running merge_sort.mutant.303.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.301
+now run merge_sort.mutant.301.py
+Success running merge_sort.mutant.301.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.42
+now run merge_sort.mutant.42.py
+Success running merge_sort.mutant.42.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.288
+now run merge_sort.mutant.288.py
+Success running merge_sort.mutant.288.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.200
+now run merge_sort.mutant.200.py
+Success running merge_sort.mutant.200.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.295
+now run merge_sort.mutant.295.py
+Success running merge_sort.mutant.295.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.213
+now run merge_sort.mutant.213.py
+Success running merge_sort.mutant.213.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.83
+now run merge_sort.mutant.83.py
+Success running merge_sort.mutant.83.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.50
+now run merge_sort.mutant.50.py
+Success running merge_sort.mutant.50.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.164
+now run merge_sort.mutant.164.py
+Success running merge_sort.mutant.164.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.293
+now run merge_sort.mutant.293.py
+Success running merge_sort.mutant.293.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.212
+now run merge_sort.mutant.212.py
+Success running merge_sort.mutant.212.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.115
+now run merge_sort.mutant.115.py
+Success running merge_sort.mutant.115.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.223
+now run merge_sort.mutant.223.py
+Success running merge_sort.mutant.223.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.228
+now run merge_sort.mutant.228.py
+Success running merge_sort.mutant.228.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.243
+now run merge_sort.mutant.243.py
+Success running merge_sort.mutant.243.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.182
+now run merge_sort.mutant.182.py
+Success running merge_sort.mutant.182.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.55
+now run merge_sort.mutant.55.py
+Success running merge_sort.mutant.55.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.176
+now run merge_sort.mutant.176.py
+Success running merge_sort.mutant.176.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.157
+now run merge_sort.mutant.157.py
+Success running merge_sort.mutant.157.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.324
+now run merge_sort.mutant.324.py
+Success running merge_sort.mutant.324.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.22
+now run merge_sort.mutant.22.py
+Success running merge_sort.mutant.22.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.246
+now run merge_sort.mutant.246.py
+Success running merge_sort.mutant.246.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.237
+now run merge_sort.mutant.237.py
+Success running merge_sort.mutant.237.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.156
+now run merge_sort.mutant.156.py
+Success running merge_sort.mutant.156.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.89
+now run merge_sort.mutant.89.py
+Success running merge_sort.mutant.89.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.52
+now run merge_sort.mutant.52.py
+Success running merge_sort.mutant.52.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.297
+now run merge_sort.mutant.297.py
+Success running merge_sort.mutant.297.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.349
+now run merge_sort.mutant.349.py
+Success running merge_sort.mutant.349.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.210
+now run merge_sort.mutant.210.py
+Success running merge_sort.mutant.210.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.289
+now run merge_sort.mutant.289.py
+Success running merge_sort.mutant.289.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.147
+now run merge_sort.mutant.147.py
+Success running merge_sort.mutant.147.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.372
+now run merge_sort.mutant.372.py
+Success running merge_sort.mutant.372.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.332
+now run merge_sort.mutant.332.py
+Success running merge_sort.mutant.332.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.361
+now run merge_sort.mutant.361.py
+Success running merge_sort.mutant.361.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.321
+now run merge_sort.mutant.321.py
+Success running merge_sort.mutant.321.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.227
+now run merge_sort.mutant.227.py
+Success running merge_sort.mutant.227.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.225
+now run merge_sort.mutant.225.py
+Success running merge_sort.mutant.225.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.284
+now run merge_sort.mutant.284.py
+Success running merge_sort.mutant.284.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.304
+now run merge_sort.mutant.304.py
+Success running merge_sort.mutant.304.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.270
+now run merge_sort.mutant.270.py
+Success running merge_sort.mutant.270.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.112
+now run merge_sort.mutant.112.py
+Success running merge_sort.mutant.112.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.208
+now run merge_sort.mutant.208.py
+Success running merge_sort.mutant.208.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.233
+now run merge_sort.mutant.233.py
+Success running merge_sort.mutant.233.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.205
+now run merge_sort.mutant.205.py
+Success running merge_sort.mutant.205.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.219
+now run merge_sort.mutant.219.py
+Success running merge_sort.mutant.219.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.135
+now run merge_sort.mutant.135.py
+Success running merge_sort.mutant.135.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.260
+now run merge_sort.mutant.260.py
+Success running merge_sort.mutant.260.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.368
+now run merge_sort.mutant.368.py
+Success running merge_sort.mutant.368.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.168
+now run merge_sort.mutant.168.py
+Success running merge_sort.mutant.168.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.280
+now run merge_sort.mutant.280.py
+Success running merge_sort.mutant.280.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.178
+now run merge_sort.mutant.178.py
+Success running merge_sort.mutant.178.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.95
+now run merge_sort.mutant.95.py
+Success running merge_sort.mutant.95.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.346
+now run merge_sort.mutant.346.py
+Success running merge_sort.mutant.346.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.195
+now run merge_sort.mutant.195.py
+Success running merge_sort.mutant.195.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.166
+now run merge_sort.mutant.166.py
+Success running merge_sort.mutant.166.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.204
+now run merge_sort.mutant.204.py
+Success running merge_sort.mutant.204.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.370
+now run merge_sort.mutant.370.py
+Success running merge_sort.mutant.370.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.334
+now run merge_sort.mutant.334.py
+Success running merge_sort.mutant.334.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.248
+now run merge_sort.mutant.248.py
+Success running merge_sort.mutant.248.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.245
+now run merge_sort.mutant.245.py
+Success running merge_sort.mutant.245.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.209
+now run merge_sort.mutant.209.py
+Success running merge_sort.mutant.209.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.226
+now run merge_sort.mutant.226.py
+Success running merge_sort.mutant.226.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.181
+now run merge_sort.mutant.181.py
+Success running merge_sort.mutant.181.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.165
+now run merge_sort.mutant.165.py
+Success running merge_sort.mutant.165.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.240
+now run merge_sort.mutant.240.py
+Success running merge_sort.mutant.240.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.43
+now run merge_sort.mutant.43.py
+Success running merge_sort.mutant.43.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.314
+now run merge_sort.mutant.314.py
+Success running merge_sort.mutant.314.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.275
+now run merge_sort.mutant.275.py
+Success running merge_sort.mutant.275.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.44
+now run merge_sort.mutant.44.py
+Success running merge_sort.mutant.44.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.175
+now run merge_sort.mutant.175.py
+Success running merge_sort.mutant.175.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.339
+now run merge_sort.mutant.339.py
+Success running merge_sort.mutant.339.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.371
+now run merge_sort.mutant.371.py
+Success running merge_sort.mutant.371.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.310
+now run merge_sort.mutant.310.py
+Success running merge_sort.mutant.310.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.302
+now run merge_sort.mutant.302.py
+Success running merge_sort.mutant.302.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.343
+now run merge_sort.mutant.343.py
+Success running merge_sort.mutant.343.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.79
+now run merge_sort.mutant.79.py
+Success running merge_sort.mutant.79.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.272
+now run merge_sort.mutant.272.py
+Success running merge_sort.mutant.272.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.336
+now run merge_sort.mutant.336.py
+Success running merge_sort.mutant.336.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.329
+now run merge_sort.mutant.329.py
+Success running merge_sort.mutant.329.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.54
+now run merge_sort.mutant.54.py
+Success running merge_sort.mutant.54.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.47
+now run merge_sort.mutant.47.py
+Success running merge_sort.mutant.47.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.91
+now run merge_sort.mutant.91.py
+Success running merge_sort.mutant.91.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.185
+now run merge_sort.mutant.185.py
+Success running merge_sort.mutant.185.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.283
+now run merge_sort.mutant.283.py
+Success running merge_sort.mutant.283.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.300
+now run merge_sort.mutant.300.py
+Success running merge_sort.mutant.300.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.90
+now run merge_sort.mutant.90.py
+Success running merge_sort.mutant.90.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.340
+now run merge_sort.mutant.340.py
+Success running merge_sort.mutant.340.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.331
+now run merge_sort.mutant.331.py
+Success running merge_sort.mutant.331.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.197
+now run merge_sort.mutant.197.py
+Success running merge_sort.mutant.197.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.163
+now run merge_sort.mutant.163.py
+Success running merge_sort.mutant.163.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.299
+now run merge_sort.mutant.299.py
+Success running merge_sort.mutant.299.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.34
+now run merge_sort.mutant.34.py
+Success running merge_sort.mutant.34.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.30
+now run merge_sort.mutant.30.py
+Success running merge_sort.mutant.30.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.206
+now run merge_sort.mutant.206.py
+Success running merge_sort.mutant.206.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.356
+now run merge_sort.mutant.356.py
+Success running merge_sort.mutant.356.py
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/13-merge_sort/mutants.wrong_result/merge_sort.mutant.173
+now run merge_sort.mutant.173.py
+Success running merge_sort.mutant.173.py
+15-decision_tree
+/home/linharesh/henrique_workspace/DebugProv/experiments/scripts/15-decision_tree/mutants.wrong_result/decision_tree.mutant.159
+now run decision_tree.mutant.159.py
