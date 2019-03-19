@@ -8,11 +8,7 @@ import os
 import subprocess
 import shutil
 
-directories = ['11-brute_force_caesar_cipher',
-           '12-basic_maths',
-           '13-merge_sort',
-           '15-decision_tree',
-           '16-math_parser']
+directories = ['16-math_parser','17-merge_intervals','18-graph_find_path']
 
 def run_mutants(directories):
     for directory in directories:
