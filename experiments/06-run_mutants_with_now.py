@@ -47,7 +47,7 @@ def run_mutants(directories):
                                 print(os.getcwd())
                                 print("now run {}".format(py_file))
                                 print(os.environ)
-                                proc = subprocess.Popen("/home/linharesh/anaconda3/envs/now2/bin/now run {}".format(py_file), cwd=os.getcwd(), env=os.environ, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+                                proc = subprocess.Popen(['now','run',py_file], cwd=os.getcwd(), env=os.environ, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                                 try:
                                         stdout, stderr = proc.communicate(timeout=TIMEOUT_LIMIT)
                                         returncode = proc.returncode

@@ -29,7 +29,7 @@ nosetests.xml
 *.mo
 
 # Execution data
-.noworkflow
+# .noworkflow
 
 # IPython Notebook
 .last_trial
