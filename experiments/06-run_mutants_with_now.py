@@ -8,7 +8,7 @@ import os
 import subprocess
 import shutil
 
-directories = ['16-math_parser','17-merge_intervals','18-graph_find_path']
+directories = ['29-string_permutation']
 
 def run_mutants(directories):
     for directory in directories:
