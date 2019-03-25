@@ -21,15 +21,16 @@ from debugprov.provenance_enhancement import ProvenanceEnhancement
 from debugprov.single_stepping import SingleStepping
 from debugprov.divide_and_query import DivideAndQuery
 
-scripts = ['02-bisection/bisection.py',
-           '03-intersection/intersection.py',
-           '04-lu_decomposition/lu_decomposition.py',
-           '05-newton_method/newton_method.py',
-           '06-md5/hashmd5.py',
-           '07-basic_binary_tree/basic_binary_tree.py',
-           '08-edit_distance/edit_distance.py',
-           '09-dijkstra_algorithm/dijkstra_algorithm.py',
-           '11-brute_force_caesar_cipher/brute_force_caesar_cipher.py',
+scripts = [
+           #'02-bisection/bisection.py',
+           #'03-intersection/intersection.py',
+           #'04-lu_decomposition/lu_decomposition.py',
+           #'05-newton_method/newton_method.py',
+           #'06-md5/hashmd5.py',
+           #'07-basic_binary_tree/basic_binary_tree.py',
+           #'08-edit_distance/edit_distance.py',
+           #'09-dijkstra_algorithm/dijkstra_algorithm.py',
+           #'11-brute_force_caesar_cipher/brute_force_caesar_cipher.py',
            '12-basic_maths/basic_maths.py',
            '13-merge_sort/merge_sort.py',
            '15-decision_tree/decision_tree.py',
