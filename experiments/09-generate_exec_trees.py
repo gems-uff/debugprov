@@ -49,6 +49,7 @@ scripts = ['02-bisection/bisection.py',
 
 def generate_exec_trees(scripts):
     for script_path in scripts:
+        print(script_path)
         directory = script_path.split('/')[0]
         script = script_path.split('/')[1]
         os.chdir(directory)
@@ -58,31 +59,12 @@ def generate_exec_trees(scripts):
             now2_sqlite_path = os.getcwd() + '/.noworkflow/db.sqlite'
             cursor = sqlite3.connect(now2_sqlite_path).cursor()
             exec_tree = ExecTreeCreator(cursor).create_exec_tree()
-            vis = CustomVisualization(exec_tree)
+            vis = Visualization(exec_tree)
             vis.generate_exec_tree()
+            vis.graph.render(filename='exec_tree',format='pdf')
+            print('Rendering: '+os.getcwd()+'/exec_tree.pdf')
             os.chdir('..')
         os.chdir('../..')
             
 os.chdir(SCRIPTS_DIRECTORY)
-class CustomVisualization(Visualization):    
-    def generate_exec_tree(self, graph_name = 'exec_tree'):
-        file_name = "{}.gv".format(graph_name)
-        print(os.getcwd())
-        self.graph = Graph(graph_name, filename=file_name, directory=os.getcwd())
-        self.graph.attr('node', shape='box')
-        self.graph.attr('graph', ordering='out')
-        root_node = self.exec_tree.root_node
-        self.graph.node(str(root_node.ev_id), root_node.get_name(), fillcolor=self.INVALID_COLOR, style='filled') # root node
-        self.navigate(root_node)
-        eval_node = self.exec_tree.node_under_evaluation
-        if eval_node is not None:
-            self.graph.node(str(eval_node.ev_id), str(eval_node.get_name()), fillcolor=self.NODE_IN_EVALUATION, style='filled')
-        buggy_node = self.exec_tree.buggy_node
-        if buggy_node is not None:
-            self.graph.node(str(buggy_node.ev_id), str(buggy_node.get_name()), fillcolor=self.BUGGY_NODE_COLOR, style='filled')
-        if self.exec_tree.dependencies is not None:
-            for d in self.exec_tree.dependencies: # this loop draws the provenance links between nodes
-                self.graph.edge(str(d.dependent.ev_id), str(d.influencer.ev_id), None, color=self.PROVENANCE_EDGE_COLOR, dir='forward')
-        self.graph.render(filename='exec_tree',format='pdf')
-
 generate_exec_trees(scripts)
