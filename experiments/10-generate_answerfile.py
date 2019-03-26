@@ -9,6 +9,7 @@ import subprocess
 import shutil
 import sqlite3
 import json
+import pickle
 
 from graphviz import Graph
 from debugprov.validity import Validity
@@ -50,12 +51,13 @@ scripts = [
            '29-string_permutation/stringpermutation.py']
 
 def get_faulty_cc_id(faulty_line,cursor):
-    query = ("select CC.id "
+    query_1 = ("select CC.id "
              "from code_component CC "
              "where CC.type='function_def' "
              "and CC.first_char_line <= ? "
              "and CC.last_char_line >= ? ")
-    cursor.execute(query,[faulty_line,faulty_line])
+
+    cursor.execute(query_1,[faulty_line,faulty_line])
     result = cursor.fetchall()
     if len(result) != 1:
         print("Error: more than one code_component associated with faulty line")
@@ -63,9 +65,26 @@ def get_faulty_cc_id(faulty_line,cursor):
         import sys
         sys.exit()
 
-    for tupl in cursor.execute(query,[faulty_line,faulty_line]):
-        return tupl[0]
-            
+    for tupl in cursor.execute(query_1,[faulty_line,faulty_line]):
+        name = tupl[0]
+    
+    print(name)
+
+    query_2 = ("select e.code_component_id from activation a "
+               "natural join evaluation e "
+               "where a.code_block_id = ? ")
+
+    cursor.execute(query_2,[name])
+    result = cursor.fetchall()
+    if len(result) != 1:
+        print("Error: more than one activation associated with code_component.name")
+        print("code_component.name: "+ str(name))
+        import sys
+        sys.exit()
+    
+    for tupl in cursor.execute(query_2,[name]):
+        print(tupl[0])
+        return tupl[0]            
 
 
 def generate_answerfile(scripts):
@@ -84,10 +103,12 @@ def generate_answerfile(scripts):
                 now2_sqlite_path = os.getcwd() + '/.noworkflow/db.sqlite'
                 cursor = sqlite3.connect(now2_sqlite_path).cursor()
                 exec_tree = ExecTreeCreator(cursor).create_exec_tree()
-                vis = Visualization(exec_tree)
-                vis.generate_exec_tree()
-                vis.graph.render(filename='exec_tree',directory=os.getcwd())
-                print('rendering: '+os.getcwd()+'/exec_tree')
+                pickle.dump(exec_tree,open('execution_tree','wb'))
+                import sys
+                sys.exit()
+
+
+
                 faulty_code_component_id = get_faulty_cc_id(FAULTY_LINE,cursor)
                 print('faulty code_component_id: ' + str(faulty_code_component_id))
                 search_result = exec_tree.search_by_ccid(faulty_code_component_id)
@@ -108,9 +129,9 @@ def generate_answerfile(scripts):
                 for n in node_list:
                     node_id = str(n.ev_id)
                     if n.validity == Validity.INVALID:
-                        node_validity = 'valid'
-                    else: 
                         node_validity = 'invalid'
+                    else: 
+                        node_validity = 'valid'
                     obj = {
                         node_id: node_validity
                     }
@@ -119,6 +140,10 @@ def generate_answerfile(scripts):
                     'answers': answers
                 }
                 print(json.dumps(content_json))
+                vis = Visualization(exec_tree)
+                vis.generate_exec_tree()
+                vis.graph.render(filename='exec_tree',directory=os.getcwd())
+                print('rendering: '+os.getcwd()+'/exec_tree')
                 os.chdir('..')
         os.chdir('../..')
             
