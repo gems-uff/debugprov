@@ -140,11 +140,10 @@ def process_mutant(mutant_dir):
 
     buggy_node = search_result.pop()
     invalidate_node_and_parents(buggy_node)
-    print(json.dumps(format_answers(exec_tree)))
-    vis = Visualization(exec_tree)
-    vis.generate_exec_tree()
-    vis.graph.render(filename='exec_tree', directory=os.getcwd())
-    print('rendering: '+os.getcwd()+'/exec_tree')
+    ansfile = open('answers.json','w')
+    ansfile.write(json.dumps(format_answers(exec_tree)))
+    ansfile.close()
+    print('saving answerfile: '+os.getcwd()+'/answers.json')
     os.chdir('..')
 
 
