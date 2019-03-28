@@ -111,15 +111,22 @@ def invalidate_node_and_parents(node):
 
 
 def format_answers(exec_tree):
-    answers = {}
+    answers = []
     node_list = exec_tree.get_all_nodes()
     for n in node_list:
         if n.validity == Validity.INVALID:
             node_validity = 'invalid'
         else:
             node_validity = 'valid'
-        answers[n.ev_id] = node_validity
-    return answers
+            obj = {
+                str(n.ev_id): node_validity 
+            }
+        #answers[n.ev_id] = node_validity
+    return_obj = {
+        "wrong_node_id": "$FILL",
+        "answers": answers
+    }
+    return return_obj
 
 
 def process_mutant(mutant_dir):
@@ -131,7 +138,7 @@ def process_mutant(mutant_dir):
     exec_tree = ExecTreeCreator(cursor).create_exec_tree()
     exec_tree.root_node.validity = Validity.INVALID
     faulty_code_component_id = get_faulty_cc_id(FAULTY_LINE, cursor)
-    print('faulty code_component_id: ' + str(faulty_code_component_id))
+    #print('faulty code_component_id: ' + str(faulty_code_component_id))
     search_result = exec_tree.search_by_ccid(faulty_code_component_id)
 
     if len(search_result) != 1:
