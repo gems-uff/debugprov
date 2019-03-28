@@ -24,9 +24,10 @@ from debugprov.single_stepping import SingleStepping
 from debugprov.divide_and_query import DivideAndQuery
 
 subjects = [
-    'experiments/selected_mutants/bisection.mutant.19',
+#    'experiments/selected_mutants/bisection.mutant.19',
 #   'experiments/selected_mutants/heapsort.mutant.151',
-    'experiments/selected_mutants/quicksort.mutant.5'
+    'experiments/selected_mutants/intersection.mutant.81',
+#    'experiments/selected_mutants/quicksort.mutant.5'
 ]
 
 for subject in subjects:
