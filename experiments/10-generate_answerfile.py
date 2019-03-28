@@ -118,9 +118,8 @@ def format_answers(exec_tree):
             node_validity = 'invalid'
         else:
             node_validity = 'valid'
-            obj = {
-                str(n.ev_id): node_validity 
-            }
+        obj = {}
+        obj[str(n.ev_id)] = node_validity
         #answers[n.ev_id] = node_validity
         answers.append(obj)
     return_obj = {
