@@ -122,6 +122,7 @@ def format_answers(exec_tree):
                 str(n.ev_id): node_validity 
             }
         #answers[n.ev_id] = node_validity
+        answers.append(obj)
     return_obj = {
         "wrong_node_id": "$FILL",
         "answers": answers
