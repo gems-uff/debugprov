@@ -71,7 +71,12 @@ def discover_changed_lines(filename):
     elif removes == 0 and insertions == 1:
         return first_insertion
     else:
-        raise Exception('It was not possible to process this mutant diff')
+        if first_removal != 0:
+            return first_removal
+        elif first_insertion != 0:
+            return first_insertion
+        else:
+            raise Exception("It was not possible to process this mutant diff")
 
 def get_faulty_cc_id(faulty_line, cursor):
     query_1 = ("select CC.id "
