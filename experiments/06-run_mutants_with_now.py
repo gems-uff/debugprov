@@ -8,7 +8,7 @@ import os
 import subprocess
 import shutil
 
-directories = ['15-decision_tree']
+directories = ['14-rsa_cipher']
 
 def run_mutants(directories):
     for directory in directories:
