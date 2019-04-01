@@ -2,7 +2,7 @@ SCRIPTS_DIRECTORY = 'scripts'
 NOWORKFLOW_DIR = '.noworkflow'
 PY_CACHE_DIR = '__pycache__'
 MUTANTS_SUBDIR = 'mutants'
-TIMEOUT_LIMIT = 30
+TIMEOUT_LIMIT = 60
 
 import os
 import subprocess
