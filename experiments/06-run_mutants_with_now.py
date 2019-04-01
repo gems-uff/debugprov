@@ -18,7 +18,7 @@ def run_mutants(directories):
         for content in os.listdir():
                 os.chdir(content)
                 for py_file in os.listdir():
-                        if py_file.endswith('.py'):
+                        if py_file.startswith('rsa_cipher.mutant') and py_file.endswith('.py'):
                                 print(os.getcwd())
                                 print("now run {}".format(py_file))
                                 proc = subprocess.Popen(['now','run',py_file], cwd=os.getcwd(), env=os.environ, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
