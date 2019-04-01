@@ -8,7 +8,7 @@ import os
 import subprocess
 import shutil
 
-directories = ['29-string_permutation']
+directories = ['15-decision_tree']
 
 def run_mutants(directories):
     for directory in directories:
