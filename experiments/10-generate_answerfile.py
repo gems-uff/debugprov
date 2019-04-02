@@ -116,22 +116,12 @@ def invalidate_node_and_parents(node):
 
 
 def format_answers(exec_tree):
-    answers = []
+    invalid_nodes = []
     node_list = exec_tree.get_all_nodes()
     for n in node_list:
         if n.validity == Validity.INVALID:
-            node_validity = 'invalid'
-        else:
-            node_validity = 'valid'
-        obj = {}
-        obj[str(n.ev_id)] = node_validity
-        #answers[n.ev_id] = node_validity
-        answers.append(obj)
-    return_obj = {
-        "wrong_node_id": "$FILL",
-        "answers": answers
-    }
-    return return_obj
+            invalid_nodes.append(n.ev_id)
+    return invalid_nodes
 
 
 def process_mutant(mutant_dir):
@@ -156,6 +146,9 @@ def process_mutant(mutant_dir):
     ansfile.write(json.dumps(format_answers(exec_tree)))
     ansfile.close()
     print('saving answerfile: '+os.getcwd()+'/answers.json')
+    vis = Visualization(exec_tree)
+    vis.generate_exec_tree()
+    vis.graph.render(filename='exec_tree',format='pdf')
     os.chdir('..')
 
 
