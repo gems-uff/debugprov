@@ -14,10 +14,10 @@ class NavigationStrategy:
         if self.AUTOMATED_NAVIGATION:
             answer_reader = AnswerReader(answer_file)
             data = answer_reader.read_answers()
-            self.answers = data['answer_dict']
-            self.wrong_node_id = data['wrong_node_id']
-            self.nav_log = NavigationLogger()
-            self.nav_log.log("Navigation Strategy: {}".format(self.__class__.__name__))
+            self.invalid_nodes = data['invalid_nodes']
+            self.wrong_node_id = data['node_with_wrong_data_id']
+            #self.nav_log = NavigationLogger()
+            #self.nav_log.log("Navigation Strategy: {}".format(self.__class__.__name__))
             self.sequence_num = 0
 
     def navigate(self)->ExecutionTree:
@@ -34,12 +34,12 @@ class NavigationStrategy:
         self.sequence_num += 1
         seq_num = " {} ".format(str(self.sequence_num))
         self.exec_tree.node_under_evaluation = node
-        self.nav_log.log_node(node, self.sequence_num)
-        if self.answers[node.ev_id] is Validity.VALID:
+        #self.nav_log.log_node(node, self.sequence_num)
+        if node.ev_id not in self.invalid_nodes:
             # The YES answer prunes the subtree rooted at N
             self.recursive_validate(node)
-            self.nav_log.log(seq_num+"The node was defined as VALID")
-        elif self.answers[node.ev_id] is Validity.INVALID:
+            #self.nav_log.log(seq_num+"The node was defined as VALID")
+        elif node.ev_id in self.invalid_nodes:
             # The NO answer prunes all the nodes of the ET,
             # exept the subtree rooted at N
             node.validity = Validity.INVALID
@@ -47,7 +47,7 @@ class NavigationStrategy:
                 for c in node.parent.childrens:
                     if c is not node:
                         self.recursive_validate(c)
-            self.nav_log.log(seq_num+"The node was defined as INVALID")
+          #  self.nav_log.log(seq_num+"The node was defined as INVALID")
         self.exec_tree.node_under_evaluation = None
         return node
 
@@ -78,9 +78,10 @@ class NavigationStrategy:
 
     def finish_navigation(self):
         if self.AUTOMATED_NAVIGATION:
-            self.nav_log.log("Buggy node found: "+str(self.exec_tree.buggy_node.get_name()))
-            self.nav_log.log("Navigation finished.")
-            self.nav_log.file.close()
+            pass
+           # self.nav_log.log("Buggy node found: "+str(self.exec_tree.buggy_node.get_name()))
+          #  self.nav_log.log("Navigation finished.")
+          #  self.nav_log.file.close()
 
 
     def provenance_prune(self):

@@ -24,30 +24,30 @@ TIMEOUT_LIMIT = 30
 
 scripts = [
      '02-bisection/bisection.py',
-     '03-intersection/intersection.py',
-     '04-lu_decomposition/lu_decomposition.py',
-     '05-newton_method/newton_method.py',
-     '06-md5/hashmd5.py',
-     '07-basic_binary_tree/basic_binary_tree.py',
-     '08-edit_distance/edit_distance.py',
-     '09-dijkstra_algorithm/dijkstra_algorithm.py',
-     '11-brute_force_caesar_cipher/brute_force_caesar_cipher.py',
-     '12-basic_maths/basic_maths.py',
-     '13-merge_sort/merge_sort.py',
-     '15-decision_tree/decision_tree.py',
-     '16-math_parser/math_parser.py',
-     '17-merge_intervals/merge_intervals.py',
-     '18-graph_find_path/find_path.py',
-     '19-binary_search/binary_search.py',
-     '20-permute/permute.py',
-     '21-longest_common_subsequence/lcs.py',
-     '22-catalan/catalan.py',
-     '23-longest_increasing_subsequence/lis.py',
-     '24-bubblesort/bubblesort.py',
-     '25-quicksort/quicksort.py',
-     '26-heapsort/heapsort.py',
-     '28-knn/knn.py',
-     '29-string_permutation/stringpermutation.py'
+   #  '03-intersection/intersection.py',
+   #  '04-lu_decomposition/lu_decomposition.py',
+   #  '05-newton_method/newton_method.py',
+   #  '06-md5/hashmd5.py',
+   #  '07-basic_binary_tree/basic_binary_tree.py',
+   # '08-edit_distance/edit_distance.py',
+   #  '09-dijkstra_algorithm/dijkstra_algorithm.py',
+   #  '11-brute_force_caesar_cipher/brute_force_caesar_cipher.py',
+   #  '12-basic_maths/basic_maths.py',
+   #  '13-merge_sort/merge_sort.py',
+   #  '15-decision_tree/decision_tree.py',
+   #  '16-math_parser/math_parser.py',
+   #  '17-merge_intervals/merge_intervals.py',
+   #  '18-graph_find_path/find_path.py',
+   #  '19-binary_search/binary_search.py',
+   #  '20-permute/permute.py',
+   #  '21-longest_common_subsequence/lcs.py',
+   #  '22-catalan/catalan.py',
+   #  '23-longest_increasing_subsequence/lis.py',
+   #  '24-bubblesort/bubblesort.py',
+   #  '25-quicksort/quicksort.py',
+   #  '26-heapsort/heapsort.py',
+   #  '28-knn/knn.py',
+   #  '29-string_permutation/stringpermutation.py'
 ]
 
 
@@ -93,8 +93,6 @@ def get_faulty_cc_id(faulty_line, cursor):
     for tupl in cursor.execute(query_1, [faulty_line, faulty_line]):
         name = tupl[0]
 
-    print(name)
-
     query_2 = ("select e.code_component_id from activation a "
                "natural join evaluation e "
                "where a.code_block_id = ? ")
@@ -105,7 +103,6 @@ def get_faulty_cc_id(faulty_line, cursor):
         raise Exception("More than one activation associated with code_component_id. code_component_id: "+str(name))
 
     for tupl in cursor.execute(query_2, [name]):
-        print(tupl[0])
         return tupl[0]
 
 
@@ -114,16 +111,30 @@ def invalidate_node_and_parents(node):
         node.validity = Validity.INVALID
         node = node.parent
 
-
-def format_answers(exec_tree):
+def format_answers(exec_tree,node_with_wrong_data):
     invalid_nodes = []
     node_list = exec_tree.get_all_nodes()
     for n in node_list:
         if n.validity == Validity.INVALID:
             invalid_nodes.append(n.ev_id)
-    return invalid_nodes
+    obj = {
+        "invalid_nodes": set(invalid_nodes),
+        "node_with_wrong_data": node_with_wrong_data
+    }
+    return obj
 
-
+def get_node_with_wrong_data(mutant_dir,cursor):
+    result_file = open(mutant_dir+'.py.log')
+    result = result_file.readline().rstrip()
+    result_file.close()
+    query = ("select e.id from evaluation e "
+             "join code_component cc on e.code_component_id = cc.id "
+             "where e.repr = ? "
+             "order by cc.first_char_line DESC "
+             "LIMIT 1 ")
+    for tupl in cursor.execute(query, [result]):
+        return tupl[0]
+    
 def process_mutant(mutant_dir):
     os.chdir(mutant_dir)
     print(os.getcwd())
@@ -133,7 +144,6 @@ def process_mutant(mutant_dir):
     exec_tree = ExecTreeCreator(cursor).create_exec_tree()
     exec_tree.root_node.validity = Validity.INVALID
     faulty_code_component_id = get_faulty_cc_id(FAULTY_LINE, cursor)
-    #print('faulty code_component_id: ' + str(faulty_code_component_id))
     search_result = exec_tree.search_by_ccid(faulty_code_component_id)
 
     if len(search_result) != 1:
@@ -142,8 +152,9 @@ def process_mutant(mutant_dir):
 
     buggy_node = search_result.pop()
     invalidate_node_and_parents(buggy_node)
+    node_with_wrong_data = get_node_with_wrong_data(mutant_dir, cursor)
     ansfile = open('answers.json','w')
-    ansfile.write(json.dumps(format_answers(exec_tree)))
+    ansfile.write(json.dumps(format_answers(exec_tree,node_with_wrong_data)))
     ansfile.close()
     print('saving answerfile: '+os.getcwd()+'/answers.json')
     vis = Visualization(exec_tree)
