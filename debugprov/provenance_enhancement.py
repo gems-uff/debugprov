@@ -33,6 +33,9 @@ class ProvenanceEnhancement():
             evals.append(Evaluation(tupl[0],tupl[1],tupl[2],tupl[3]))
         return evals[-1]
 
+    def enhance(self,wrong_data):
+        pass
+
     def enhance_all(self):
         self.exec_tree.root_node.validity = Validity.INVALID
         dependencies = []
