@@ -40,7 +40,4 @@ class ProvenanceTools:
                 source = Evaluation(tupl[4],tupl[5],tupl[6],tupl[7])
                 target = Evaluation(tupl[0],tupl[1],tupl[2],tupl[3])
                 dependencies.append(DependencyRel(source,target))
-        print("SOURCE -> TARGET")
-        for d in dependencies:
-            print("DependencyRel(Evaluation({},{},'{}','{}'),Evaluation({},{},'{}','{}')),".format(d.source.ev_id,d.source.code_component_id,d.source.code_component_type,d.source.code_component_name,d.target.ev_id,d.target.code_component_id,d.target.code_component_type,d.target.code_component_name))
         return self.list_to_dict(dependencies)

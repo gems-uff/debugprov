@@ -33,7 +33,11 @@ class ProvenanceEnhancement():
             evals.append(Evaluation(tupl[0],tupl[1],tupl[2],tupl[3]))
         return evals[-1]
 
-    def enhance(self, wrong_data):
-        self.exec_tree.dependencies = self.dependencies
+    def enhance_all(self):
         self.exec_tree.root_node.validity = Validity.INVALID
-        
+        dependencies = []
+        for source in self.dependencies:
+            if source.code_component_type == 'call':
+                for target in self.dependencies[source]:
+                    dependencies.append(DependencyRel(source,target))
+        self.exec_tree.dependencies = dependencies

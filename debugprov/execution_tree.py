@@ -33,7 +33,5 @@ class ExecutionTree:
         nodes = []
         nodes.append(node)
         for c in node.childrens:
-            nodes.append(c)
-        for c in node.childrens:
             nodes.extend(self._get_all_nodes(c))
         return nodes

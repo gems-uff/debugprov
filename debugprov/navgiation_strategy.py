@@ -83,6 +83,3 @@ class NavigationStrategy:
           #  self.nav_log.log("Navigation finished.")
           #  self.nav_log.file.close()
 
-
-    def provenance_prune(self):
-        pass
