@@ -32,6 +32,7 @@ class ExecutionTree:
     def _get_all_nodes(self, node):
         nodes = []
         nodes.append(node)
-        for c in node.childrens:
-            nodes.extend(self._get_all_nodes(c))
+        if node.childrens is not None and len(node.childrens) > 0:
+            for c in node.childrens:
+                nodes.extend(self._get_all_nodes(c))
         return nodes

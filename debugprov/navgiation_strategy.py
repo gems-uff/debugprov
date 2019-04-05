@@ -83,3 +83,14 @@ class NavigationStrategy:
           #  self.nav_log.log("Navigation finished.")
           #  self.nav_log.file.close()
 
+    def provenance_prune(self):
+        all_nodes = self.exec_tree.get_all_nodes()
+        for node in all_nodes:
+            node.validity = Validity.NOT_IN_PROV
+        for d in self.exec_tree.dependencies:
+            source_node = self.exec_tree.search_by_ev_id(d.source.ev_id)
+            if source_node is not None:
+                source_node.validity = Validity.UNKNOWN
+            target_node = self.exec_tree.search_by_ev_id(d.target.ev_id)
+            if target_node is not None:
+                target_node.validity = Validity.UNKNOWN

@@ -33,13 +33,14 @@ class ProvenanceEnhancement():
             evals.append(Evaluation(tupl[0],tupl[1],tupl[2],tupl[3]))
         return evals[-1]
 
-    def enhance(self,wrong_eval):
-        self.recursive_enhance(wrong_eval) 
+    def enhance(self,wrong_node_id):
+        for e in self.dependencies:
+            if e.ev_id == wrong_node_id:
+                wd = e
+        self.recursive_enhance(wd) 
         self.exec_tree.root_node.validity = Validity.INVALID
         self.exec_tree.dependencies = self.final_dependencies
 
-        
-    
     def recursive_enhance(self,current):
         conj = self.dependencies[current]
         for c in conj:
