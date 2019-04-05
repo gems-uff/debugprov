@@ -31,8 +31,9 @@ class Visualization:
         if buggy_node is not None:
             self.graph.node(str(buggy_node.ev_id), str(buggy_node.get_name()), fillcolor=self.BUGGY_NODE_COLOR, style='filled')
         if self.exec_tree.dependencies is not None:
-            for d in self.exec_tree.dependencies: # this loop draws the provenance links between nodes
-                self.graph.edge(str(d.dependent.ev_id), str(d.influencer.ev_id), None, color=self.PROVENANCE_EDGE_COLOR, dir='forward')
+            for target in self.exec_tree.dependencies: # this loop draws the provenance links between nodes
+                for source in self.exec_tree.dependencies[target]:
+                    self.graph.edge(str(source.ev_id), str(target.ev_id), None, color=self.PROVENANCE_EDGE_COLOR, dir='forward')
 
     def view_exec_tree(self, graph_name = 'exec_tree'):
         self.generate_exec_tree(graph_name)

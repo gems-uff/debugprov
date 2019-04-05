@@ -85,13 +85,4 @@ class NavigationStrategy:
 
 
     def provenance_prune(self):
-        dependencies = self.exec_tree.dependencies        
-        nodes = self.exec_tree.get_all_nodes()
-        for n in nodes:
-            n.validity = Validity.NOT_IN_PROV
-        for d in dependencies:
-            infl_node = self.exec_tree.search_by_ev_id(d.influencer.ev_id) 
-            infl_node.validity = Validity.UNKNOWN
-            depend_node = self.exec_tree.search_by_ev_id(d.dependent.ev_id)
-            depend_node.validity = Validity.UNKNOWN
-        self.exec_tree.root_node.validity = Validity.INVALID
+        pass

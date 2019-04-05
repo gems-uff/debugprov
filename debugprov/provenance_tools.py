@@ -1,3 +1,5 @@
+from collections import defaultdict
+
 from debugprov.dependency_rel import DependencyRel
 from debugprov.evaluation import Evaluation
 
@@ -5,6 +7,25 @@ class ProvenanceTools:
 
     def __init__(self, cursor):
         self.cursor = cursor
+
+    def flat(self, list_):
+        for element in list_:
+            if isinstance(element, list):
+                yield from self.flat(element)
+            else:
+                yield element
+
+    def list_to_dict(self, dependencies):
+        reachable = defaultdict(list)
+        for dep in dependencies:
+            if dep.target.code_component_type == 'call': # if is a function call
+                reachable[dep.source].append(dep.target)
+            else:
+                reachable[dep.source].append(reachable[dep.target])
+        return {
+            key: set(self.flat(value))
+            for key, value in reachable.items()
+        }
 
     def get_dependencies(self):
         dependencies = []
@@ -16,7 +37,10 @@ class ProvenanceTools:
         "join code_component CC_DEPEND on EV_DEPEND.code_component_id = CC_DEPEND.id "
         "join code_component CC_INFLU on EV_INFLU.code_component_id = CC_INFLU.id " )
         for tupl in self.cursor.execute(query,[]):
-                dependent = Evaluation(tupl[4],tupl[5],tupl[6],tupl[7])
-                influencer = Evaluation(tupl[0],tupl[1],tupl[2],tupl[3])
-                dependencies.append(DependencyRel(influencer,dependent))
-        return dependencies
+                source = Evaluation(tupl[4],tupl[5],tupl[6],tupl[7])
+                target = Evaluation(tupl[0],tupl[1],tupl[2],tupl[3])
+                dependencies.append(DependencyRel(source,target))
+        print("SOURCE -> TARGET")
+        for d in dependencies:
+            print("DependencyRel(Evaluation({},{},'{}','{}'),Evaluation({},{},'{}','{}')),".format(d.source.ev_id,d.source.code_component_id,d.source.code_component_type,d.source.code_component_name,d.target.ev_id,d.target.code_component_id,d.target.code_component_type,d.target.code_component_name))
+        return self.list_to_dict(dependencies)
