@@ -2,6 +2,7 @@ from collections import defaultdict
 
 from debugprov.dependency_rel import DependencyRel
 from debugprov.evaluation import Evaluation
+import logging
 
 class ProvenanceTools:
 
@@ -9,7 +10,6 @@ class ProvenanceTools:
         self.cursor = cursor
 
     def flat(self, list_):
-        #print(".",end='')
         for element in list_:
             if isinstance(element, list):
                 yield from self.flat(element)
@@ -17,21 +17,21 @@ class ProvenanceTools:
                 yield element
 
     def list_to_dict(self, dependencies):
-        print("Provenance tools # list_to_dict STARTED")
-        print('len(dependencies): {}'.format(len(dependencies)))
+        logging.info("Provenance tools # list_to_dict STARTED")
+        logging.info('len(dependencies): {}'.format(len(dependencies)))
         reachable = defaultdict(list)
         for dep in dependencies:
             if dep.target.code_component_type == 'call': # if is a function call
                 reachable[dep.source].append(dep.target)
             else:
                 reachable[dep.source].append(reachable[dep.target])
-        print("Provenance tools # list_to_dict FINISHED")    
-        print("Provenance tools # FLAT starting..")    
+        logging.info("Provenance tools # list_to_dict FINISHED")    
+        logging.info("Provenance tools # FLAT starting..")    
         obj = {
             key: set(self.flat(value))
             for key, value in reachable.items()
         }
-        print("Provenance tools # FLAT finished")
+        logging.info("Provenance tools # FLAT finished")
         return obj    
         
 
