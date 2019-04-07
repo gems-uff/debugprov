@@ -30,9 +30,9 @@ class Visualization:
         buggy_node = self.exec_tree.buggy_node
         if buggy_node is not None:
             self.graph.node(str(buggy_node.ev_id), str(buggy_node.get_name()), fillcolor=self.BUGGY_NODE_COLOR, style='filled')
-        if self.exec_tree.dependencies is not None:
-            for d in self.exec_tree.dependencies:
-                self.graph.edge(str(d.source.ev_id), str(d.target.ev_id), None, color=self.PROVENANCE_EDGE_COLOR, dir='forward')
+        #if self.exec_tree.dependencies is not None:
+        #    for d in self.exec_tree.dependencies:
+        #        self.graph.edge(str(d.source.ev_id), str(d.target.ev_id), None, color=self.PROVENANCE_EDGE_COLOR, dir='forward')
 
     def view_exec_tree(self, graph_name = 'exec_tree'):
         self.generate_exec_tree(graph_name)
