@@ -1,3 +1,7 @@
+import json
+import sqlite3
+import os
+
 from debugprov.provenance_enhancement import ProvenanceEnhancement
 from debugprov.divide_and_query import DivideAndQuery
 from debugprov.single_stepping import SingleStepping
@@ -9,18 +13,10 @@ from debugprov.execution_tree import ExecutionTree
 from debugprov.node import Node
 from debugprov.validity import Validity
 from graphviz import Graph
-import pickle
-import json
-import sqlite3
-import shutil
-import subprocess
-import os
-SCRIPTS_DIRECTORY = 'scripts'
-NOWORKFLOW_DIR = '.noworkflow'
-PY_CACHE_DIR = '__pycache__'
-MUTANTS_SUBDIR = 'mutants'
-TIMEOUT_LIMIT = 30
 
+SCRIPTS_DIRECTORY = 'scripts'
+
+os.chdir(SCRIPTS_DIRECTORY)
 
 scripts = [
      '02-bisection/bisection.py',
@@ -178,6 +174,4 @@ def generate_answerfile(scripts):
                 os.chdir('..')
         os.chdir('../..')
 
-
-os.chdir(SCRIPTS_DIRECTORY)
 generate_answerfile(scripts)

@@ -1,12 +1,8 @@
-SCRIPTS_DIRECTORY = 'scripts'
-NOWORKFLOW_DIR = '.noworkflow'
-PY_CACHE_DIR = '__pycache__'
-MUTANTS_SUBDIR = 'mutants'
-TIMEOUT_LIMIT = 30
-
 import os
 import subprocess
-import shutil
+
+SCRIPTS_DIRECTORY = 'scripts'
+os.chdir(SCRIPTS_DIRECTORY)
 
 scripts = ['01-compression_analysis/psnr.py',
            '02-bisection/bisection.py',
@@ -39,13 +35,9 @@ scripts = ['01-compression_analysis/psnr.py',
            '29-string_permutation/stringpermutation.py',
            '30-linear_regression/demo.py']
 
-def run_scripts(scripts,save_log=False):
-    c=0
+def run_scripts(scripts):
     for script_path in scripts:
-        c += 1
-        #print(c)
         print(script_path)
-        #print("$ python "+script_path)
         directory = script_path.split('/')[0]
         script = script_path.split('/')[1]
         try:
@@ -53,16 +45,12 @@ def run_scripts(scripts,save_log=False):
             proc = subprocess.Popen(['python',script], cwd=os.getcwd(), env=os.environ, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             stdout, stderr = proc.communicate()
             print(stdout.decode('utf-8'))
-            if save_log:
-                logfile = open(script+'.log','w') 
-                logfile.write(stdout.decode('utf-8'))
-                logfile.close()
-            os.chdir('..')
+            logfile = open(script+'.log','w') 
+            logfile.write(stdout.decode('utf-8'))
+            logfile.close()
         except:
             print("#### "+script)
-            print('#### something went very very wrong')
-            os.chdir('..')
-    #print(c)
-    
-os.chdir(SCRIPTS_DIRECTORY)
-run_scripts(scripts,True)
+            print('#### something went very wrong')
+        os.chdir('..')
+
+run_scripts(scripts)

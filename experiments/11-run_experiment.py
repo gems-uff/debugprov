@@ -1,10 +1,10 @@
-SCRIPTS_DIRECTORY = 'scripts'
-PY_CACHE_DIR = '__pycache__'
-MUTANTS_SUBDIR = 'mutants'
-
 import os
 import subprocess
 from datetime import datetime
+
+SCRIPTS_DIRECTORY = 'scripts'
+
+os.chdir(SCRIPTS_DIRECTORY)
 
 programs = [
            '02-bisection',
@@ -12,8 +12,6 @@ programs = [
            #'04-lu_decomposition
            '05-newton_method',
         ]
-
-os.chdir(SCRIPTS_DIRECTORY)
 
 for program in programs:
     os.chdir(program)

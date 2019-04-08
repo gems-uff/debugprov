@@ -1,15 +1,9 @@
-SCRIPTS_DIRECTORY = 'scripts'
-NOWORKFLOW_DIR = '.noworkflow'
-PY_CACHE_DIR = '__pycache__'
-MUTANTS_SUBDIR = 'mutants'
-TIMEOUT_LIMIT = 30
-
 import os
-import subprocess
-import shutil
-import sqlite3
-import json
 import difflib
+
+SCRIPTS_DIRECTORY = 'scripts'
+
+os.chdir(SCRIPTS_DIRECTORY)
 
 scripts = [
            '02-bisection/bisection.py',
@@ -92,10 +86,5 @@ def generate_aboutdiff(scripts):
                 print('It was not possible to process this mutant diff')
             os.chdir('..')
         os.chdir('../..')
-            
 
-
-
-
-os.chdir(SCRIPTS_DIRECTORY)
 generate_aboutdiff(scripts)

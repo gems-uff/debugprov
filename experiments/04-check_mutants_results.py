@@ -1,17 +1,13 @@
-SCRIPTS_DIRECTORY = 'scripts'
-NOWORKFLOW_DIR = '.noworkflow'
-PY_CACHE_DIR = '__pycache__'
-MUTANTS_SUBDIR = 'mutants'
-TIMEOUT_LIMIT = 30
-
 import os
 import subprocess
-import shutil
 
-scripts = ['14-rsa_cipher/rsa_cipher.py.log']
-         
+SCRIPTS_DIRECTORY = 'scripts'
 
-def run_mutants(scripts):
+os.chdir(SCRIPTS_DIRECTORY)
+
+scripts = ['08-edit_distance/edit_distance.py.log']
+
+def check_results(scripts):
     for script_path in scripts:
         muts_with_correct_results = []
         print(script_path)
@@ -38,5 +34,4 @@ def run_mutants(scripts):
         muts_with_correct_results = []
         print()
 
-os.chdir(SCRIPTS_DIRECTORY)
-run_mutants(scripts)
+check_results(scripts)

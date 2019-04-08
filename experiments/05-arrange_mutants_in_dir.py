@@ -1,14 +1,12 @@
 SCRIPTS_DIRECTORY = 'scripts'
-NOWORKFLOW_DIR = '.noworkflow'
-PY_CACHE_DIR = '__pycache__'
-MUTANTS_SUBDIR = 'mutants'
-TIMEOUT_LIMIT = 30
 
 import os
 import subprocess
 import shutil
 
-directories = ['14-rsa_cipher']
+os.chdir(SCRIPTS_DIRECTORY)
+
+directories = ['08-edit_distance']
 
 def run_mutants(directories):
     for directory in directories:
@@ -26,5 +24,4 @@ def run_mutants(directories):
                 shutil.move("{}/{}".format(cwd,logfile), "{}/{}/{}".format(cwd,dir_name,logfile))
                 print("{}/{}".format(cwd,logfile) + ' -> ' + "{}/{}/{}".format(cwd,dir_name,logfile))
         os.chdir('../..')
-os.chdir(SCRIPTS_DIRECTORY)
 run_mutants(directories)

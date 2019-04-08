@@ -1,14 +1,12 @@
-SCRIPTS_DIRECTORY = 'scripts'
-NOWORKFLOW_DIR = '.noworkflow'
-PY_CACHE_DIR = '__pycache__'
-MUTANTS_SUBDIR = 'mutants'
-TIMEOUT_LIMIT = 60
-
 import os
 import subprocess
-import shutil
 
-mutants = ['14-rsa_cipher/mutants.running']
+SCRIPTS_DIRECTORY = 'scripts'
+TIMEOUT_LIMIT = 90
+
+os.chdir(SCRIPTS_DIRECTORY)
+
+mutants = ['08-edit_distance/mutants.running']
 
 def run_mutants(scripts):
     muts_with_syntax_errors = []
@@ -17,7 +15,7 @@ def run_mutants(scripts):
         print(script_path)
         os.chdir(script_path)
         for mutant in os.listdir():
-            if mutant.startswith('rsa_cipher.mutant') and mutant.endswith('.py'):
+            if mutant.endswith('.py'):
                 print(mutant)
                 proc = subprocess.Popen(['python',mutant], cwd=os.getcwd(), env=os.environ, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                 try:
@@ -42,5 +40,4 @@ def run_mutants(scripts):
         print("Deleted {} mutants with infinite loops".format(len(muts_with_infinite_loops)))
         os.chdir('../..')
 
-os.chdir(SCRIPTS_DIRECTORY)
 run_mutants(mutants)
