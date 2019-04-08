@@ -172,7 +172,7 @@ def process_mutant(mutant_dir):
     buggy_node = search_result.pop()
     invalidate_node_and_parents(buggy_node)
     node_with_wrong_data = get_node_with_wrong_data(mutant_dir, cursor)
-    ansfile = open('answers.json','w')
+    ansfile = open('oracle.json','w')
     ansfile.write(json.dumps(format_answers(exec_tree,node_with_wrong_data)))
     ansfile.close()
     print('saving answerfile: '+os.getcwd()+'/answers.json')
