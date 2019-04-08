@@ -19,9 +19,9 @@ SCRIPTS_DIRECTORY = 'scripts'
 os.chdir(SCRIPTS_DIRECTORY)
 
 scripts = [
-     '02-bisection/bisection.py',
-   #  '03-intersection/intersection.py',
-   #  '04-lu_decomposition/lu_decomposition.py',
+     '02-bisection',
+   #  '03-intersection',
+   #  '04-lu_decomposition',
    #  '05-newton_method/newton_method.py',
    #  '06-md5/hashmd5.py',
    #  '07-basic_binary_tree/basic_binary_tree.py',
@@ -47,32 +47,46 @@ scripts = [
 ]
 
 
+#def discover_changed_lines(filename):
+#    mutant = open(filename)
+#    content = mutant.readlines()
+#    mutant.close()
+#    removes = 0
+#    insertions = 0
+#    count = 0
+#    for line in content:
+#        count += 1
+#        if line.startswith('+'):
+#            first_insertion = count
+#            insertions += 1
+#        elif line.startswith('-'):
+#            first_removal = count
+#            removes += 1
+#    if removes == 1 and insertions == 1:
+#        return first_removal
+#    elif removes == 0 and insertions == 1:
+#        return first_insertion
+#    else:
+#        if first_removal != 0:
+#            return first_removal
+#        elif first_insertion != 0:
+#            return first_insertion
+#        else:
+#            raise Exception("It was not possible to process this mutant diff")
+
+
 def discover_changed_lines(filename):
     mutant = open(filename)
     content = mutant.readlines()
     mutant.close()
-    removes = 0
-    insertions = 0
-    count = 0
+    line_count = 0
     for line in content:
-        count += 1
+        line_count += 1
         if line.startswith('+'):
-            first_insertion = count
-            insertions += 1
+            return line_count
         elif line.startswith('-'):
-            first_removal = count
-            removes += 1
-    if removes == 1 and insertions == 1:
-        return first_removal
-    elif removes == 0 and insertions == 1:
-        return first_insertion
-    else:
-        if first_removal != 0:
-            return first_removal
-        elif first_insertion != 0:
-            return first_insertion
-        else:
-            raise Exception("It was not possible to process this mutant diff")
+            return line_count
+    raise Exception("It was not possible to process this mutant diff")
 
 def get_faulty_cc_id(faulty_line, cursor):
     query_1 = ("select CC.id "
@@ -114,23 +128,32 @@ def format_answers(exec_tree,node_with_wrong_data):
         if n.validity == Validity.INVALID:
             invalid_nodes.append(n.ev_id)
     obj = {
-        "invalid_nodes": set(invalid_nodes),
+        "invalid_nodes": list(set(invalid_nodes)),
         "node_with_wrong_data": node_with_wrong_data
     }
     return obj
 
+#def get_node_with_wrong_data(mutant_dir,cursor):
+#    result_file = open(mutant_dir+'.py.log')
+#    result = result_file.readline().rstrip()
+#    result_file.close()
+#    query = ("select e.id from evaluation e "
+#             "join code_component cc on e.code_component_id = cc.id "
+#             "where e.repr = ? "
+#             "order by cc.first_char_line DESC "
+#             "LIMIT 1 ")
+#    for tupl in cursor.execute(query, [result]):
+#        return tupl[0]
+
 def get_node_with_wrong_data(mutant_dir,cursor):
-    result_file = open(mutant_dir+'.py.log')
-    result = result_file.readline().rstrip()
-    result_file.close()
     query = ("select e.id from evaluation e "
              "join code_component cc on e.code_component_id = cc.id "
-             "where e.repr = ? "
+             "where cc.name like '%print%' and cc.type='call' "
              "order by cc.first_char_line DESC "
              "LIMIT 1 ")
-    for tupl in cursor.execute(query, [result]):
+    for tupl in cursor.execute(query):
         return tupl[0]
-    
+
 def process_mutant(mutant_dir):
     os.chdir(mutant_dir)
     print(os.getcwd())
@@ -161,8 +184,7 @@ def process_mutant(mutant_dir):
 
 def generate_answerfile(scripts):
     for script_path in scripts:
-        directory = script_path.split('/')[0]
-        # script = script_path.split('/')[1]
+        directory = script_path
         os.chdir(directory)
         os.chdir('mutants.wrong_result')
         for mutant_dir in os.listdir():
