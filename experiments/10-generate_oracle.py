@@ -18,7 +18,7 @@ SCRIPTS_DIRECTORY = 'scripts'
 
 os.chdir(SCRIPTS_DIRECTORY)
 
-scripts = ['03-intersection']
+scripts = ['17-merge_intervals']
 
 def discover_changed_lines(filename):
     mutant = open(filename)

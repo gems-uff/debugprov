@@ -27,10 +27,12 @@ SCRIPTS_DIRECTORY = 'scripts'
 os.chdir(SCRIPTS_DIRECTORY)
 
 programs = [
-           '02-bisection',
-           '03-intersection',
-           '04-lu_decomposition',
-           '05-newton_method',
+           #'02-bisection',
+           #'03-intersection',
+           #'04-lu_decomposition',
+           #'05-newton_method',
+           '17-merge_intervals'
+           #'25-quicksort'
         ]
 
 
