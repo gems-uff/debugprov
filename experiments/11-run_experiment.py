@@ -10,7 +10,7 @@ programs = [
            '02-bisection',
            '03-intersection',
            #'04-lu_decomposition
-           '05-newton_method',
+           #'05-newton_method',
         ]
 
 for program in programs:
