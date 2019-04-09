@@ -18,62 +18,7 @@ SCRIPTS_DIRECTORY = 'scripts'
 
 os.chdir(SCRIPTS_DIRECTORY)
 
-scripts = [
-     '02-bisection',
-   #  '03-intersection',
-   #  '04-lu_decomposition',
-   #  '05-newton_method/newton_method.py',
-   #  '06-md5/hashmd5.py',
-   #  '07-basic_binary_tree/basic_binary_tree.py',
-   # '08-edit_distance/edit_distance.py',
-   #  '09-dijkstra_algorithm/dijkstra_algorithm.py',
-   #  '11-brute_force_caesar_cipher/brute_force_caesar_cipher.py',
-   #  '12-basic_maths/basic_maths.py',
-   #  '13-merge_sort/merge_sort.py',
-   #  '15-decision_tree/decision_tree.py',
-   #  '16-math_parser/math_parser.py',
-   #  '17-merge_intervals/merge_intervals.py',
-   #  '18-graph_find_path/find_path.py',
-   #  '19-binary_search/binary_search.py',
-   #  '20-permute/permute.py',
-   #  '21-longest_common_subsequence/lcs.py',
-   #  '22-catalan/catalan.py',
-   #  '23-longest_increasing_subsequence/lis.py',
-   #  '24-bubblesort/bubblesort.py',
-   #  '25-quicksort/quicksort.py',
-   #  '26-heapsort/heapsort.py',
-   #  '28-knn/knn.py',
-   #  '29-string_permutation/stringpermutation.py'
-]
-
-
-#def discover_changed_lines(filename):
-#    mutant = open(filename)
-#    content = mutant.readlines()
-#    mutant.close()
-#    removes = 0
-#    insertions = 0
-#    count = 0
-#    for line in content:
-#        count += 1
-#        if line.startswith('+'):
-#            first_insertion = count
-#            insertions += 1
-#        elif line.startswith('-'):
-#            first_removal = count
-#            removes += 1
-#    if removes == 1 and insertions == 1:
-#        return first_removal
-#    elif removes == 0 and insertions == 1:
-#        return first_insertion
-#    else:
-#        if first_removal != 0:
-#            return first_removal
-#        elif first_insertion != 0:
-#            return first_insertion
-#        else:
-#            raise Exception("It was not possible to process this mutant diff")
-
+scripts = ['03-intersection']
 
 def discover_changed_lines(filename):
     mutant = open(filename)
@@ -133,18 +78,6 @@ def format_answers(exec_tree,node_with_wrong_data):
     }
     return obj
 
-#def get_node_with_wrong_data(mutant_dir,cursor):
-#    result_file = open(mutant_dir+'.py.log')
-#    result = result_file.readline().rstrip()
-#    result_file.close()
-#    query = ("select e.id from evaluation e "
-#             "join code_component cc on e.code_component_id = cc.id "
-#             "where e.repr = ? "
-#             "order by cc.first_char_line DESC "
-#             "LIMIT 1 ")
-#    for tupl in cursor.execute(query, [result]):
-#        return tupl[0]
-
 def get_node_with_wrong_data(mutant_dir,cursor):
     query = ("select e.id from evaluation e "
              "join code_component cc on e.code_component_id = cc.id "
@@ -175,7 +108,7 @@ def process_mutant(mutant_dir):
     ansfile = open('oracle.json','w')
     ansfile.write(json.dumps(format_answers(exec_tree,node_with_wrong_data)))
     ansfile.close()
-    print('saving answerfile: '+os.getcwd()+'/answers.json')
+    print('saving oracle.json file: '+os.getcwd()+'/oracle.json')
     vis = Visualization(exec_tree)
     vis.generate_exec_tree()
     vis.graph.render(filename='exec_tree',format='pdf')

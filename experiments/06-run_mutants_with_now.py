@@ -3,11 +3,11 @@ import subprocess
 import shutil
 
 SCRIPTS_DIRECTORY = 'scripts'
-TIMEOUT_LIMIT = 75
+TIMEOUT_LIMIT = 90
 
 os.chdir(SCRIPTS_DIRECTORY)
 
-directories = ['08-edit_distance']
+directories = ['04-lu_decomposition']
 
 def run_mutants_with_now(directories):
     for directory in directories:

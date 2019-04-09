@@ -4,9 +4,9 @@ import difflib
 SCRIPTS_DIRECTORY = 'scripts'
 os.chdir(SCRIPTS_DIRECTORY)
 
-programs = ['08-edit_distance']
+programs = ['04-lu_decomposition/lu_decomposition.py']
 
-def view_diffs(scripts):
+def store_diffs(scripts):
     for script_path in scripts:
         directory = script_path.split('/')[0]
         script = script_path.split('/')[1]

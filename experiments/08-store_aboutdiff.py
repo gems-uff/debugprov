@@ -5,33 +5,7 @@ SCRIPTS_DIRECTORY = 'scripts'
 
 os.chdir(SCRIPTS_DIRECTORY)
 
-scripts = [
-           '02-bisection/bisection.py',
-           '03-intersection/intersection.py',
-           '04-lu_decomposition/lu_decomposition.py',
-           '05-newton_method/newton_method.py',
-           '06-md5/hashmd5.py',
-           '07-basic_binary_tree/basic_binary_tree.py',
-           '08-edit_distance/edit_distance.py',
-           '09-dijkstra_algorithm/dijkstra_algorithm.py',
-           '11-brute_force_caesar_cipher/brute_force_caesar_cipher.py',
-           '12-basic_maths/basic_maths.py',
-           '13-merge_sort/merge_sort.py',
-           '15-decision_tree/decision_tree.py',
-           '16-math_parser/math_parser.py',
-           '17-merge_intervals/merge_intervals.py',
-           '18-graph_find_path/find_path.py',
-           '19-binary_search/binary_search.py',
-           '20-permute/permute.py',
-           '21-longest_common_subsequence/lcs.py',
-           '22-catalan/catalan.py',
-           '23-longest_increasing_subsequence/lis.py',
-           '24-bubblesort/bubblesort.py',
-           '25-quicksort/quicksort.py',
-           '26-heapsort/heapsort.py',
-           '28-knn/knn.py',
-           '29-string_permutation/stringpermutation.py'
-        ]
+scripts = ['04-lu_decomposition/lu_decomposition.py']
 
 def process_inline_diff(oneline,otherline,outputfile):
     oneline = oneline.rstrip()

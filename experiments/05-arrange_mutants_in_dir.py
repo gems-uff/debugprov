@@ -6,7 +6,7 @@ import shutil
 
 os.chdir(SCRIPTS_DIRECTORY)
 
-directories = ['08-edit_distance']
+directories = ['04-lu_decomposition']
 
 def run_mutants(directories):
     for directory in directories:

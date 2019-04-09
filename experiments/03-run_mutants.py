@@ -6,7 +6,7 @@ TIMEOUT_LIMIT = 90
 
 os.chdir(SCRIPTS_DIRECTORY)
 
-mutants = ['08-edit_distance/mutants.running']
+mutants = ['04-lu_decomposition/mutants.running']
 
 def run_mutants(scripts):
     muts_with_syntax_errors = []

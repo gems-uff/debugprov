@@ -2,10 +2,11 @@ import os
 import subprocess
 
 SCRIPTS_DIRECTORY = 'scripts'
+MUTANTS_WRONG_RESULT_DIR = 'mutants.wrong_result'
 
 os.chdir(SCRIPTS_DIRECTORY)
 
-scripts = ['08-edit_distance/edit_distance.py.log']
+scripts = ['04-lu_decomposition/lu_decomposition.py.log']
 
 def check_results(scripts):
     for script_path in scripts:
@@ -17,7 +18,7 @@ def check_results(scripts):
         original_log_file = open(script) 
         original_result = original_log_file.readlines()
         original_log_file.close()
-        os.chdir('mutants.wrong_result')
+        os.chdir(MUTANTS_WRONG_RESULT_DIR)
         for a_file in os.listdir():
             if a_file.endswith('.log'):
                 logfile = open(a_file,'r')
