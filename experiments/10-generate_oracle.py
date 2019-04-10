@@ -18,7 +18,7 @@ SCRIPTS_DIRECTORY = 'scripts'
 
 os.chdir(SCRIPTS_DIRECTORY)
 
-scripts = ['10-caesar_cipher']
+scripts = ['20-permute']
 
 def discover_changed_lines(filename):
     mutant = open(filename)
@@ -84,6 +84,10 @@ def get_node_with_wrong_data(mutant_dir,cursor):
              "where cc.name like '%print%' and cc.type='call' "
              "order by cc.first_char_line DESC "
              "LIMIT 1 ")
+    cursor.execute(query)
+    result = cursor.fetchall()
+    if len(result) == 0:
+        raise Exception("Could not find print node")
     for tupl in cursor.execute(query):
         return tupl[0]
 

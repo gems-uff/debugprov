@@ -31,9 +31,14 @@ programs = [
            #'03-intersection',
            #'04-lu_decomposition',
            #'05-newton_method',
-            '10-caesar_cipher'
+           # '10-caesar_cipher'
+           #'18-graph_find_path'
+           # '19-binary_search'
+           '20-permute'
            #'21-longest_common_subsequence'
            #'17-merge_intervals'
+           #'23-longest_increasing_subsequence'
+           #'24-bubblesort'
            #'25-quicksort',
            #'26-heapsort',
            #'22-catalan',
@@ -51,9 +56,8 @@ for program in programs:
         experiment.run()
         experiment.export_experiment_data()
         print("{} - Done".format(datetime.now().strftime('%Y_%m_%d %H-%M-%S.%f')))
-    except Exception as e:
+    except Exception:
         print("{} - Something went wrong".format(datetime.now().strftime('%Y_%m_%d %H-%M-%S.%f')))
-        print(e)
         traceback.print_exc()
     os.chdir('..')
 
