@@ -31,8 +31,13 @@ programs = [
            #'03-intersection',
            #'04-lu_decomposition',
            #'05-newton_method',
-           '17-merge_intervals'
-           #'25-quicksort'
+            '10-caesar_cipher'
+           #'21-longest_common_subsequence'
+           #'17-merge_intervals'
+           #'25-quicksort',
+           #'26-heapsort',
+           #'22-catalan',
+           #'28-knn'
         ]
 
 

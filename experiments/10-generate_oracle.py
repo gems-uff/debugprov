@@ -18,7 +18,7 @@ SCRIPTS_DIRECTORY = 'scripts'
 
 os.chdir(SCRIPTS_DIRECTORY)
 
-scripts = ['17-merge_intervals']
+scripts = ['10-caesar_cipher']
 
 def discover_changed_lines(filename):
     mutant = open(filename)

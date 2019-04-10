@@ -5,7 +5,7 @@ SCRIPTS_DIRECTORY = 'scripts'
 
 os.chdir(SCRIPTS_DIRECTORY)
 
-scripts = ['04-lu_decomposition/lu_decomposition.py']
+scripts = ['10-caesar_cipher/caesar_cipher.py']
 
 def process_inline_diff(oneline,otherline,outputfile):
     oneline = oneline.rstrip()

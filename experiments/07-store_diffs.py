@@ -4,7 +4,7 @@ import difflib
 SCRIPTS_DIRECTORY = 'scripts'
 os.chdir(SCRIPTS_DIRECTORY)
 
-programs = ['04-lu_decomposition/lu_decomposition.py']
+programs = ['10-caesar_cipher/caesar_cipher.py']
 
 def store_diffs(scripts):
     for script_path in scripts:
