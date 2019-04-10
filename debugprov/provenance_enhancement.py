@@ -5,7 +5,7 @@ from debugprov.execution_tree import ExecutionTree
 from debugprov.visualization import Visualization
 from debugprov.provenance_tools import ProvenanceTools
 from debugprov.evaluation import Evaluation
-import logging
+#import logging
 
 class ProvenanceEnhancement():
 
@@ -35,8 +35,8 @@ class ProvenanceEnhancement():
         return evals[-1]
 
     def enhance(self,wrong_node_id):
-        logging.info("Provenance Enhancement # enhance STARTED")
-        logging.info("len(self.dependencies): {}".format(str(len(self.dependencies))))
+        #logging.info("Provenance Enhancement # enhance STARTED")
+        #logging.info("len(self.dependencies): {}".format(str(len(self.dependencies))))
         for e in self.dependencies:
             if e.ev_id == wrong_node_id:
                 wd = e
@@ -48,16 +48,19 @@ class ProvenanceEnhancement():
             
         nodes_to_visit = self.dependencies[wd]
         for node in nodes_to_visit:
+            self.final_dependencies.append(DependencyRel(wd,node))
+        for node in nodes_to_visit:
             search_result = self.exec_tree.search_by_ev_id(node.ev_id)
             if search_result is not None:
                 search_result.validity = Validity.UNKNOWN
             node.visited = True
             for n in self.dependencies[node]:
+                self.final_dependencies.append(DependencyRel(n,node))
                 if not hasattr(n,'visited'):
                     nodes_to_visit.append(n)
-
+        self.exec_tree.dependencies = set(self.final_dependencies)
         self.exec_tree.root_node.validity = Validity.INVALID
-        logging.info("Provenance Enhancement # enhance FINISHED")
+        #logging.info("Provenance Enhancement # enhance FINISHED")
 
     def enhance_all(self):
         self.exec_tree.root_node.validity = Validity.INVALID
