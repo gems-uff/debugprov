@@ -98,3 +98,10 @@ typings/
 .env
 
 .awcache
+
+# Experiment execution data
+experiment_logs
+experiments/provenance-logs
+experiments/scripts
+experiments/selected_mutants
+graphs
