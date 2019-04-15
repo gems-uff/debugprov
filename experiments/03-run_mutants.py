@@ -1,19 +1,36 @@
 import os
 import subprocess
+import shutil
+from config import Config
 
-SCRIPTS_DIRECTORY = 'scripts'
 TIMEOUT_LIMIT = 90
 
-os.chdir(SCRIPTS_DIRECTORY)
+config = Config()
+config.go_to_scripts_path()
 
-mutants = ['04-lu_decomposition/mutants.running']
+def copytree(src, dst, symlinks=False, ignore=None):
+    for item in os.listdir(src):
+        s = os.path.join(src, item)
+        d = os.path.join(dst, item)
+        if os.path.isdir(s):
+            shutil.copytree(s, d, symlinks, ignore)
+        else:
+            shutil.copy2(s, d)
+
+# Move all mutants from mutants.all to mutants.running
+def move_mutants():
+    os.mkdir(config.running_mutants_dir)
+    copytree(config.all_mutants_dir,config.running_mutants_dir)
 
 def run_mutants(scripts):
     muts_with_syntax_errors = []
     muts_with_infinite_loops = []
     for script_path in scripts:
         print(script_path)
-        os.chdir(script_path)
+        directory = script_path.split('/')[0]
+        os.chdir(directory)
+        move_mutants()
+        os.chdir(config.running_mutants_dir)
         for mutant in os.listdir():
             if mutant.endswith('.py'):
                 print(mutant)
@@ -40,4 +57,5 @@ def run_mutants(scripts):
         print("Deleted {} mutants with infinite loops".format(len(muts_with_infinite_loops)))
         os.chdir('../..')
 
-run_mutants(mutants)
+run_mutants(config.target_scripts)
+config.go_back_to_current_path()

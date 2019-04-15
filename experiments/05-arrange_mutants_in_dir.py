@@ -1,15 +1,15 @@
-SCRIPTS_DIRECTORY = 'scripts'
-
 import os
 import subprocess
 import shutil
 
-os.chdir(SCRIPTS_DIRECTORY)
+from config import Config
 
-directories = ['04-lu_decomposition']
+config = Config()
+config.go_to_scripts_path()
 
-def run_mutants(directories):
-    for directory in directories:
+def arrange_mutants(scripts):
+    for script_path in scripts:
+        directory = script_path.split('/')[0]
         print(directory)
         os.chdir(directory)
         os.chdir('mutants.wrong_result')
@@ -24,4 +24,5 @@ def run_mutants(directories):
                 shutil.move("{}/{}".format(cwd,logfile), "{}/{}/{}".format(cwd,dir_name,logfile))
                 print("{}/{}".format(cwd,logfile) + ' -> ' + "{}/{}/{}".format(cwd,dir_name,logfile))
         os.chdir('../..')
-run_mutants(directories)
+
+arrange_mutants(config.target_scripts)

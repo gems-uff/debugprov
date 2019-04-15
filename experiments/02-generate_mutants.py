@@ -1,13 +1,9 @@
 import sys
 import os
 import subprocess
+from config import Config
 
-SCRIPTS_DIRECTORY = 'scripts'
-MUTANTS_SUBDIR = 'mutants'
-
-os.chdir(SCRIPTS_DIRECTORY)
-
-scripts = ['04-lu_decomposition/lu_decomposition.py']
+config = Config()
 
 def generate_mutants(scripts):
     for script_path in scripts:
@@ -16,9 +12,9 @@ def generate_mutants(scripts):
         script = script_path.split('/')[1]
         try:
             os.chdir(directory)
-            print(os.getcwd())
-            print("mutate {} --mutantDir mutants.all".format(script))
-            proc = subprocess.Popen("mutate {} --mutantDir mutants.all".format(script), cwd=os.getcwd(), env=os.environ, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            os.mkdir(config.all_mutants_dir)
+            print("mutate {} --mutantDir {}".format(script,config.all_mutants_dir))
+            proc = subprocess.Popen("mutate {} --mutantDir {}".format(script,config.all_mutants_dir), cwd=os.getcwd(), env=os.environ, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             stdout, stderr = proc.communicate()
             print(stdout.decode('utf-8'))
             logfile = open('mutant_generation.log','w') 
@@ -36,4 +32,6 @@ else: # PYTHON 2
     print("UNIVERSALMUTATOR HAVE TO BE INSTALLED")
     ans = raw_input("TYPE OK TO RUN \n")
     if ans == 'ok':
-        generate_mutants(scripts)
+        config.go_to_scripts_path()
+        generate_mutants(config.target_scripts)
+        config.go_back_to_current_path()

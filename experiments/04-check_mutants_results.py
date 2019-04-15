@@ -1,12 +1,24 @@
 import os
 import subprocess
+import shutil
+from config import Config
 
-SCRIPTS_DIRECTORY = 'scripts'
-MUTANTS_WRONG_RESULT_DIR = 'mutants.wrong_result'
+config = Config()
+config.go_to_scripts_path()
 
-os.chdir(SCRIPTS_DIRECTORY)
+def copytree(src, dst, symlinks=False, ignore=None):
+    for item in os.listdir(src):
+        s = os.path.join(src, item)
+        d = os.path.join(dst, item)
+        if os.path.isdir(s):
+            shutil.copytree(s, d, symlinks, ignore)
+        else:
+            shutil.copy2(s, d)
 
-scripts = ['04-lu_decomposition/lu_decomposition.py.log']
+# Move all mutants from mutants.running to mutants.wrong_result
+def move_mutants():
+    os.mkdir(config.mutants_with_wrong_result)
+    copytree(config.running_mutants_dir,config.mutants_with_wrong_result)
 
 def check_results(scripts):
     for script_path in scripts:
@@ -14,11 +26,13 @@ def check_results(scripts):
         print(script_path)
         directory = script_path.split('/')[0]
         script = script_path.split('/')[1]
+        script_log = "{}.log".format(script)
         os.chdir(directory)
-        original_log_file = open(script) 
+        move_mutants()
+        original_log_file = open(script_log) 
         original_result = original_log_file.readlines()
         original_log_file.close()
-        os.chdir(MUTANTS_WRONG_RESULT_DIR)
+        os.chdir(config.mutants_with_wrong_result)
         for a_file in os.listdir():
             if a_file.endswith('.log'):
                 logfile = open(a_file,'r')
@@ -35,4 +49,5 @@ def check_results(scripts):
         muts_with_correct_results = []
         print()
 
-check_results(scripts)
+check_results(config.target_scripts)
+config.go_to_scripts_path()
