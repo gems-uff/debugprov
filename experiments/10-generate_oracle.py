@@ -14,11 +14,12 @@ from debugprov.node import Node
 from debugprov.validity import Validity
 from graphviz import Graph
 
-SCRIPTS_DIRECTORY = 'scripts'
 
-os.chdir(SCRIPTS_DIRECTORY)
+from config import Config
 
-scripts = ['20-permute']
+config = Config()
+config.go_to_scripts_path()
+
 
 def discover_changed_lines(filename):
     mutant = open(filename)
@@ -121,7 +122,7 @@ def process_mutant(mutant_dir):
 
 def generate_answerfile(scripts):
     for script_path in scripts:
-        directory = script_path
+        directory = script_path.split('/')[0]
         os.chdir(directory)
         os.chdir('mutants.wrong_result')
         for mutant_dir in os.listdir():
@@ -133,4 +134,4 @@ def generate_answerfile(scripts):
                 os.chdir('..')
         os.chdir('../..')
 
-generate_answerfile(scripts)
+generate_answerfile(config.target_scripts)

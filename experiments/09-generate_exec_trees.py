@@ -13,17 +13,17 @@ from debugprov.provenance_enhancement import ProvenanceEnhancement
 from debugprov.single_stepping import SingleStepping
 from debugprov.divide_and_query import DivideAndQuery
 
-SCRIPTS_DIRECTORY = 'scripts'
+from config import Config
 
-os.chdir(SCRIPTS_DIRECTORY)
+config = Config()
+config.go_to_scripts_path()
 
-programs = ['04-lu_decomposition']
-
-def generate_exec_trees(programs):
-    for program in programs:
-        print(program)
-        os.chdir(program)
-        os.chdir('mutants.wrong_result')
+def generate_exec_trees(scripts):
+    for script_path in scripts:
+        print(script_path)
+        directory = script_path.split('/')[0]
+        os.chdir(script_path)
+        os.chdir(config.mutants_with_wrong_result)
         for mutant_dir in os.listdir():
             os.chdir(mutant_dir)
             now2_sqlite_path = os.getcwd() + '/.noworkflow/db.sqlite'
@@ -36,4 +36,4 @@ def generate_exec_trees(programs):
             os.chdir('..')
         os.chdir('../..')
             
-generate_exec_trees(programs)
+generate_exec_trees(config.target_scripts)

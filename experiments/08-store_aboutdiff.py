@@ -1,11 +1,9 @@
 import os
 import difflib
+from config import Config
 
-SCRIPTS_DIRECTORY = 'scripts'
-
-os.chdir(SCRIPTS_DIRECTORY)
-
-scripts = ['10-caesar_cipher/caesar_cipher.py']
+config = Config()
+config.go_to_scripts_path()
 
 def process_inline_diff(oneline,otherline,outputfile):
     oneline = oneline.rstrip()
@@ -61,4 +59,4 @@ def generate_aboutdiff(scripts):
             os.chdir('..')
         os.chdir('../..')
 
-generate_aboutdiff(scripts)
+generate_aboutdiff(config.target_scripts)

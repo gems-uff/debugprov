@@ -14,40 +14,26 @@ from debugprov.node import Node
 from datetime import datetime
 from graphviz import Graph
 from experiment_lib import ExperimentLib
+
 import time
 import sqlite3
 import copy
 import os
 import pandas as pd
-import logging
 import traceback
 
+import logging
 logging.basicConfig(filename='experiment_log.log', filemode='w',level=logging.INFO, format='%(asctime)s - %(message)s')
-SCRIPTS_DIRECTORY = 'scripts'
-os.chdir(SCRIPTS_DIRECTORY)
 
-programs = [
-           #'02-bisection',
-           #'03-intersection',
-           #'04-lu_decomposition',
-           #'05-newton_method',
-           # '10-caesar_cipher'
-           #'18-graph_find_path'
-           # '19-binary_search'
-           '20-permute'
-           #'21-longest_common_subsequence'
-           #'17-merge_intervals'
-           #'23-longest_increasing_subsequence'
-           #'24-bubblesort'
-           #'25-quicksort',
-           #'26-heapsort',
-           #'22-catalan',
-           #'28-knn'
-        ]
+from config import Config
+
+config = Config()
+config.go_to_scripts_path()
 
 
-for program in programs:
-    os.chdir(program)
+for script_path in config.target_scripts:
+    directory = script_path.split('/')[0]    
+    os.chdir(directory)
     try:
         print("{} - Running experiments from {}".format(datetime.now().strftime('%Y_%m_%d %H-%M-%S.%f'),program))
         experiment = ExperimentLib()
