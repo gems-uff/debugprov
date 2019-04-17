@@ -39,4 +39,4 @@ class Node:
             self.params.append(Parameter(tupl[0], tupl[1]))
 
     def get_name(self):
-        return "{} {} {}".format(self.ev_id, self.name, self.code_component_id)
+        return "{} {}".format(self.ev_id, self.name)

@@ -48,7 +48,8 @@ class ProvenanceEnhancement():
             
         nodes_to_visit = self.dependencies[wd]
         for node in nodes_to_visit:
-            self.final_dependencies.append(DependencyRel(wd,node))
+            # original: self.final_dependencies.append(DependencyRel(wd,node))
+            self.final_dependencies.append(DependencyRel(node,wd))#
         for node in nodes_to_visit:
             search_result = self.exec_tree.search_by_ev_id(node.ev_id)
             if search_result is not None:
