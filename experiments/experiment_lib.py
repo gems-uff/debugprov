@@ -135,7 +135,7 @@ class ExperimentLib:
                         if self.generate_trees:
                                 vis = Visualization(exec_tree)
                                 vis.view_exec_tree(str(id(exec_tree)))
-                        self.heaviest_first_results.append(top_down.sequence_num)
+                        self.heaviest_first_results.append(heaviest_first.sequence_num)
                     except Exception as e:
                         self.heaviest_first_results.append(None)
                         print("Exception: {}".format(e))
@@ -251,7 +251,7 @@ class ExperimentLib:
                                 str(heaviest_first.sequence_num)+" steps.")
                         logging.info("HeaviestFirst experiment finished: " +
                                         str(heaviest_first.sequence_num)+" steps.")
-                        self.heaviest_first_prov_results.append(top_down.sequence_num)
+                        self.heaviest_first_prov_results.append(heaviest_first.sequence_num)
                         if self.generate_trees:
                             vis = Visualization(exec_tree)
                             vis.view_exec_tree(str(id(exec_tree)))
@@ -278,7 +278,7 @@ class ExperimentLib:
                         if self.generate_trees:
                             vis = Visualization(exec_tree)
                             vis.view_exec_tree(str(id(exec_tree)))
-                        self.divide_and_query_prov_results.append(top_down.sequence_num)
+                        self.divide_and_query_prov_results.append(divide_and_query.sequence_num)
                     except:
                         self.divide_and_query_prov_results.append(None)
                         print("Exception: {}".format(e))
