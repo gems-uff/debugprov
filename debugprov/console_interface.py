@@ -45,7 +45,7 @@ class CustomVisualization(Visualization):
 
 class ConsoleInterface:
 
-    DEFAULT_SQLITE_PATH = 'C:/Users/linha/Desktop/ws/py-scripts-examples/age-avg/.noworkflow/db.sqlite'
+    DEFAULT_SQLITE_PATH = '.noworkflow/db.sqlite'
     NAVIGATION_STRATEGIES = [SingleStepping, TopDown, HeaviestFirst, DivideAndQuery] 
 
     def ask_db_path(self):
@@ -75,7 +75,7 @@ class ConsoleInterface:
         self.out_filename = prompt('Output file name: ', default='exec_tree')
 
     def run(self):
-        self.ask_db_path()
+        self.db_path = self.DEFAULT_SQLITE_PATH
         try:
             cursor = sqlite3.connect(self.db_path).cursor()
             creator = ExecTreeCreator(cursor)
