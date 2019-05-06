@@ -63,16 +63,22 @@ class ConsoleInterface:
         return confirm('Do you want to use provenance enhancement? ')
 
     def ask_use_wrong_data(self):
-        return confirm('Do you want to inform which output data is wrong? ')
+        ans = 0
+        while (ans != 1 and ans != 2):
+            print("How do you want to perform the enhancement? ")
+            print('[1] - Use the last print as criterion')
+            print('[2] - Use a wrong output as criterion')
+            ans = int(prompt('> '))
+        return ans
 
-    def ask_wrong_data(self, exec_tree):
-        custom_vis = CustomVisualization(exec_tree)
-        custom_vis.view_exec_tree('custom_tree')
-        print("Choose the id of the node with incorrect data: ")
-        return int(prompt('> '))
+    def ask_wrong_data(self):
+        print("Tell me which output data is wrong ")
+        wrong_data = prompt('> ')
+        return wrong_data
 
     def ask_output_file_name(self):
-        self.out_filename = prompt('Output file name: ', default='exec_tree')
+        out_filename = prompt('Output file name: ', default='exec_tree')
+        return out_filename
 
     def run(self):
         self.db_path = self.DEFAULT_SQLITE_PATH
@@ -86,14 +92,17 @@ class ConsoleInterface:
         self.select_nav_strategy()
         nav = self.choosen_nav_strategy(exec_tree) 
         if self.ask_use_prov():
-            prov = ProvenanceEnhancement(exec_tree, cursor)
-            prov.enhance_all()
-            if self.ask_use_wrong_data():
-                wrong_data_id = self.ask_wrong_data(exec_tree)
-                wrong_data = exec_tree.search_by_ev_id(wrong_data_id)
-                prov.final_dependencies = []
-                prov.enhance(wrong_data)
-            nav.provenance_prune()
+            if self.ask_use_wrong_data() == 1:
+                # Slice Criterion: last print
+                prov = ProvenanceEnhancement(exec_tree, cursor)
+                wrong_data_id = prov.get_last_print_evid()
+                prov.enhance(wrong_data_id)
+            else:
+                # Slice criterion: Wrong output (informed by user)
+                wrong_data = self.ask_wrong_data()
+                prov = ProvenanceEnhancement(exec_tree, cursor)
+                wrong_data_id = prov.get_wrong_data_evid(wrong_data)
+                prov.enhance(wrong_data_id)
         result_tree = nav.navigate()
         file_name = self.ask_output_file_name()
         vis = Visualization(result_tree)

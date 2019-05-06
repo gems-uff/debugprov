@@ -34,6 +34,32 @@ class ProvenanceEnhancement():
             evals.append(Evaluation(tupl[0],tupl[1],tupl[2],tupl[3]))
         return evals[-1]
 
+    def get_last_print_evid(self):
+        query = ("select e.id from evaluation e "
+                "join code_component cc on e.code_component_id = cc.id "
+                "where cc.name like '%print%' and cc.type='call' "
+                "order by cc.first_char_line DESC "
+                "LIMIT 1 ")
+        self.cursor.execute(query)
+        result = self.cursor.fetchall()
+        if len(result) == 0:
+            raise Exception("Could not find print node")
+        for tupl in self.cursor.execute(query):
+            return tupl[0]
+
+    def get_wrong_data_evid(self,wrong_data):
+        wrong_data = "%{}%".format(wrong_data)
+        query = ("select e.id from evaluation e "
+                "where e.repr like ? "
+                "order by e.id DESC "
+                "LIMIT 1 ")
+        self.cursor.execute(query, [wrong_data])
+        result = self.cursor.fetchall()
+        if len(result) == 0:
+            raise Exception("Could not find wrong node")
+        for tupl in self.cursor.execute(query, [wrong_data]):
+            return tupl[0]
+
     def enhance(self,wrong_node_id):
         #logging.info("Provenance Enhancement # enhance STARTED")
         #logging.info("len(self.dependencies): {}".format(str(len(self.dependencies))))
