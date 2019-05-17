@@ -27,6 +27,12 @@ def run_mutants_with_now(scripts):
                         stdout, stderr = proc.communicate(
                             timeout=TIMEOUT_LIMIT)
                         returncode = proc.returncode
+                        if stdout is not None:
+                            print("STDOUT")
+                            print(stdout)
+                        if stderr is not None:
+                            print("STDERR")
+                            print(stderr)
                         if returncode == 0:
                             print("Success running {}".format(py_file))
                         else:
