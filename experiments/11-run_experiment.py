@@ -33,6 +33,7 @@ config.go_to_scripts_path()
 
 for script_path in config.target_scripts:
     directory = script_path.split('/')[0]    
+    program = script_path.split('/')[1]  
     os.chdir(directory)
     try:
         print("{} - Running experiments from {}".format(datetime.now().strftime('%Y_%m_%d %H-%M-%S.%f'),program))
