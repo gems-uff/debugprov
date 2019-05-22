@@ -37,12 +37,26 @@ class Config:
                 '27-generate_parenthesis/generate_parenthesis.py',
                 '28-knn/knn.py',
                 '29-string_permutation/stringpermutation.py',
-                '30-linear_regression/demo.py',
-                '31-bfs/bfs.py']
+                '30-linear_regression/demo.py']
 
     @property
     def target_scripts(self):
-        return ['31-bfs/bfs.py']
+        return ['02-bisection/bisection.py',
+                '03-intersection/intersection.py',
+                '04-lu_decomposition/lu_decomposition.py',
+                '05-newton_method/newton_method.py',
+                '07-basic_binary_tree/basic_binary_tree.py',
+                '09-dijkstra_algorithm/dijkstra_algorithm.py',
+                '13-merge_sort/merge_sort.py',
+                '17-merge_intervals/merge_intervals.py',
+                '19-binary_search/binary_search.py',
+                '20-permute/permute.py',
+                '21-longest_common_subsequence/lcs.py',
+                '22-catalan/catalan.py',
+                '24-bubblesort/bubblesort.py',
+                '25-quicksort/quicksort.py',
+                '26-heapsort/heapsort.py',
+        ]
 
     # ../../debugprov-experimentdata/scripts
     def go_to_scripts_path(self):

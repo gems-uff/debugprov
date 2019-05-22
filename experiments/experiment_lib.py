@@ -35,29 +35,55 @@ class ExperimentLib:
         self.timestamps = []
         self.cwds = []
 
+        self.expected_buggy_node = []
+
         self.single_stepping_results = []
+        self.single_stepping_buggy_node_returned = []
+
         self.top_down_results = []
+        self.top_down_buggy_node_returned = []
+
         self.heaviest_first_results = []
+        self.heaviest_first_buggy_node_returned = []
+
         self.divide_and_query_results = []
+        self.divide_and_query_buggy_node_returned = []
 
         self.single_stepping_prov_results = []
+        self.single_stepping_prov_buggy_node_returned = []
+
         self.top_down_prov_results = []
+        self.top_down_prov_buggy_node_returned = []
+
         self.heaviest_first_prov_results = []
+        self.heaviest_first_prov_buggy_node_returned = []
+
         self.divide_and_query_prov_results = []
+        self.divide_and_query_prov_buggy_node_returned = []
+
 
     def export_experiment_data(self, output_filename='output'):
         data_frame = pd.DataFrame({
             'Subject': self.subjects,
             'Timestamp': self.timestamps,
             'Cwd': self.cwds,
+            'Expected Buggy Node': self.expected_buggy_node,
             'Single Stepping': self.single_stepping_results,
+            'Single Stepping Buggy Node Found': self.single_stepping_buggy_node_returned,
             'Top Down': self.top_down_results,
+            'Top Down Buggy Node Found': self.top_down_buggy_node_returned,
             'Heaviest First': self.heaviest_first_results, 
+            'Heaviest First Buggy Node Found': self.top_down_buggy_node_returned,
             'Divide and Query': self.divide_and_query_results,
+            'Divide and Query Buggy Node Found': self.divide_and_query_buggy_node_returned,
             'Single Stepping PROV': self.single_stepping_prov_results,
+            'Single Stepping PROV Buggy Node Found': self.single_stepping_prov_buggy_node_returned,
             'Top Down PROV': self.top_down_prov_results,
+            'Top Down PROV Buggy Node Found': self.top_down_prov_buggy_node_returned,
             'Heaviest First PROV': self.heaviest_first_prov_results, 
-            'Divide and Query PROV': self.divide_and_query_prov_results
+            'Heaviest First PROV Buggy Node Found': self.heaviest_first_prov_buggy_node_returned,
+            'Divide and Query PROV': self.divide_and_query_prov_results,
+            'Divide and Query PROV Buggy Node Found': self.divide_and_query_prov_buggy_node_returned,
         })
         data_frame.to_excel("{}.xlsx".format(output_filename)) 
 
@@ -96,7 +122,9 @@ class ExperimentLib:
                         if self.generate_trees:
                                 vis = Visualization(exec_tree)
                                 vis.view_exec_tree(str(id(exec_tree)))
+                        self.expected_buggy_node.append(max(single_stepping.invalid_nodes))
                         self.single_stepping_results.append(single_stepping.sequence_num)
+                        self.single_stepping_buggy_node_returned.append(single_stepping.exec_tree.buggy_node.ev_id)
                     except Exception as e:
                         self.single_stepping_results.append(None)
                         print("Exception: {}".format(e))
@@ -116,6 +144,7 @@ class ExperimentLib:
                                 vis = Visualization(exec_tree)
                                 vis.view_exec_tree(str(id(exec_tree)))
                         self.top_down_results.append(top_down.sequence_num)
+                        self.top_down_buggy_node_returned.append(top_down.exec_tree.buggy_node.ev_id)
                     except Exception as e:
                         self.top_down_results.append(None)
                         print("Exception: {}".format(e))
@@ -135,7 +164,9 @@ class ExperimentLib:
                         if self.generate_trees:
                                 vis = Visualization(exec_tree)
                                 vis.view_exec_tree(str(id(exec_tree)))
+                        arr = [heaviest_first.sequence_num,heaviest_first.exec_tree.buggy_node.ev_id,]
                         self.heaviest_first_results.append(heaviest_first.sequence_num)
+                        self.heaviest_first_buggy_node_returned.append(heaviest_first.exec_tree.buggy_node.ev_id)                  
                     except Exception as e:
                         self.heaviest_first_results.append(None)
                         print("Exception: {}".format(e))
@@ -155,7 +186,8 @@ class ExperimentLib:
                         if self.generate_trees:
                                 vis = Visualization(exec_tree)
                                 vis.view_exec_tree(str(id(exec_tree)))
-                        self.divide_and_query_results.append(divide_and_query.sequence_num)
+                        self.divide_and_query_results.append(divide_and_query.sequence_num) 
+                        self.divide_and_query_buggy_node_returned.append(divide_and_query.exec_tree.buggy_node.ev_id)
                     except Exception as e:
                         self.divide_and_query_results.append(None)
                         print("Exception: {}".format(e))
@@ -198,11 +230,12 @@ class ExperimentLib:
                         prov.enhance(wrong_node_ev)
                         single_stepping.provenance_prune()
                         single_stepping.navigate()
-                        print("SingleStepping experiment finished: " +
+                        print("SingleStepping PROV experiment finished: " +
                                 str(single_stepping.sequence_num)+" steps.")
                         logging.info("SingleStepping experiment finished: " +
                                         str(single_stepping.sequence_num)+" steps.")
                         self.single_stepping_prov_results.append(single_stepping.sequence_num)
+                        self.single_stepping_prov_buggy_node_returned.append(single_stepping.exec_tree.buggy_node.ev_id)
                         if self.generate_trees:
                             vis = Visualization(exec_tree)
                             vis.view_exec_tree(str(id(exec_tree)))
@@ -223,7 +256,7 @@ class ExperimentLib:
                         prov.enhance(wrong_node_ev)
                         top_down.provenance_prune()
                         top_down.navigate()
-                        print("TopDown experiment finished: " +
+                        print("TopDown PROV experiment finished: " +
                                 str(top_down.sequence_num)+" steps.")
                         logging.info("TopDown experiment finished: " +
                                         str(top_down.sequence_num)+" steps.")
@@ -231,6 +264,7 @@ class ExperimentLib:
                             vis = Visualization(exec_tree)
                             vis.view_exec_tree(str(id(exec_tree)))
                         self.top_down_prov_results.append(top_down.sequence_num)
+                        self.top_down_prov_buggy_node_returned.append(top_down.exec_tree.buggy_node.ev_id)
                     except Exception as e:
                         self.top_down_prov_results.append(None)
                         print("Exception: {}".format(e))
@@ -247,11 +281,12 @@ class ExperimentLib:
                         prov.enhance(wrong_node_ev)
                         heaviest_first.provenance_prune()
                         heaviest_first.navigate()
-                        print("HeaviestFirst experiment finished: " +
+                        print("HeaviestFirst PROV experiment finished: " +
                                 str(heaviest_first.sequence_num)+" steps.")
                         logging.info("HeaviestFirst experiment finished: " +
                                         str(heaviest_first.sequence_num)+" steps.")
                         self.heaviest_first_prov_results.append(heaviest_first.sequence_num)
+                        self.heaviest_first_prov_buggy_node_returned.append(heaviest_first.exec_tree.buggy_node.ev_id)
                         if self.generate_trees:
                             vis = Visualization(exec_tree)
                             vis.view_exec_tree(str(id(exec_tree)))
@@ -271,7 +306,7 @@ class ExperimentLib:
                         prov.enhance(wrong_node_ev)
                         divide_and_query.provenance_prune()
                         divide_and_query.navigate()
-                        print("DivideAndQuery experiment finished: " +
+                        print("DivideAndQuery PROV experiment finished: " +
                                 str(divide_and_query.sequence_num)+" steps.")
                         logging.info("DivideAndQuery experiment finished: " +
                                         str(divide_and_query.sequence_num)+" steps.")
@@ -279,6 +314,7 @@ class ExperimentLib:
                             vis = Visualization(exec_tree)
                             vis.view_exec_tree(str(id(exec_tree)))
                         self.divide_and_query_prov_results.append(divide_and_query.sequence_num)
+                        self.divide_and_query_prov_buggy_node_returned.append(divide_and_query.exec_tree.buggy_node.ev_id)
                     except:
                         self.divide_and_query_prov_results.append(None)
                         print("Exception: {}".format(e))
