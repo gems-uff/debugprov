@@ -256,9 +256,6 @@ class ExperimentLib:
                             self.single_stepping["single_stepping_prov_buggy_node_returned"].append(single_stepping.exec_tree.buggy_node.ev_id)
                         else:
                             self.single_stepping["single_stepping_prov_buggy_node_returned"].append(None)
-                        
-                        self.single_stepping_prov_results.append(single_stepping.sequence_num)
-                        self.single_stepping_prov_buggy_node_returned.append(single_stepping.exec_tree.buggy_node.ev_id)
                         if self.generate_trees:
                             vis = Visualization(exec_tree)
                             vis.view_exec_tree(str(id(exec_tree)))
