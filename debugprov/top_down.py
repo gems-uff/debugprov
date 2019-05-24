@@ -32,3 +32,7 @@ class TopDown(NavigationStrategy):
                     if n.parent.all_childrens_are_valid():
                         self.exec_tree.buggy_node = n.parent
                         self.finish_navigation()
+                    elif not n.parent.has_childrens_with_validity(Validity.UNKNOWN):
+                        self.exec_tree.buggy_node = n.parent
+                        self.finish_navigation()
+                    
