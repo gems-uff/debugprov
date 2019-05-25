@@ -31,6 +31,10 @@ class HeaviestFirst(NavigationStrategy):
                     if n.parent.all_childrens_are_valid():
                         self.exec_tree.buggy_node = n.parent
                         self.finish_navigation()
+                    elif not n.parent.has_childrens_with_validity(Validity.UNKNOWN):
+                        self.exec_tree.buggy_node = n.parent
+                        self.finish_navigation()
+					
                 if n.validity == Validity.INVALID:
                     for j in node.childrens:
                         if j is not n:
