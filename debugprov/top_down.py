@@ -18,12 +18,12 @@ class TopDown(NavigationStrategy):
                     # provenance dag, but without removing its childs
                     # (the childs can be in the dag)
                     if n.has_childrens():
-                        self.recursive_navigate(n)                    
+                        self.recursive_navigate(n)     
                 if n.validity == Validity.INVALID:
                     for j in node.childrens:
-                        if j.validity == Validity.UNKNOWN:
+                        if j is not n:
                             self.recursive_validate(j)
-                    if n.has_childrens():
+                    if n.has_childrens_with_validity(Validity.UNKNOWN):
                         self.recursive_navigate(n)
                     else:
                         self.exec_tree.buggy_node = n
