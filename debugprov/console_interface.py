@@ -64,10 +64,11 @@ class ConsoleInterface:
 
     def ask_use_wrong_data(self):
         ans = 0
-        while (ans != 1 and ans != 2):
+        while (ans != 1 and ans != 2 and ans != 3):
             print("How do you want to perform the enhancement? ")
             print('[1] - Use the last print as criterion')
             print('[2] - Use a wrong output as criterion')
+            print('[3] - Select node as criterion')
             ans = int(prompt('> '))
         return ans
 
@@ -92,17 +93,25 @@ class ConsoleInterface:
         self.select_nav_strategy()
         nav = self.choosen_nav_strategy(exec_tree) 
         if self.ask_use_prov():
-            if self.ask_use_wrong_data() == 1:
+            prov = ProvenanceEnhancement(exec_tree, cursor)
+            strategy = self.ask_use_wrong_data() 
+            if strategy == 1:
                 # Slice Criterion: last print
-                prov = ProvenanceEnhancement(exec_tree, cursor)
                 wrong_data_id = prov.get_last_print_evid()
                 prov.enhance(wrong_data_id)
-            else:
+            elif strategy == 2:
                 # Slice criterion: Wrong output (informed by user)
                 wrong_data = self.ask_wrong_data()
-                prov = ProvenanceEnhancement(exec_tree, cursor)
                 wrong_data_id = prov.get_wrong_data_evid(wrong_data)
                 prov.enhance(wrong_data_id)
+            elif strategy == 3:
+                # Slice criterion: Node in tree (informed by user)
+                tmp_vis = Visualization(exec_tree)
+                tmp_vis.view_exec_tree('tmp_tree')
+                print("Tell me which ID ")
+                ev_id = int(prompt('> '))
+                prov.enhance(ev_id)
+
         result_tree = nav.navigate()
         file_name = self.ask_output_file_name()
         vis = Visualization(result_tree)

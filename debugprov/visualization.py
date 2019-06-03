@@ -3,6 +3,7 @@ from graphviz import Graph
 from debugprov.execution_tree import ExecutionTree
 from debugprov.node import Node
 from debugprov.validity import Validity
+from debugprov.evaluation import Evaluation
 
 class Visualization:
 
@@ -32,7 +33,8 @@ class Visualization:
             self.graph.node(str(buggy_node.ev_id), str(buggy_node.get_name()), fillcolor=self.BUGGY_NODE_COLOR, style='filled')
         if self.exec_tree.dependencies is not None:
             for d in self.exec_tree.dependencies:
-                self.graph.edge(str(d.source.ev_id), str(d.target.ev_id), None, color=self.PROVENANCE_EDGE_COLOR, dir='forward')
+                if not isinstance(d,Evaluation):
+                    self.graph.edge(str(d.source.ev_id), str(d.target.ev_id), None, color=self.PROVENANCE_EDGE_COLOR, dir='back')
 
     def view_exec_tree(self, graph_name = 'exec_tree'):
         self.generate_exec_tree(graph_name)
