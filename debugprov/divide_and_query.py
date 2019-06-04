@@ -42,6 +42,7 @@ class DivideAndQuery(NavigationStrategy):
                     self.exec_tree.buggy_node = self.best_guess.parent
                     self.finish_navigation()
             elif self.best_guess.validity is Validity.INVALID:
+                # Invalidar o "resto da árvore"
                 if self.best_guess.has_childrens_with_validity(Validity.UNKNOWN):
                     self.recursive_navigate(node)
                 else:

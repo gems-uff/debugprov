@@ -43,10 +43,11 @@ class NavigationStrategy:
             # The NO answer prunes all the nodes of the ET,
             # exept the subtree rooted at N
             node.validity = Validity.INVALID
-            if node.parent is not None:
-                for c in node.parent.childrens:
-                    if c is not node:
-                        self.recursive_validate(c)
+            self.recursive_validate(self.exec_tree.root_node,node)
+            #if node.parent is not None:
+            #    for c in node.parent.childrens:
+            #        if c is not node:
+            #            self.recursive_validate(c)
           #  self.nav_log.log(seq_num+"The node was defined as INVALID")
         self.exec_tree.node_under_evaluation = None
         return node
@@ -63,18 +64,21 @@ class NavigationStrategy:
             # The NO answer prunes all the nodes of the ET,
             # exept the subtree rooted at N
             node.validity = Validity.INVALID
-            if node.parent is not None:
-                for c in node.parent.childrens:
-                    if c is not node:
-                        self.recursive_validate(c)
+            self.recursive_validate(self.exec_tree.root_node,node)
+            #if node.parent is not None:
+            #    for c in node.parent.childrens:
+            #        if c is not node:
+            #            self.recursive_validate(c)
         self.exec_tree.node_under_evaluation = None
         return node
 
-    def recursive_validate(self, node):
+    def recursive_validate(self, node, forbidden=None):
+        if node is forbidden:
+            return
         if node.validity is not Validity.NOT_IN_PROV:
             node.validity = Validity.VALID
         for c in node.childrens:
-            self.recursive_validate(c)
+            self.recursive_validate(c,forbidden)
 
     def finish_navigation(self):
         if self.AUTOMATED_NAVIGATION:

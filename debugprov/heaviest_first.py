@@ -36,9 +36,10 @@ class HeaviestFirst(NavigationStrategy):
                         self.finish_navigation()
 					
                 if n.validity == Validity.INVALID:
-                    for j in node.childrens:
-                        if j is not n:
-                            self.recursive_validate(j)
+                    self.recursive_validate(self.exec_tree.root_node,n)
+                    #for j in node.childrens:
+                    #    if j is not n:
+                    #        self.recursive_validate(j)
                     if n.has_childrens_with_validity(Validity.UNKNOWN):
                         self.recursive_navigate(n)
                     else:

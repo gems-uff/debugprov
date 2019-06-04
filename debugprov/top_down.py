@@ -20,9 +20,10 @@ class TopDown(NavigationStrategy):
                     if n.has_childrens():
                         self.recursive_navigate(n)     
                 if n.validity == Validity.INVALID:
-                    for j in node.childrens:
-                        if j is not n:
-                            self.recursive_validate(j)
+                    self.recursive_validate(self.exec_tree.root_node,n)
+                    #for j in node.childrens:
+                    #   if j is not n:
+                    #        self.recursive_validate(j)
                     if n.has_childrens_with_validity(Validity.UNKNOWN):
                         self.recursive_navigate(n)
                     else:
