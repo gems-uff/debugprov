@@ -71,15 +71,6 @@ class ProvenanceEnhancement():
         search_result = self.exec_tree.search_by_ev_id(wrong_node_id)    
         if search_result is not None:
             search_result.validity = Validity.UNKNOWN
-            
-        #######################################
-        #######################################
-        p = search_result.parent
-        while p is not None:
-            p.validity = Validity.UNKNOWN
-            p = p.parent
-        #######################################
-        #######################################
 
         nodes_to_visit = self.dependencies[wd]
         for node in nodes_to_visit:
