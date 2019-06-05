@@ -245,7 +245,6 @@ class ExperimentLib:
                         prov = ProvenanceEnhancement(exec_tree, CURSOR)
                         wrong_node_ev = single_stepping.wrong_node_id
                         prov.enhance(wrong_node_ev)
-                        single_stepping.provenance_prune()
                         single_stepping.navigate()
                         print("SingleStepping PROV experiment finished: " +
                                 str(single_stepping.sequence_num)+" steps.")
@@ -275,7 +274,6 @@ class ExperimentLib:
                         prov = ProvenanceEnhancement(exec_tree, CURSOR)
                         wrong_node_ev = top_down.wrong_node_id
                         prov.enhance(wrong_node_ev)
-                        top_down.provenance_prune()
                         top_down.navigate()
                         print("TopDown PROV experiment finished: " +
                                 str(top_down.sequence_num)+" steps.")
@@ -303,7 +301,6 @@ class ExperimentLib:
                         prov = ProvenanceEnhancement(exec_tree, CURSOR)
                         wrong_node_ev = heaviest_first.wrong_node_id
                         prov.enhance(wrong_node_ev)
-                        heaviest_first.provenance_prune()
                         heaviest_first.navigate()
                         print("HeaviestFirst PROV experiment finished: " +
                                 str(heaviest_first.sequence_num)+" steps.")
@@ -331,7 +328,6 @@ class ExperimentLib:
                         prov = ProvenanceEnhancement(exec_tree, CURSOR)
                         wrong_node_ev = divide_and_query.wrong_node_id
                         prov.enhance(wrong_node_ev)
-                        divide_and_query.provenance_prune()
                         divide_and_query.navigate()
                         print("DivideAndQuery PROV experiment finished: " +
                                 str(divide_and_query.sequence_num)+" steps.")
