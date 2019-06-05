@@ -12,6 +12,6 @@ class TopDown(NavigationStrategy):
     def recursive_navigate(self, node: Node):
         if self.there_are_nodes_with_unknown_validity():
             self.evaluate(node)
-            if node.validity is Validity.INVALID:
+            if node.validity is not Validity.VALID:
                 for n in node.childrens:
                     self.recursive_navigate(n)

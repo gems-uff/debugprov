@@ -14,7 +14,7 @@ class HeaviestFirst(NavigationStrategy):
         if self.there_are_nodes_with_unknown_validity():
             self.weight(node)
             self.evaluate(node)
-            if node.validity is Validity.INVALID:
+            if node.validity is not Validity.VALID:
                 # sort by weight, from bigger to smaller
                 sorted_childrens = copy.deepcopy(node.childrens)
                 sorted_childrens.sort(key=lambda x: x.weight, reverse=True)

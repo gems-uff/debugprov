@@ -40,6 +40,7 @@ class NavigationStrategy:
             self.recursive_validate(node)
             #self.nav_log.log(seq_num+"The node was defined as VALID")
         elif node.ev_id in self.invalid_nodes:
+            print(node.ev_id)
             # The NO answer prunes all the nodes of the ET,
             # exept the subtree rooted at N
             node.validity = Validity.INVALID
@@ -90,5 +91,10 @@ class NavigationStrategy:
             return False
     
     def finish_navigation(self):
-        invalid_nodes = [n.ev_id for n in self.exec_tree.get_all_nodes() if n.validity is Validity.INVALID]        
-        self.exec_tree.buggy_node = self.exec_tree.search_by_ev_id(max(invalid_nodes))
+        if self.exec_tree.buggy_node is None:
+            invalid_nodes = [n.ev_id for n in self.exec_tree.get_all_nodes() if n.validity is Validity.INVALID]        
+            print("invalid nodes: {}".format(invalid_nodes))
+            if len(invalid_nodes) == 0:
+                self.exec_tree.buggy_node = Node('inf','inf','inf','inf','inf')
+            else:
+                self.exec_tree.buggy_node = self.exec_tree.search_by_ev_id(max(invalid_nodes))
