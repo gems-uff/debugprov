@@ -6,6 +6,7 @@ class TopDown(NavigationStrategy):
 
     def navigate(self):
         self.recursive_navigate(self.exec_tree.root_node)
+        self.finish_navigation()
         return self.exec_tree
 
     def recursive_navigate(self, node: Node):
@@ -14,5 +15,3 @@ class TopDown(NavigationStrategy):
             if node.validity is Validity.INVALID:
                 for n in node.childrens:
                     self.recursive_navigate(n)
-
-                    

@@ -88,3 +88,7 @@ class NavigationStrategy:
             return True
         else:
             return False
+    
+    def finish_navigation(self):
+        invalid_nodes = [n.ev_id for n in self.exec_tree.get_all_nodes() if n.validity is Validity.INVALID]        
+        self.exec_tree.buggy_node = self.exec_tree.search_by_ev_id(max(invalid_nodes))
