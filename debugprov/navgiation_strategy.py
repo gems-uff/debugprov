@@ -82,22 +82,9 @@ class NavigationStrategy:
         for c in node.childrens:
             self.recursive_validate(c,forbidden)
 
-    def finish_navigation(self):
-        if self.AUTOMATED_NAVIGATION:
-            pass
-           # self.nav_log.log("Buggy node found: "+str(self.exec_tree.buggy_node.get_name()))
-          #  self.nav_log.log("Navigation finished.")
-          #  self.nav_log.file.close()
-
-    def provenance_prune(self):
-        pass
-    #    all_nodes = self.exec_tree.get_all_nodes()
-    #    for node in all_nodes:
-    #        node.validity = Validity.NOT_IN_PROV
-    #    for d in self.exec_tree.dependencies:
-    #        source_node = self.exec_tree.search_by_ev_id(d.source.ev_id)
-    #        if source_node is not None:
-    #            source_node.validity = Validity.UNKNOWN
-    #        target_node = self.exec_tree.search_by_ev_id(d.target.ev_id)
-    #        if target_node is not None:
-    #            target_node.validity = Validity.UNKNOWN
+    def there_are_nodes_with_unknown_validity(self):
+        nodes_with_unknown_validity = [n for n in self.exec_tree.get_all_nodes() if n.validity is Validity.UNKNOWN]        
+        if len(nodes_with_unknown_validity) > 0:
+            return True
+        else:
+            return False
