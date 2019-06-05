@@ -72,6 +72,15 @@ class ProvenanceEnhancement():
         if search_result is not None:
             search_result.validity = Validity.UNKNOWN
             
+        #######################################
+        #######################################
+        p = search_result.parent
+        while p is not None:
+            p.validity = Validity.UNKNOWN
+            p = p.parent
+        #######################################
+        #######################################
+
         nodes_to_visit = self.dependencies[wd]
         for node in nodes_to_visit:
             # original: self.final_dependencies.append(DependencyRel(wd,node))
@@ -87,11 +96,11 @@ class ProvenanceEnhancement():
                     if not hasattr(n,'visited'):
                         nodes_to_visit.append(n)
         self.exec_tree.dependencies = set(self.final_dependencies)
-        self.exec_tree.root_node.validity = Validity.INVALID
+        #self.exec_tree.root_node.validity = Validity.INVALID
         #logging.info("Provenance Enhancement # enhance FINISHED")
 
     def enhance_all(self):
-        self.exec_tree.root_node.validity = Validity.INVALID
+        #self.exec_tree.root_node.validity = Validity.INVALID
         dependencies = []
         for source in self.dependencies:
             if source.code_component_type == 'call':

@@ -6,8 +6,14 @@ from debugprov.validity import Validity
 class HeaviestFirst(NavigationStrategy):
 
     def navigate(self):
-        self.recursive_navigate(self.exec_tree.root_node)
-        return self.exec_tree
+        self.evaluate(self.exec_tree.root_node)
+        if self.exec_tree.root_node.validity is Validity.VALID:
+            print("ERROR")
+            import sys
+            sys.exit(1)
+        else:
+            self.recursive_navigate(self.exec_tree.root_node)
+            return self.exec_tree
 
     def recursive_navigate(self, node: Node):
         self.weight(node)

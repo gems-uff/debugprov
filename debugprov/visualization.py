@@ -23,7 +23,17 @@ class Visualization:
         self.graph.attr('node', shape='box')
         self.graph.attr('graph', ordering='out')
         root_node = self.exec_tree.root_node
-        self.graph.node(str(root_node.ev_id), root_node.get_name(), fillcolor=self.INVALID_COLOR, style='filled') # root node
+        root_node_color = None
+        if root_node.validity is Validity.UNKNOWN:
+            root_node_color = 'white'
+        elif root_node.validity is Validity.INVALID:
+            root_node_color = self.INVALID_COLOR
+        elif root_node.validity is Validity.VALID:
+            root_node_color = self.VALID_COLOR
+        elif root_node.validity is Validity.NOT_IN_PROV:
+            root_node_color = self.PROV_PRUNED_NODE_COLOR
+
+        self.graph.node(str(root_node.ev_id), root_node.get_name(), fillcolor=root_node_color, style='filled') # root node
         self.navigate(root_node)
         eval_node = self.exec_tree.node_under_evaluation
         if eval_node is not None:
