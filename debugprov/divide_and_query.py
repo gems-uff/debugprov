@@ -13,10 +13,10 @@ class DivideAndQuery(NavigationStrategy):
     def find_best_guess(self,node,w_2):
         nodes_with_unknown_validity = [n for n in self.exec_tree.get_all_nodes() if n.validity is Validity.UNKNOWN]        
         if len(nodes_with_unknown_validity) == 0:
-            invalid_nodes = [n for n in self.exec_tree.get_all_nodes() if n.validity is Validity.INVALID]
+            #invalid_nodes = [n for n in self.exec_tree.get_all_nodes() if n.validity is Validity.INVALID]
             #sorted_invalid_nodes = copy.deepcopy(invalid_nodes)
-            invalid_nodes.sort(key=lambda x: x.ev_id, reverse=True)
-            self.exec_tree.buggy_node = invalid_nodes[0]
+            #invalid_nodes.sort(key=lambda x: x.ev_id, reverse=True)
+            #self.exec_tree.buggy_node = invalid_nodes[0]
             self.finish_navigation()
         else:
             return max(
