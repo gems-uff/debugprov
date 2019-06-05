@@ -11,11 +11,19 @@ class DivideAndQuery(NavigationStrategy):
 
 
     def find_best_guess(self,node,w_2):
-        return max(
-            (n for n in self.exec_tree.get_all_nodes()
-            if n.validity is Validity.UNKNOWN
-            if n.weight <= w_2),
-            key=lambda n: n.weight)
+        nodes_with_unknown_validity = [n for n in self.exec_tree.get_all_nodes() if n.validity is Validity.UNKNOWN]        
+        if len(nodes_with_unknown_validity) == 0:
+            invalid_nodes = [n for n in self.exec_tree.get_all_nodes() if n.validity is Validity.INVALID]
+            #sorted_invalid_nodes = copy.deepcopy(invalid_nodes)
+            invalid_nodes.sort(key=lambda x: x.ev_id, reverse=True)
+            self.exec_tree.buggy_node = invalid_nodes[0]
+            self.finish_navigation()
+        else:
+            return max(
+                (n for n in self.exec_tree.get_all_nodes()
+                if n.validity is Validity.UNKNOWN
+                if n.weight <= w_2),
+                key=lambda n: n.weight)
         #nodes = self.exec_tree.get_all_nodes()
         #best_guess = None
         #for n in nodes:
@@ -51,21 +59,26 @@ class DivideAndQuery(NavigationStrategy):
         print("Best guess: {}".format(self.best_guess))
         if self.best_guess is not None:
             self.evaluate(self.best_guess)
-            if self.best_guess.validity is Validity.VALID:
-                if self.best_guess.parent.has_childrens_with_validity(Validity.UNKNOWN):
-                    self.recursive_navigate(node)
-                else:
-                    self.exec_tree.buggy_node = self.best_guess.parent
-                    self.finish_navigation()
-            elif self.best_guess.validity is Validity.INVALID:
-                # Invalidar o "resto da árvore"
-                if self.best_guess.has_childrens_with_validity(Validity.UNKNOWN):
-                    print("IF")
-                    self.recursive_navigate(node)
-                else:
-                    print("ELSE")
-                    self.exec_tree.buggy_node = self.best_guess
-                    self.finish_navigation()
+            if self.best_guess.validity is Validity.INVALID:
+                p = self.best_guess.parent
+                while p is not None:
+                    p.validity = Validity.INVALID
+                    p = p.parent
+            self.recursive_navigate(node)
+            
+            #if self.best_guess.validity is Validity.VALID:
+            #    if self.best_guess.parent.has_childrens_with_validity(Validity.UNKNOWN):
+            #        self.recursive_navigate(node)
+            #    else:
+            #        self.exec_tree.buggy_node = self.best_guess.parent
+            #        self.finish_navigation()
+            #    if self.best_guess.has_childrens_with_validity(Validity.UNKNOWN):
+            #        print("IF")
+            #        self.recursive_navigate(node)
+            #    else:
+            #        print("ELSE")
+            #        self.exec_tree.buggy_node = self.best_guess
+            #        self.finish_navigation()
 
 
             

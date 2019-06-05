@@ -30,10 +30,11 @@ class TopDown(NavigationStrategy):
                         self.exec_tree.buggy_node = n
                         self.finish_navigation()
                 if n.validity == Validity.VALID:
+                    print("if n.validity == Validity.VALID:")
                     if n.parent.all_childrens_are_valid():
                         self.exec_tree.buggy_node = n.parent
                         self.finish_navigation()
                     elif not n.parent.has_childrens_with_validity(Validity.UNKNOWN):
-                        self.exec_tree.buggy_node = n.parent
+                        self.exec_tree.buggy_node = n
                         self.finish_navigation()
                     
