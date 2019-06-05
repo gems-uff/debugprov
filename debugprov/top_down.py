@@ -21,9 +21,6 @@ class TopDown(NavigationStrategy):
                         self.recursive_navigate(n)     
                 if n.validity == Validity.INVALID:
                     self.recursive_validate(self.exec_tree.root_node,n)
-                    #for j in node.childrens:
-                    #   if j is not n:
-                    #        self.recursive_validate(j)
                     if n.has_childrens_with_validity(Validity.UNKNOWN):
                         self.recursive_navigate(n)
                     else:
@@ -31,10 +28,13 @@ class TopDown(NavigationStrategy):
                         self.finish_navigation()
                 if n.validity == Validity.VALID:
                     print("if n.validity == Validity.VALID:")
-                    if n.parent.all_childrens_are_valid():
+                    siblings = [j for j in n.parent.childrens if j.validity is Validity.UNKNOWN]
+                    if len(siblings) == 0:
                         self.exec_tree.buggy_node = n.parent
                         self.finish_navigation()
-                    elif not n.parent.has_childrens_with_validity(Validity.UNKNOWN):
-                        self.exec_tree.buggy_node = n
-                        self.finish_navigation()
+
+                    #if n.parent.all_childrens_are_valid():
+                    #elif not n.parent.has_childrens_with_validity(Validity.UNKNOWN):
+                    #    self.exec_tree.buggy_node = n
+                    #    self.finish_navigation()
                     
