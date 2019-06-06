@@ -93,8 +93,16 @@ class NavigationStrategy:
     def finish_navigation(self):
         if self.exec_tree.buggy_node is None:
             invalid_nodes = [n.ev_id for n in self.exec_tree.get_all_nodes() if n.validity is Validity.INVALID]        
-            print("invalid nodes: {}".format(invalid_nodes))
+            #print("invalid nodes: {}".format(invalid_nodes))
             if len(invalid_nodes) == 0:
-                self.exec_tree.buggy_node = Node('inf','inf','inf','inf','inf')
+                not_in_prov_nodes = [n for n in self.exec_tree.get_all_nodes() if n.validity is Validity.NOT_IN_PROV]
+                if len(not_in_prov_nodes) == 0: 
+                    self.exec_tree.buggy_node = Node('inf','inf','inf','inf','inf')
+                else:
+                    print("The buggy node was not found in the provenance")
+                    print("Searching in the remaining nodes")
+                    for n in not_in_prov_nodes:
+                        n.validity = Validity.UNKNOWN
+                    self.navigate()
             else:
                 self.exec_tree.buggy_node = self.exec_tree.search_by_ev_id(max(invalid_nodes))
