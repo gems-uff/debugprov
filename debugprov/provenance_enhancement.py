@@ -128,29 +128,28 @@ class ProvenanceEnhancement():
         for d in self.dependencies.get(node, []):
             checkpoint = checkpoint or d.checkpoint
             yield d, None
-        return  
+        #return  
         if checkpoint:
             # Get initial reference to value
-            original, result = get_original_reference(n)
+            original = node.member_container_id
+            #original, result = get_original_reference(n)
 
             # Move to all parts of the structure 
-            # Sort derivedByInsertion
-            parts = [
-                (T.bound, A.bound, D.bound, TP.bound, TX.bound)
-                for __ in hadMember(n, D, type=TP, key=A, checkpoint=T, text=TX)
-                if T.bound <= time
-            ]
-            parts.sort()
             # Reconstruct state
+            keys = self.members.get(original, {})
             state = {}
-            for __, key, value, type_, text in parts:
-                for __ in entity(value, _, TX):
-                    state[key] = (value, {text, TX.bound})
+            for key, checkpoints in keys.items():
+                state[key] = max(
+                    ((member_checkpoint, evaluation)
+                    for member_checkpoint, evaluation in checkpoints.items()
+                    if member_checkpoint <= checkpoint),
+                    key=lambda e: e[0],
+                    default=None
+                )
+
             # Move to parts of the state
-            for value, text in state.values():
-                yield (Context(value, time), result | text)
-
-
+            for member_checkpoint, evaluation in state.values():
+                yield Context(evaluation, checkpoint)
 
 
 
