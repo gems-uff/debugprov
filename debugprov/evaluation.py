@@ -1,7 +1,8 @@
 class Evaluation:
 
-    def __init__(self, ev_id, code_component_id, code_component_type, code_component_name,checkpoint,member_container_id):
+    def __init__(self, ev_id, activation_id, code_component_id, code_component_type, code_component_name, checkpoint, member_container_id):
         self.ev_id = ev_id
+        self.activation_id = activation_id
         self.code_component_id = code_component_id
         self.code_component_type = code_component_type
         self.code_component_name = code_component_name
@@ -15,3 +16,6 @@ class Evaluation:
 
     def __hash__(self):
         return hash(self.ev_id)
+
+    def __repr__(self):
+        return f"Evaluation({self.ev_id},{self.code_component_name},{self.checkpoint})"

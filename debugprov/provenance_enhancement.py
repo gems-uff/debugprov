@@ -1,3 +1,5 @@
+from collections import defaultdict
+
 from debugprov.node import Node
 from debugprov.dependency_rel import DependencyRel
 from debugprov.validity import Validity
@@ -21,7 +23,7 @@ class ProvenanceEnhancement():
         self.exec_tree = exec_tree
         self.prov_tools = ProvenanceTools(cursor)
         self.cursor = cursor
-        self.dependencies, self.original_evaluation = self.prov_tools.get_dependencies()
+        self.dependencies = self.prov_tools.get_dependencies()
         self.members = self.prov_tools.get_members()
         self.exec_tree.dependencies = self.dependencies
         self.filtered_dependencies = []
@@ -92,6 +94,8 @@ class ProvenanceEnhancement():
         #self.exec_tree.root_node.validity = Validity.INVALID
         #logging.info("Provenance Enhancement # enhance FINISHED")'''
 
+
+
     def enhance(self,wrong_node_id):
         for e in self.dependencies:
             if e.ev_id == wrong_node_id:
@@ -104,6 +108,7 @@ class ProvenanceEnhancement():
 
         nodes_to_visit = [Context(wd,None)]
         visited = {nodes_to_visit[0]}
+        partial_dependencies = []
         while nodes_to_visit:
 
             context = nodes_to_visit.pop()
@@ -113,11 +118,34 @@ class ProvenanceEnhancement():
             for neighbor in self.get_neighborhood(context):
                 if neighbor not in visited:
                     visited.add(neighbor)
-                    self.final_dependencies.append(DependencyRel(neighbor.evaluation,context.evaluation))
+                    partial_dependencies.append((neighbor.evaluation,context.evaluation))
                     nodes_to_visit.append(neighbor)
+
+
+        reachable = defaultdict(list)
+        for target, source in partial_dependencies:
+            target_node = self.exec_tree.search_by_ev_id(target.ev_id)
+            if target_node: # if is a function call
+                reachable[source].append(target)
+                print(source, target)
+            else:
+                reachable[source].append(reachable[target])
+
+        self.final_dependencies = [
+            DependencyRel(value, key)
+            for key, values in reachable.items()
+            for value in self.prov_tools.inplace_flat(values)
+        ]
+
+        
+
         self.exec_tree.dependencies = set(self.final_dependencies)
 
     def get_neighborhood(self,context):
+
+        if context.is_activation:
+            return
+
         node = context.evaluation
         checkpoint = context.checkpoint
         # If time is not in the context, get it from the entity
@@ -127,8 +155,17 @@ class ProvenanceEnhancement():
         # Follow default derivations
         for d in self.dependencies.get(node, []):
             checkpoint = checkpoint or d.checkpoint
-            yield d, None
-        #return  
+            yield Context(d, None)
+        
+        # Yield non-navigatable activation
+        activation_node = self.exec_tree.search_by_ev_id(node.activation_id) 
+        if activation_node:
+            yield Context(
+                Evaluation(node.activation_id, None, node.code_component_id, None, node.code_component_name, None, None),
+                None, True
+            )
+        
+
         if checkpoint:
             # Get initial reference to value
             original = node.member_container_id
