@@ -131,11 +131,12 @@ class ProvenanceEnhancement():
             else:
                 reachable[source].append(reachable[target])
 
-        self.final_dependencies = [
-            DependencyRel(value, key)
-            for key, values in reachable.items()
-            for value in self.prov_tools.inplace_flat(values)
-        ]
+
+        for source, values in reachable.items():
+            source_node = self.exec_tree.search_by_ev_id(source.ev_id)
+            if source_node:
+                for target in self.prov_tools.inplace_flat(values):
+                    self.final_dependencies.append(DependencyRel(target, source))
 
         
 
