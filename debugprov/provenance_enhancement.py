@@ -82,16 +82,16 @@ class ProvenanceEnhancement():
             if search_result is not None:
                 search_result.validity = Validity.UNKNOWN
             node.visited = True
-            for n in self.dependencies[node]:
+            for n in self.dependencies.get(node,[]):
                 if not hasattr(n,'visited'):
                     self.final_dependencies.append(DependencyRel(n,node))
                     nodes_to_visit.append(n)
+        self.exec_tree.dependencies = set(self.final_dependencies)
 
         #for node in nodes_to_visit:
             # original: self.final_dependencies.append(DependencyRel(wd,node))
         #for node in nodes_to_visit:
         #    if node in self.dependencies:
-        self.exec_tree.dependencies = set(self.final_dependencies)
         #self.exec_tree.root_node.validity = Validity.INVALID
         #logging.info("Provenance Enhancement # enhance FINISHED")
 
