@@ -74,7 +74,7 @@ class NavigationStrategy:
         return node
 
     def recursive_validate(self, node, forbidden=None):
-        print("RECURSIVE VALIDATE {}".format(node.ev_id))
+        #print("RECURSIVE VALIDATE {}".format(node.ev_id))
         if node is forbidden:
             return
         # if node.validity is not Validity.NOT_IN_PROV:
