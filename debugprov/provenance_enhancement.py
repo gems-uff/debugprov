@@ -74,18 +74,23 @@ class ProvenanceEnhancement():
 
         nodes_to_visit = self.dependencies[wd]
         for node in nodes_to_visit:
-            # original: self.final_dependencies.append(DependencyRel(wd,node))
             self.final_dependencies.append(DependencyRel(node,wd))#
-        for node in nodes_to_visit:
+
+        while nodes_to_visit:
+            node = nodes_to_visit.pop()
             search_result = self.exec_tree.search_by_ev_id(node.ev_id)
             if search_result is not None:
                 search_result.validity = Validity.UNKNOWN
             node.visited = True
-            if node in self.dependencies:
-                for n in self.dependencies[node]:
+            for n in self.dependencies[node]:
+                if not hasattr(n,'visited'):
                     self.final_dependencies.append(DependencyRel(n,node))
-                    if not hasattr(n,'visited'):
-                        nodes_to_visit.append(n)
+                    nodes_to_visit.append(n)
+
+        #for node in nodes_to_visit:
+            # original: self.final_dependencies.append(DependencyRel(wd,node))
+        #for node in nodes_to_visit:
+        #    if node in self.dependencies:
         self.exec_tree.dependencies = set(self.final_dependencies)
         #self.exec_tree.root_node.validity = Validity.INVALID
         #logging.info("Provenance Enhancement # enhance FINISHED")
