@@ -360,7 +360,7 @@ class ExperimentLib:
                             vis = Visualization(exec_tree)
                             vis.view_exec_tree(str(id(exec_tree)))
                         self.divide_and_query["divide_and_query_prov_results"].append(divide_and_query.sequence_num)
-                        self.heaviest_first["divide_and_query_prov_fallback"].append(divide_and_query.fallback)
+                        self.divide_and_query["divide_and_query_prov_fallback"].append(divide_and_query.fallback)
                         if divide_and_query.exec_tree.buggy_node is not None:
                             self.divide_and_query["divide_and_query_prov_buggy_node_returned"].append(divide_and_query.exec_tree.buggy_node.ev_id)
                         else:
