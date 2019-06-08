@@ -19,6 +19,7 @@ class NavigationStrategy:
             #self.nav_log = NavigationLogger()
             #self.nav_log.log("Navigation Strategy: {}".format(self.__class__.__name__))
             self.sequence_num = 0
+            self.fallback = False
 
     def navigate(self)->ExecutionTree:
         raise NotImplementedError("Abstract method: Please Implement this method in subclass")
@@ -99,8 +100,9 @@ class NavigationStrategy:
                 if len(not_in_prov_nodes) == 0: 
                     self.exec_tree.buggy_node = Node('inf','inf','inf','inf','inf')
                 else:
-                    print("The buggy node was not found in the provenance")
-                    print("Searching in the remaining nodes")
+                    #print("The buggy node was not found in the provenance")
+                    #print("Fallback: Searching in the remaining nodes")
+                    self.fallback = True
                     for n in not_in_prov_nodes:
                         n.validity = Validity.UNKNOWN
                     self.navigate()
