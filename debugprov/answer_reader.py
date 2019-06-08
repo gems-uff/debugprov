@@ -17,4 +17,3 @@ class AnswerReader:
             "node_with_wrong_data_id": node_with_wrong_data_id
         }
         return obj
-

@@ -88,15 +88,7 @@ class ProvenanceEnhancement():
                     nodes_to_visit.append(n)
         self.exec_tree.dependencies = set(self.final_dependencies)
 
-        #for node in nodes_to_visit:
-            # original: self.final_dependencies.append(DependencyRel(wd,node))
-        #for node in nodes_to_visit:
-        #    if node in self.dependencies:
-        #self.exec_tree.root_node.validity = Validity.INVALID
-        #logging.info("Provenance Enhancement # enhance FINISHED")
-
     def enhance_all(self):
-        #self.exec_tree.root_node.validity = Validity.INVALID
         dependencies = []
         for source in self.dependencies:
             if source.code_component_type == 'call':

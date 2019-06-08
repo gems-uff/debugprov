@@ -46,10 +46,6 @@ class NavigationStrategy:
             # exept the subtree rooted at N
             node.validity = Validity.INVALID
             self.recursive_validate(self.exec_tree.root_node,node)
-            #if node.parent is not None:
-            #    for c in node.parent.childrens:
-            #        if c is not node:
-            #            self.recursive_validate(c)
           #  self.nav_log.log(seq_num+"The node was defined as INVALID")
         self.exec_tree.node_under_evaluation = None
         return node
@@ -67,18 +63,12 @@ class NavigationStrategy:
             # exept the subtree rooted at N
             node.validity = Validity.INVALID
             self.recursive_validate(self.exec_tree.root_node,node)
-            #if node.parent is not None:
-            #    for c in node.parent.childrens:
-            #        if c is not node:
-            #            self.recursive_validate(c)
         self.exec_tree.node_under_evaluation = None
         return node
 
     def recursive_validate(self, node, forbidden=None):
-        #print("RECURSIVE VALIDATE {}".format(node.ev_id))
         if node is forbidden:
             return
-        # if node.validity is not Validity.NOT_IN_PROV:
         if node.validity is Validity.UNKNOWN:
             node.validity = Validity.VALID
         for c in node.childrens:
@@ -94,14 +84,11 @@ class NavigationStrategy:
     def finish_navigation(self):
         if self.exec_tree.buggy_node is None:
             invalid_nodes = [n.ev_id for n in self.exec_tree.get_all_nodes() if n.validity is Validity.INVALID]        
-            #print("invalid nodes: {}".format(invalid_nodes))
             if len(invalid_nodes) == 0:
                 not_in_prov_nodes = [n for n in self.exec_tree.get_all_nodes() if n.validity is Validity.NOT_IN_PROV]
                 if len(not_in_prov_nodes) == 0: 
                     self.exec_tree.buggy_node = Node('inf','inf','inf','inf','inf')
                 else:
-                    #print("The buggy node was not found in the provenance")
-                    #print("Fallback: Searching in the remaining nodes")
                     self.fallback = True
                     for n in not_in_prov_nodes:
                         n.validity = Validity.UNKNOWN
