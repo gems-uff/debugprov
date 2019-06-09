@@ -127,7 +127,7 @@ class ProvenanceEnhancement():
             target_node = self.exec_tree.search_by_ev_id(target.ev_id)
             if target_node: # if is a function call
                 reachable[source].append(target)
-                print(source, target)
+                #print(source, target)
             else:
                 reachable[source].append(reachable[target])
 
@@ -135,8 +135,9 @@ class ProvenanceEnhancement():
         for source, values in reachable.items():
             source_node = self.exec_tree.search_by_ev_id(source.ev_id)
             if source_node:
-                for target in self.prov_tools.inplace_flat(values):
-                    self.final_dependencies.append(DependencyRel(target, source))
+                for target in self.prov_tools.flat(values, visited=set()):
+                    if source != target:
+                        self.final_dependencies.append(DependencyRel(target, source))
 
         
 
@@ -177,13 +178,15 @@ class ProvenanceEnhancement():
             keys = self.members.get(original, {})
             state = {}
             for key, checkpoints in keys.items():
-                state[key] = max(
+                value = max(
                     ((member_checkpoint, evaluation)
                     for member_checkpoint, evaluation in checkpoints.items()
                     if member_checkpoint <= checkpoint),
                     key=lambda e: e[0],
                     default=None
                 )
+                if value is not None:
+                    state[key] = value
 
             # Move to parts of the state
             for member_checkpoint, evaluation in state.values():
