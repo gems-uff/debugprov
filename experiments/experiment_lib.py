@@ -40,29 +40,37 @@ class ExperimentLib:
 
         self.single_stepping = {
             "single_stepping_results": [],
+            "single_stepping_fallback": [],
             "single_stepping_buggy_node_returned": [],
             "single_stepping_prov_results": [],
+            "single_stepping_prov_fallback": [],
             "single_stepping_prov_buggy_node_returned": []
         }
 
         self.top_down = {
             "top_down_results": [],
+            "top_down_fallback": [],
             "top_down_buggy_node_returned": [],
             "top_down_prov_results": [],
+            "top_down_prov_fallback": [],            
             "top_down_prov_buggy_node_returned": []
         }
 
         self.heaviest_first = {
             "heaviest_first_results": [],
+            "heaviest_first_fallback": [],
             "heaviest_first_buggy_node_returned": [],
             "heaviest_first_prov_results": [],
+            "heaviest_first_prov_fallback": [],
             "heaviest_first_prov_buggy_node_returned": []
         }
 
         self.divide_and_query = {
             "divide_and_query_results": [],
+            "divide_and_query_fallback": [],
             "divide_and_query_buggy_node_returned": [],
             "divide_and_query_prov_results": [],
+            "divide_and_query_prov_fallback": [],
             "divide_and_query_prov_buggy_node_returned": []
         }
 
@@ -75,20 +83,28 @@ class ExperimentLib:
             'Cwd': self.cwds,
             'Expected Buggy Node': self.expected_buggy_node,
             'Single Stepping': self.single_stepping["single_stepping_results"],
+            'Single Stepping Fallback': self.single_stepping["single_stepping_fallback"],
             'Single Stepping Buggy Node Found': self.single_stepping["single_stepping_buggy_node_returned"],
             'Top Down': self.top_down["top_down_results"],
+            'Top Down Fallback': self.top_down["top_down_fallback"],
             'Top Down Buggy Node Found': self.top_down["top_down_buggy_node_returned"],
             'Heaviest First': self.heaviest_first["heaviest_first_results"], 
+            'Heaviest First Fallback': self.heaviest_first["heaviest_first_fallback"],
             'Heaviest First Buggy Node Found': self.heaviest_first["heaviest_first_buggy_node_returned"], 
             'Divide and Query': self.divide_and_query["divide_and_query_results"],
+            'Divide and Query Fallback': self.divide_and_query["divide_and_query_fallback"],
             'Divide and Query Buggy Node Found': self.divide_and_query["divide_and_query_buggy_node_returned"],
             'Single Stepping PROV': self.single_stepping["single_stepping_prov_results"],
+            'Single Stepping PROV Fallback': self.single_stepping["single_stepping_prov_fallback"],
             'Single Stepping PROV Buggy Node Found': self.single_stepping["single_stepping_prov_buggy_node_returned"],
             'Top Down PROV': self.top_down["top_down_prov_results"],
+            'Top Down PROV Fallback': self.top_down["top_down_prov_fallback"],
             'Top Down PROV Buggy Node Found': self.top_down["top_down_prov_buggy_node_returned"],
-            'Heaviest First PROV': self.heaviest_first["heaviest_first_prov_results"], 
+            'Heaviest First PROV': self.heaviest_first["heaviest_first_prov_results"],
+            'Heaviest First PROV Fallback': self.heaviest_first["heaviest_first_prov_fallback"], 
             'Heaviest First PROV Buggy Node Found': self.heaviest_first["heaviest_first_prov_buggy_node_returned"],
             'Divide and Query PROV': self.divide_and_query["divide_and_query_prov_results"],
+            'Divide and Query PROV Fallback': self.divide_and_query["divide_and_query_prov_fallback"],
             'Divide and Query PROV Buggy Node Found': self.divide_and_query["divide_and_query_prov_buggy_node_returned"],
         })
         data_frame.to_excel("{}.xlsx".format(output_filename)) 
@@ -130,6 +146,7 @@ class ExperimentLib:
                                 vis.view_exec_tree(str(id(exec_tree)))
                         self.expected_buggy_node.append(max(single_stepping.invalid_nodes))
                         self.single_stepping["single_stepping_results"].append(single_stepping.sequence_num)
+                        self.single_stepping["single_stepping_fallback"].append(single_stepping.fallback)
                         if single_stepping.exec_tree.buggy_node is not None:
                             self.single_stepping["single_stepping_buggy_node_returned"].append(single_stepping.exec_tree.buggy_node.ev_id)
                         else:
@@ -153,6 +170,7 @@ class ExperimentLib:
                                 vis = Visualization(exec_tree)
                                 vis.view_exec_tree(str(id(exec_tree)))
                         self.top_down["top_down_results"].append(top_down.sequence_num)
+                        self.top_down["top_down_fallback"].append(top_down.fallback)
                         if top_down.exec_tree.buggy_node is not None:
                             self.top_down["top_down_buggy_node_returned"].append(top_down.exec_tree.buggy_node.ev_id)
                         else:
@@ -177,6 +195,7 @@ class ExperimentLib:
                                 vis = Visualization(exec_tree)
                                 vis.view_exec_tree(str(id(exec_tree)))
                         self.heaviest_first["heaviest_first_results"].append(heaviest_first.sequence_num)
+                        self.heaviest_first["heaviest_first_fallback"].append(heaviest_first.fallback)
                         if heaviest_first.exec_tree.buggy_node is not None:
                             self.heaviest_first["heaviest_first_buggy_node_returned"].append(heaviest_first.exec_tree.buggy_node.ev_id)
                         else:
@@ -201,6 +220,7 @@ class ExperimentLib:
                                 vis = Visualization(exec_tree)
                                 vis.view_exec_tree(str(id(exec_tree)))
                         self.divide_and_query["divide_and_query_results"].append(divide_and_query.sequence_num)
+                        self.divide_and_query["divide_and_query_fallback"].append(divide_and_query.fallback)
                         if divide_and_query.exec_tree.buggy_node is not None:
                             self.divide_and_query["divide_and_query_buggy_node_returned"].append(divide_and_query.exec_tree.buggy_node.ev_id)
                         else:
@@ -252,6 +272,7 @@ class ExperimentLib:
                                         str(single_stepping.sequence_num)+" steps.")
 
                         self.single_stepping["single_stepping_prov_results"].append(single_stepping.sequence_num)
+                        self.single_stepping["single_stepping_prov_fallback"].append(single_stepping.fallback)
                         if single_stepping.exec_tree.buggy_node is not None:
                             self.single_stepping["single_stepping_prov_buggy_node_returned"].append(single_stepping.exec_tree.buggy_node.ev_id)
                         else:
@@ -283,6 +304,7 @@ class ExperimentLib:
                             vis = Visualization(exec_tree)
                             vis.view_exec_tree(str(id(exec_tree)))
                         self.top_down["top_down_prov_results"].append(top_down.sequence_num)
+                        self.top_down["top_down_prov_fallback"].append(top_down.fallback)
                         if top_down.exec_tree.buggy_node is not None:
                             self.top_down["top_down_prov_buggy_node_returned"].append(top_down.exec_tree.buggy_node.ev_id)
                         else:
@@ -307,6 +329,7 @@ class ExperimentLib:
                         logging.info("HeaviestFirst experiment finished: " +
                                         str(heaviest_first.sequence_num)+" steps.")
                         self.heaviest_first["heaviest_first_prov_results"].append(heaviest_first.sequence_num)
+                        self.heaviest_first["heaviest_first_prov_fallback"].append(heaviest_first.fallback)
                         if heaviest_first.exec_tree.buggy_node is not None:
                             self.heaviest_first["heaviest_first_prov_buggy_node_returned"].append(heaviest_first.exec_tree.buggy_node.ev_id)
                         else:
@@ -337,6 +360,7 @@ class ExperimentLib:
                             vis = Visualization(exec_tree)
                             vis.view_exec_tree(str(id(exec_tree)))
                         self.divide_and_query["divide_and_query_prov_results"].append(divide_and_query.sequence_num)
+                        self.divide_and_query["divide_and_query_prov_fallback"].append(divide_and_query.fallback)
                         if divide_and_query.exec_tree.buggy_node is not None:
                             self.divide_and_query["divide_and_query_prov_buggy_node_returned"].append(divide_and_query.exec_tree.buggy_node.ev_id)
                         else:
