@@ -99,9 +99,19 @@ class NavigationStrategy:
                 if len(not_in_prov_nodes) == 0: 
                     self.exec_tree.buggy_node = Node('inf','inf','inf','inf','inf')
                 else:
-                    self.fallback = True
-                    for n in not_in_prov_nodes:
-                        n.validity = Validity.UNKNOWN
-                    self.navigate()
+                    self.apply_fallback()
             else:
-                self.exec_tree.buggy_node = self.exec_tree.search_by_ev_id(max(invalid_nodes))
+                buggy_node_candidate = self.exec_tree.search_by_ev_id(max(invalid_nodes))
+                candidate_valid_childrends = [n for n in buggy_node_candidate.childrens if n.validity is Validity.VALID]
+                if len(candidate_valid_childrends) == len(buggy_node_candidate.childrens):
+                    self.exec_tree.buggy_node = buggy_node_candidate 
+                else:
+                    self.apply_fallback()
+                
+    def apply_fallback(self):
+        self.fallback = True
+        not_in_prov_nodes = [n for n in self.exec_tree.get_all_nodes() if n.validity is Validity.NOT_IN_PROV]
+        for n in not_in_prov_nodes:
+            n.validity = Validity.UNKNOWN
+        self.navigate()
+   
