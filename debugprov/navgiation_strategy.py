@@ -106,7 +106,9 @@ class NavigationStrategy:
                 if len(candidate_valid_childrends) == len(buggy_node_candidate.childrens):
                     self.exec_tree.buggy_node = buggy_node_candidate 
                 else:
-                    self.apply_fallback()
+                    self.fallback = True
+                    self.recursive_fallback(buggy_node_candidate)
+                    self.navigate()
                 
     def apply_fallback(self):
         self.fallback = True
@@ -114,4 +116,10 @@ class NavigationStrategy:
         for n in not_in_prov_nodes:
             n.validity = Validity.UNKNOWN
         self.navigate()
+
+    def recursive_fallback(self,node):
+        if node.validity is Validity.NOT_IN_PROV:
+            self.node.validity = Validity.UNKNOWN
+        for n in node.childrens:
+            self.recursive_fallback(n)
    
