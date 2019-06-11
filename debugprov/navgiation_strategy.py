@@ -79,7 +79,7 @@ class NavigationStrategy:
         if node is forbidden:
             return
         # if node.validity is not Validity.NOT_IN_PROV:
-        if node.validity is Validity.UNKNOWN:
+        if node.validity is Validity.UNKNOWN or node.validity is Validity.NOT_IN_PROV:
             node.validity = Validity.VALID
         for c in node.childrens:
             self.recursive_validate(c,forbidden)
@@ -107,7 +107,10 @@ class NavigationStrategy:
                     self.exec_tree.buggy_node = buggy_node_candidate 
                 else:
                     self.fallback = True
-                    self.recursive_fallback(buggy_node_candidate)
+                    descendants = self.exec_tree.root_node.get_all_descendants()
+                    for d in descendants:
+                        if d.validity is Validity.NOT_IN_PROV:
+                            d.validity = Validity.UNKNOWN
                     self.navigate()
                 
     def apply_fallback(self):
@@ -117,9 +120,3 @@ class NavigationStrategy:
             n.validity = Validity.UNKNOWN
         self.navigate()
 
-    def recursive_fallback(self,node):
-        if node.validity is Validity.NOT_IN_PROV:
-            self.node.validity = Validity.UNKNOWN
-        for n in node.childrens:
-            self.recursive_fallback(n)
-   

@@ -40,3 +40,15 @@ class Node:
 
     def get_name(self):
         return "{} {}".format(self.ev_id, self.name)
+
+
+    def get_all_descendants(self):
+        return self._get_all_descendants(self)
+
+    def _get_all_descendants(self, node):
+        nodes = []
+        nodes.append(node)
+        if node.childrens is not None and len(node.childrens) > 0:
+            for c in node.childrens:
+                nodes.extend(self._get_all_descendants(c))
+        return nodes
