@@ -269,7 +269,7 @@ class ExperimentLib:
                         wrong_node_ev = single_stepping.wrong_node_id
                         prov.enhance(wrong_node_ev)
 
-                        wrong_node = single_stepping.exec_tree.search_by_ev_id(single_stepping.wrong_node_id)
+                        wrong_node = single_stepping.exec_tree.search_by_ev_id(max(single_stepping.invalid_nodes))
                         if wrong_node.validity == Validity.NOT_IN_PROV:
                             self.is_buggy_node_in_prov = False
                         else:
