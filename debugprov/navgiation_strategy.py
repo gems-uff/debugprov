@@ -106,11 +106,17 @@ class NavigationStrategy:
                 if len(candidate_valid_childrends) == len(buggy_node_candidate.childrens):
                     self.exec_tree.buggy_node = buggy_node_candidate 
                 else:
+                   # print("Fallback")
                     self.fallback = True
-                    descendants = self.exec_tree.root_node.get_all_descendants()
+                    buggy_node_candidate = self.exec_tree.search_by_ev_id(max(invalid_nodes))
+                    #for chd in buggy_node_candidate.childrens:
+                    #    print(str(chd.validity))
+                    descendants = buggy_node_candidate.get_all_descendants()
                     for d in descendants:
                         if d.validity is Validity.NOT_IN_PROV:
                             d.validity = Validity.UNKNOWN
+                    #print("back to navigation")
+                    self.exec_tree.root_node = buggy_node_candidate
                     self.navigate()
                 
     def apply_fallback(self):

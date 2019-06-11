@@ -160,12 +160,12 @@ class ProvenanceEnhancement():
             yield Context(d, None)
         
         # Yield non-navigatable activation
-        activation_node = self.exec_tree.search_by_ev_id(node.activation_id) 
-        if activation_node:
-            yield Context(
-                Evaluation(node.activation_id, None, node.code_component_id, None, node.code_component_name, None, None),
-                None, True
-            )
+        #activation_node = self.exec_tree.search_by_ev_id(node.activation_id) 
+        #if activation_node:
+        #    yield Context(
+        #        Evaluation(node.activation_id, None, node.code_component_id, None, node.code_component_name, None, None),
+        #        None, True
+        #    )
         
 
         if checkpoint:
