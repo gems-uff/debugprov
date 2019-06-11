@@ -38,6 +38,8 @@ class ExperimentLib:
 
         self.expected_buggy_node = []
 
+        self.is_buggy_node_in_prov = []
+
         self.single_stepping = {
             "single_stepping_results": [],
             "single_stepping_fallback": [],
@@ -106,6 +108,7 @@ class ExperimentLib:
             'Divide and Query PROV': self.divide_and_query["divide_and_query_prov_results"],
             'Divide and Query PROV Fallback': self.divide_and_query["divide_and_query_prov_fallback"],
             'Divide and Query PROV Buggy Node Found': self.divide_and_query["divide_and_query_prov_buggy_node_returned"],
+            'Is Buggy Node In Prov': self.is_buggy_node_in_prov,
         })
         data_frame.to_excel("{}.xlsx".format(output_filename)) 
 
@@ -265,6 +268,13 @@ class ExperimentLib:
                         prov = ProvenanceEnhancement(exec_tree, CURSOR)
                         wrong_node_ev = single_stepping.wrong_node_id
                         prov.enhance(wrong_node_ev)
+
+                        wrong_node = single_stepping.exec_tree.search_by_ev_id(single_stepping.wrong_node_id)
+                        if wrong_node.validity == Validity.NOT_IN_PROV:
+                            self.is_buggy_node_in_prov = False
+                        else:
+                            self.is_buggy_node_in_prov = True
+
                         single_stepping.navigate()
                         print("SingleStepping PROV experiment finished: " +
                                 str(single_stepping.sequence_num)+" steps.")
