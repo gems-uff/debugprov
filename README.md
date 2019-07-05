@@ -1,7 +1,7 @@
 DebugProv
 ==========
 
-DebugProv is an Algorithmic Debugger designed to locate defects in Python programs.  
+DebugProv is an algorithmic debugger designed to locate defects in python programs.  
 Through the provenance enhancement technique, DebugProv can remove from the search space sub-computations that did not contribute to the production of an incorrect output, reducing the number of questions in the navigation phase of algorithmic debugging.
 
 Quick Installation
@@ -30,7 +30,7 @@ $ pip install prompt-toolkit
 Basic Usage
 -----------
 
-To start an algorithmic debugging session of a defective Python program, you should run
+To start an algorithmic debugging session of a defective Python program, you should run:
 ```bash
 $ debugprov program.py
 ```
