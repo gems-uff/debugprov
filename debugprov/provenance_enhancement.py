@@ -89,9 +89,8 @@ class ProvenanceEnhancement():
         self.exec_tree.dependencies = set(self.final_dependencies)
 
     def enhance_all(self):
-        dependencies = []
-        for source in self.dependencies:
-            if source.code_component_type == 'call':
-                for target in self.dependencies[source]:
-                    dependencies.append(DependencyRel(source,target))
-        self.exec_tree.dependencies = dependencies
+        for e in self.dependencies:
+            if e.code_component_type == 'call':
+                self.enhance(e.ev_id)
+        self.exec_tree.dependencies = set(self.final_dependencies)
+        
