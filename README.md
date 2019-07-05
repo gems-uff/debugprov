@@ -9,7 +9,7 @@ Team
 
 The main DebugProv team is composed by researchers from Universidade Federal Fluminense (UFF) in Brazil.
 
-- Henrique do Prado Linhares (main developer)
+- Henrique do Prado Linhares (lead researcher)
 - João Felipe Pimentel
 - Troy Costa Kohwalter
 - Leonardo Gresta Paulino Murta
