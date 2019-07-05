@@ -9,7 +9,7 @@ Team
 
 The main DebugProv team is composed by researchers from Universidade Federal Fluminense (UFF) in Brazil.
 
-- Henrique do Prado Linhares (lead researcher)
+- Henrique do Prado Linhares (main developer)
 - João Felipe Pimentel
 - Troy Costa Kohwalter
 - Leonardo Gresta Paulino Murta
@@ -51,11 +51,17 @@ To pass arguments to the program:
 $ debugprov program.py first_arg second_arg 
 ```
 
+Acknowledgements
+----------------
+
+We would like to thank CAPES and CNPq for partially supporting this work.
 
 License Terms
 -------------
 
 The MIT License (MIT)
+
+Copyright (c) 2019 Universidade Federal Fluminense (UFF).
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
