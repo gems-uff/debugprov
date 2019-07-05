@@ -4,6 +4,17 @@ DebugProv
 DebugProv is an algorithmic debugger designed to locate defects in python programs.  
 Through the provenance enhancement technique, DebugProv can remove from the search space sub-computations that did not contribute to the production of an incorrect output, reducing the number of questions in the navigation phase of algorithmic debugging.
 
+Team
+----
+
+The main DebugProv team is composed by researchers from Universidade Federal Fluminense (UFF) in Brazil.
+
+- Henrique do Prado Linhares (main developer)
+- João Felipe Pimentel
+- Troy Costa Kohwalter
+- Leonardo Gresta Paulino Murta
+
+
 Quick Installation
 ------------------
 
