@@ -14,6 +14,10 @@ The main DebugProv team is composed by researchers from Universidade Federal Flu
 - Troy Costa Kohwalter
 - Leonardo Gresta Paulino Murta
 
+Publications
+------------
+
+* LINHARES, H.; PIMENTEL, J. F. N.; KOHWALTER, T.; MURTA, L. G. P.; Provenance-enhanced Algorithmic Debugging. In: Brazilian Symposium on Software Engineering (SBES), 2019, Salvador, Brazil.
 
 Quick Installation
 ------------------
