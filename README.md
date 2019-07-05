@@ -2,7 +2,7 @@ DebugProv
 ==========
 
 DebugProv is an Algorithmic Debugger designed to locate defects in Python programs.  
-Debugprov implements a technique called provenance enhancement to reduce the number of questions in the navigation phase of the algorithmic debugging session.  
+Through the provenance enhancement technique, DebugProv can remove from the search space sub-computations that did not contribute to the production of an incorrect output, reducing the number of questions in the navigation phase of algorithmic debugging.
 
 Quick Installation
 ------------------
