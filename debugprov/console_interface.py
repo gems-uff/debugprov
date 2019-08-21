@@ -25,7 +25,9 @@ class ConsoleInterface:
     def select_trial(trials):
         for trial in trials:
             print(str(trial))
-        print("Select a trial from 1 to N")
+        print("Select a trial from 1 to {}".format(len(trials)))
+        trial_id = prompt('')
+        return int(trial_id)
 
     @staticmethod
     def get_run_command():

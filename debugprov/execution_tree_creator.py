@@ -1,10 +1,13 @@
 from debugprov.node import Node
 from debugprov.execution_tree import ExecutionTree
+from debugprov.now_storage_interface import NowStorageInterface
 
 class ExecTreeCreator():
 
-    def __init__(self, cursor):
-        self.cursor = cursor
+    def __init__(self, now_storage_interface):
+        self.now_storage_interface = now_storage_interface
+
+        #self.cursor = cursor
         self.query = ("select EV.id, CC.id, EV.repr, CC.name "
                       "from evaluation EV "
                       "natural join activation ACT "
